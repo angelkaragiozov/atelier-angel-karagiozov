@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { SpeedInsights } from "@vercel/speed-insights/next"
 import { Fira_Code } from 'next/font/google'
 import "./globals.css";
 import Navbar from './components/UI/Navbar'
@@ -43,6 +44,7 @@ export default function RootLayout({
           <main className="min-h-screen flex flex-col">
                   <div className="flex-grow">
                   {children}
+                  <SpeedInsights />
                   </div>
           </main>
          <footer className="justify-center">
