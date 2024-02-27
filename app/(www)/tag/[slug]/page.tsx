@@ -1,5 +1,5 @@
 import React from "react";
-import { Project,Params } from "@/app/(www)/utils/interface"
+import { Project,Params } from "@/sanity/lib/utils"
 import { getProjectsByTag } from "@/sanity/lib/utils";
 import CardComponent from "../../components/Projects/CardComponent";
 
@@ -14,7 +14,7 @@ const page = async ({ params }: Params) => {
       <h2 className="text-center"> <div id={params.name}></div> </h2>
       <div>
         {project?.length > 0 && project?.map((project) => (
-          <CardComponent key={project?._id} project={project} title={""} tags={""} />
+          <CardComponent key={project?._id} project={project}/>
         ))}
       </div>
     </div>

@@ -4,7 +4,7 @@ import { Image } from "sanity";
 
 export interface Project {
   renamedId: string;
-  title: string
+  title: string;
   slug: { current: string };
   publishedAt: string;
   subtitle: string;
