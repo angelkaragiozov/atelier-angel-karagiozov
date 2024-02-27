@@ -1,11 +1,28 @@
 "use client"
 
 import React, { useRef, useState, useEffect } from 'react';
-import { Node, Link } from "../../utils/interface";
 import * as THREE from 'three';
 import ForceGraph3D, {GraphData}from "react-force-graph-3d"
 import d3Data from "../../datasets/miserables.json"
 import SpriteText from 'three-spritetext';
+
+interface Node {
+  x: number;
+  y: number;
+  id: string;
+  group: number; 
+  url: string;
+  fx: number;
+  fy: number;
+  fz: number;
+
+}
+
+interface Link {
+  source: string;
+  target: string;
+  value: number;
+}
 
 
 function WorksGraph() {
