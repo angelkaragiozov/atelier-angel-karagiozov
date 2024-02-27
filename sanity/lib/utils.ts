@@ -26,6 +26,15 @@ export interface Tag {
   projectCount?: number
 }
 
+export interface Params {
+  params: {
+    name: string | undefined;
+    slug: string;
+    title: string;
+
+  };
+}
+
 
 export async function getProjects(): Promise<Project[]> {
   return client.fetch(
