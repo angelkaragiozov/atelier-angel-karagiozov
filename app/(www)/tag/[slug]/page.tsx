@@ -1,5 +1,5 @@
 import React from "react";
-import { Project,Params } from "@/sanity/lib/utils"
+import { Project, Params } from "@/sanity/lib/utils"
 import { getProjectsByTag } from "@/sanity/lib/utils";
 import CardComponent from "../../components/Projects/CardComponent";
 
