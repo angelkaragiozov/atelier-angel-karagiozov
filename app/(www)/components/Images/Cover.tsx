@@ -1,7 +1,7 @@
 import React from 'react'
 import { urlForImage } from "@/sanity/lib/image";
 import DynamicPlaiceholderBlur from "./CoverBlur";
-import { Project } from '../../utils/interface';
+import { Project } from '@/sanity/lib/utils';
 
 interface Prop {
     project: Project;
