@@ -40,7 +40,10 @@ const Navbar = () => {
         className="absolute top-0 left-full w-12 -translate-x-2 h-full backdrop-blur-sm bg-light/10 border-r border-gray border-dashed dark:bg-dark/10 dark:border-dark cursor-pointer transition text-neutral hover:text-dark hover:bg-white dark:hover:bg-blacks dark:text- dark:hover:text-light hover:border-solid hover:-translate-x-0.5 ease-out duration-500">
             <div className={nav ? 'ease-in duration-500' : ''}>
              <div className="w-3 h-3 mx-auto mt-3 translate-x-1"> 
-             <Nav />
+            -
+            -
+            -
+
               </div>
               </div></div>
 
