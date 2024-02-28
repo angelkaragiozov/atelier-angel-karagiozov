@@ -49,10 +49,13 @@ export default async function Home(
           <div className=" top-0 left-0 w-full h-2 border-b-[3px] border-gray dark:border-dark border-double "></div>
           
     <div className='mt-5 grid md:grid-cols-2 lg:grid-cols-3 gap-8 items-center'>
-        <Suspense fallback={<div>Loading...</div>}>
-          {entries.map((project) => <CardComponent key={project._id} project={project} />)}
-        </Suspense>
-    </div>
+
+             
+            <Suspense key={`page-${searchParams.page}`} fallback={<div>Loading...</div>}>
+               {entries.map((project) => <CardComponent key={project._id} project={project} />)}
+            </Suspense>
+
+     </div>
 
     <div className="mt-8">
             <PaginationControls

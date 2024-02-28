@@ -7,10 +7,12 @@ import { Project } from '@/sanity/lib/utils';
 
 
 
-const ListComponent = ({ project }: { project: Project }) => {
+const ListComponent = async ({ project }: { project: Project }) => {
+  await new Promise((resolve) => setTimeout(resolve, 1000));
+
   return (
   
-  <div className='border-b border-dotted border-neutral hover:bg-white bg-light dark:bg-black dark:hover:bg-blacks h-32 transition-all ease-in-out duration-1000'>
+  <div className='p-2 border-b border-dotted border-neutral hover:bg-white bg-light dark:bg-black dark:hover:bg-blacks h-32 transition-all ease-in-out duration-1000'>
 
        
 <Link href={`/projects/${project?.slug?.current}`}>

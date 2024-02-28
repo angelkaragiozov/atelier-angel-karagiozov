@@ -7,7 +7,10 @@ import { Project } from '@/sanity/lib/utils';
 
 
 
-const CardComponent = ({ project }: { project: Project }) => {
+const CardComponent = async ({ project }: { project: Project }) => {
+
+  await new Promise((resolve) => setTimeout(resolve, 1000));
+  
   return (
     <div key={project._id}>
       <Link href={`/projects/${project?.slug?.current}`}>

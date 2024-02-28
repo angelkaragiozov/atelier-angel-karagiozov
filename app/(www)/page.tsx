@@ -1,7 +1,6 @@
 import React, { Suspense } from "react";
 import { Logo } from "./utils/Icons";
 import Loading from "./components/Loading/Loading";
-// const GraphForce = React.lazy(() => import('./components/Graph/GraphForce'));
 import Tags from "./components/UI/Tags";
 import { getProjects } from "@/sanity/lib/utils";
 import Pagination from "./components/Projects/Pagination";
@@ -15,7 +14,7 @@ export default async function Home(
   searchParams: { [key: string]: string | string[] | undefined }
 }) {
   const page = searchParams['page'] ?? '1'
-  const per_page = searchParams['per_page'] ?? '5'
+  const per_page = searchParams['per_page'] ?? '9'
 
   const projects = await getProjects();
 
@@ -47,11 +46,10 @@ export default async function Home(
         <div className=" top-0 left-0 flex flex-col lg:flex-col xl:space-x-4 xl:flex-row w-full h-full border-t-[3px] border-gray dark:border-dark border-double pt-2 ">
           <div className="flex flex-col w-full h-screen overflow-auto scroll-smooth xl:w-1/3 border border-gray border-dotted hover:border-solid dark:border-dark">
 
-
-        <Suspense fallback={<div>Loading...</div>}>
-          {entries.map((project) => <ListComponent key={project._id} project={project} />)}
-        </Suspense>
-
+        
+          <Suspense key={`page-${searchParams.page}`} fallback={<div>Loading...</div>}>
+               {entries.map((project) => <ListComponent key={project._id} project={project} />)}
+            </Suspense>
         
         <div className="mt-auto">
         <Pagination
@@ -65,12 +63,12 @@ export default async function Home(
   
           </div>
 
-          {/* <div className=" hidden w-full lg:block  mt-4 xl:w-2/3 xl:mt-0 cursor-move">
+          <div className=" hidden w-full lg:block  mt-4 xl:w-2/3 xl:mt-0 cursor-move">
               <Suspense fallback={<div><Loading/></div>} >
                 <GraphForce />
               </Suspense> 
 
-          </div>     */}
+          </div>    
         </div>
         <div className="flex flex-col lg:flex-row pl-4 w-full mt-4 border mb-2 border-gray border-dotted  hover:border-solid  dark:border-dark">
           <pre className='text-2xs text-gray dark:text-dark'>{`                                             
@@ -91,5 +89,6 @@ export default async function Home(
 
   );
 }
+const GraphForce = React.lazy(() => import('./components/Graph/GraphForce'));
 
 
