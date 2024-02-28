@@ -1,7 +1,7 @@
 import React, { Suspense } from "react";
 import { Logo } from "./utils/Icons";
 import Loading from "./components/Loading/Loading";
-const GraphForce = React.lazy(() => import('./components/Graph/GraphForce'));
+// const GraphForce = React.lazy(() => import('./components/Graph/GraphForce'));
 import Tags from "./components/UI/Tags";
 import { getProjects } from "@/sanity/lib/utils";
 import Pagination from "./components/Projects/Pagination";
@@ -65,12 +65,12 @@ export default async function Home(
   
           </div>
 
-          <div className=" hidden w-full lg:block  mt-4 xl:w-2/3 xl:mt-0 cursor-move">
+          {/* <div className=" hidden w-full lg:block  mt-4 xl:w-2/3 xl:mt-0 cursor-move">
               <Suspense fallback={<div><Loading/></div>} >
                 <GraphForce />
               </Suspense> 
 
-          </div>    
+          </div>     */}
         </div>
         <div className="flex flex-col lg:flex-row pl-4 w-full mt-4 border mb-2 border-gray border-dotted  hover:border-solid  dark:border-dark">
           <pre className='text-2xs text-gray dark:text-dark'>{`                                             
