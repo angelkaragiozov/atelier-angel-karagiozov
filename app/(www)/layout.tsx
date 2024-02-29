@@ -1,33 +1,30 @@
 import type { Metadata } from "next";
-import { SpeedInsights } from "@vercel/speed-insights/next"
-import { Fira_Code } from 'next/font/google'
+import { SpeedInsights } from "@vercel/speed-insights/next";
+import {Handjet} from 'next/font/google';
 import "./globals.css";
-import Navbar from './components/UI/Navbar'
-import { Provider } from './utils/Provider'
-import localFont from "next/font/local"
+import Navbar from './components/UI/Navbar';
+import { Provider } from './utils/Provider';
 import Footer from "./components/UI/Footer";
 
-const firaCode = Fira_Code({ 
+
+
+const handjet = Handjet({ 
   subsets: ['latin'], 
   weight:'400',
+  variable: '--font-handjet',
+  display: 'block',
 });
+
+
 
 export const metadata: Metadata = {
   title: "Atelier Angel Karagiozov",
   description: "new-media",
-};
+  
+}
 
-const Pixel =localFont({
-  src: [
-    {
-   path: '../../public/fonts/Pixel.woff2',
-   weight: '400',
-   style: 'normal'
-    },
-  ],
-  display:'block',
-  variable:'--pixel-font'
-  })
+
+
 
 export default function RootLayout({
   children,
@@ -36,7 +33,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={`${firaCode.className} h-full bg-light dark:bg-black text-neutral text-xs selection:bg-yellow selection:text-dark`}>
+      <body className={`${handjet.variable}  handjet h-full tracking-widest bg-light dark:bg-black text-neutral text-xs selection:bg-yellow selection:text-dark`}>
       <Provider>
         <header>
         <Navbar />

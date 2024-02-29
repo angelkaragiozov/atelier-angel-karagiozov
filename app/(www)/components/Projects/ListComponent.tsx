@@ -2,9 +2,7 @@ import React from 'react'
 import Image from "next/image";
 import { urlForImage } from '@/sanity/lib/image';
 import Link from 'next/link';
-import { Project } from '@/sanity/lib/utils';
-
-
+import { Project } from '@/sanity/lib/utils'
 
 
 const ListComponent = async ({ project }: { project: Project }) => {
@@ -17,7 +15,7 @@ const ListComponent = async ({ project }: { project: Project }) => {
        
 <Link href={`/projects/${project?.slug?.current}`}>
  <div className='flex justify-between'>
-   <h2 className={`text-[18px] text-blue dark:text-yellow font-pixel lowercase w-20`}>{project?.title}</h2>
+   <h2 className='text-[18px] text-blue dark:text-yellow uppercase w-20'>{project?.title}</h2>
 
    <p className={`text-2xs text-gray dark:text-dark col-span-2`}>
      {new Date(project?.publishedAt).toDateString()}</p>

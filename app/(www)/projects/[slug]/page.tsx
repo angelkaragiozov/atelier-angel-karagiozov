@@ -61,7 +61,7 @@ const page = async ({ params }: Params) => {
    <div className="ml-14 mr-8">  
      <div className="mx-auto 2xl:max-w-screen-xl">         
        <div className="py-6 text-center border-b-[3px] border-double border-gray dark:border-dark">
-       <h1 className="text-2xl lg:text-4xl text-neutral font-pixel transition-all ease-out duration-500">{project?.title}</h1>
+       <h1 className="text-2xl lg:text-4xl text-neutral transition-all ease-out duration-500">{project?.title}</h1>
      </div>
 
      <h1 className="text-base text-center my-8 text-neutral">{project?.subtitle}</h1>

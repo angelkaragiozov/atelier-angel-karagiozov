@@ -21,14 +21,16 @@ const config: Config = {
         'yellow': '#ffff0a',
       },
       extend: {
+        
+        fontFamily: {
+          handjetm: 'Handjet, sans-serif'
+        },
 
         fontSize: {
           '2xs': '10px',
           '3xs': '8px'
         },
-        fontFamily: {
-          pixel: 'Pixel, sans-serif'
-        },
+     
         animation: {
           'spin-slow': 'spin 60s linear infinite',
         }, 
