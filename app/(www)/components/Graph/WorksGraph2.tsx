@@ -6,24 +6,27 @@ import ForceGraph3D, {GraphData}from "react-force-graph-3d"
 import d3Data from "../../datasets/miserables.json"
 import SpriteText from 'three-spritetext';
 
+
+
+
 interface Node {
-    x: number;
-    y: number;
-    id: string;
-    group: number; 
-    url: string;
-    fx: number;
-    fy: number;
-    fz: number;
-  
-  }
-  
-  interface Link {
-    source: string;
-    target: string;
-    value: number;
-  }
-  
+  x: number;
+  y: number;
+  id: string;
+  group: number; 
+  url: string;
+  fx: number;
+  fy: number;
+  fz: number;
+
+}
+
+interface Link {
+  source: string;
+  target: string;
+  value: number;
+}
+
 
 
 function WorksGraph() {
@@ -80,8 +83,9 @@ function WorksGraph() {
         const sprite = new SpriteText(node.id);
         sprite.fontFace = 'Pixel';
         sprite.color = 'blue';
-        sprite.textHeight = 2;
+        sprite.textHeight = 3;
         sprite.position.y = -3;
+        
         
 
         // Create a group and add both mesh and sprite to it

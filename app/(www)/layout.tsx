@@ -1,20 +1,22 @@
 import type { Metadata } from "next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
-import {Handjet} from 'next/font/google';
+// import {Handjet} from 'next/font/google';
 import "./globals.css";
 import Navbar from './components/UI/Navbar';
 import { Provider } from './utils/Provider';
 import Footer from "./components/UI/Footer";
+import localFont from "next/font/local"
+
+const pixel =localFont({ src: '../../public/fonts/Pixel.woff2'})
 
 
 
-const handjet = Handjet({ 
-  subsets: ['latin'], 
-  weight:'400',
-  variable: '--font-handjet',
-  display: 'block',
-});
-
+// const handjet = Handjet({ 
+//   subsets: ['latin'], 
+//   weight:'400',
+//   variable: '--font-handjet',
+//   display: 'block',
+// });
 
 
 export const metadata: Metadata = {
@@ -24,8 +26,6 @@ export const metadata: Metadata = {
 }
 
 
-
-
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -33,7 +33,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={`${handjet.variable}  handjet h-full tracking-widest bg-light dark:bg-black text-neutral text-xs selection:bg-yellow selection:text-dark`}>
+      <body className={`${pixel.className} handjet h-full tracking-widest bg-light dark:bg-black text-neutral text-xs selection:bg-yellow selection:text-dark`}>
       <Provider>
         <header>
         <Navbar />

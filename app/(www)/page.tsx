@@ -5,6 +5,7 @@ import Tags from "./components/UI/Tags";
 import { getProjects } from "@/sanity/lib/utils";
 import Pagination from "./components/Projects/Pagination";
 import ListComponent from "./components/Projects/ListComponent";
+import Link from "next/link";
 
 
 export default async function Home(
@@ -30,7 +31,9 @@ export default async function Home(
       <div className="ml-14 mr-8">
         <div className="fadein-animation">
         <div className="w-24 h-24 mx-auto mt-8 mb-6 animate-spin-slow transition-all ease-in-out duration-1000">
+        <Link href="/">
             <Logo />
+          </Link>
         </div>
         </div>
         <div><p className="text-xs text-neutral text-center mb-2">Index</p></div>

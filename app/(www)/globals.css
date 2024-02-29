@@ -12,6 +12,14 @@
     left: 0px;
     }
 
+    @font-face {
+      font-family: 'Pixel';
+      src: url('../../public/fonts/Pixel.woff2') format('woff2');
+      font-weight: 400;
+      font-display: swap;
+      font-style: normal;
+    } 
+
 
     /* Scroll */
 
@@ -105,10 +113,3 @@
   display:none;
 }
 
-@font-face {
-  font-family: 'Handjet';
-  src: url('/fonts/Handjet-Medium.woff2') format('woff2');
-  font-weight: 500;
-  font-display: block;
-  font-style: normal;
-}

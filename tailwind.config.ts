@@ -22,8 +22,9 @@ const config: Config = {
       },
       extend: {
         
+
         fontFamily: {
-          handjetm: 'Handjet, sans-serif'
+          pixel: 'Pixel, sans-serif'
         },
 
         fontSize: {
