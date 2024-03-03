@@ -1,10 +1,10 @@
 import { getProjects } from "@/sanity/lib/utils";
-import PaginationControls from "../components/Projects/PaginationControls";
 import CardComponent from "../components/Projects/CardComponent";
 import { Suspense } from 'react';
 import Link from "next/link";
 import { Logo } from "../utils/Icons";
 import Tags from "../components/UI/Tags";
+import PaginationCard from "../components/Projects/PaginationCard";
 
 export default async function Home(
   {
@@ -38,12 +38,11 @@ export default async function Home(
             <span className="text-gray dark:text-dark">&nbsp;|&nbsp;Projects</span>
           </div>
 
-          <pre className='text-2xs text-gray dark:text-dark mt-0 lg:-mt-20'>{`                                                                         
+          <pre className='text-2xs text-gray dark:text-dark mt-0 lg:-mt-20'>{`
  _____ _____ _____    __ _____ _____ _____ _____ 
 |  _  | __  |     |__|  |   __|     |_   _|   __|
 |   __|    -|  |  |  |  |   __|   --| | | |__   |
-|__|  |__|__|_____|_____|_____|_____| |_| |_____|                                                 
-    `}
+|__|  |__|__|_____|_____|_____|_____| |_| |_____|`}
      </pre>
 
           <div className=" top-0 left-0 w-full h-2 border-b-[3px] border-gray dark:border-dark border-double "></div>
@@ -57,21 +56,21 @@ export default async function Home(
 
      </div>
 
-    <div className="mt-8">
-            <PaginationControls
+    <div className="mt-8 border border-gray dark:border-dark border-dotted p-4">
+            <PaginationCard
                   hasNextPage={end < projects.length}
                   hasPrevPage={start > 0}
                   totalProjects={projects.length}
                 />
      </div>           
 
-<div className="flex flex-col lg:flex-row pl-4 w-full mt-4 border mb-2 border-gray border-dotted  hover:border-solid  dark:border-dark">
-          <pre className='text-2xs text-gray dark:text-dark'>{`                                             
+<div className="flex flex-col lg:flex-row w-full mt-4 border mb-2 border-gray border-dotted  hover:border-solid  dark:border-dark">
+         
+        <pre className='text-2xs text-gray dark:text-dark p-4 pt-0 '>{`
  _____ _____ _____ _____ 
 |_   _|  _  |   __|   __|
   | | |     |  |  |__   |
-  |_| |__|__|_____|_____|
-                    `}
+  |_| |__|__|_____|_____|`}
           </pre>
 
           <div className="p-2 pl-4 w-full border-l border-dotted border-gray dark:border-dark hover:dark:bg-blacks  hover:bg-white bg-light dark:bg-black dark:hover:bg-blacks h-30 transition-all ease-in-out duration-1000">

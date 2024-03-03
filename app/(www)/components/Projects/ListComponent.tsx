@@ -6,24 +6,21 @@ import { Project } from '@/sanity/lib/utils'
 
 
 const ListComponent = async ({ project }: { project: Project }) => {
-  // await new Promise((resolve) => setTimeout(resolve, 1000));
+  await new Promise((resolve) => setTimeout(resolve, 1000));
 
   return (
   
-  <div className='p-2 border-b border-dotted border-neutral hover:bg-white bg-light dark:bg-black dark:hover:bg-blacks h-32 transition-all ease-in-out duration-1000'>
+  <div className='p-2 pt-0.5 border border-dotted border-gray dark:border-dark  hover:text-dark dark:hover:text-gray hover:border-solid hover:bg-white bg-light dark:bg-black dark:hover:bg-blacks h-[90px] transition-all ease-in-out duration-1000'>
 
        
 <Link href={`/projects/${project?.slug?.current}`}>
  <div className='flex justify-between'>
-   <h2 className='text-[18px] text-blue dark:text-yellow uppercase w-20'>{project?.title}</h2>
+   <h2 className='text-sm text-blue dark:text-yellow'>{project?.title}</h2>
 
    <p className={`text-2xs text-gray dark:text-dark col-span-2`}>
      {new Date(project?.publishedAt).toDateString()}</p>
      
-
  </div>
-
-
    <div className='grid grid-rows-3 grid-flow-col gap-4'>
 
    <div className='grayscale w-28 hover:grayscale-0 row-span-3'>
@@ -36,9 +33,7 @@ const ListComponent = async ({ project }: { project: Project }) => {
 
    
    <div className="col-span-2">
-
-
-   <p className='text-neutral text-2xs'>{project?.excerpt}</p>
+   <p className='text-2xs'>{project?.excerpt}</p>
    
 </div>
 

@@ -1,6 +1,6 @@
 export const Logo = () => {
   return (
-    <svg className="fill-neutral dark:fill-neutral hover:fill-dark transition-all ease-in-out duration-1000"
+    <svg className="fill-neutral hover:fill-black  dark:hover:fill-gray  transition-all ease-in-out duration-1000"
       width="100%"
       height="100%"
       viewBox="0 0 120 120"

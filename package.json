@@ -22,6 +22,7 @@
     "react-dom": "^18",
     "react-force-graph-3d": "^1.24.2",
     "sanity": "^3.28.0",
+    "sanity-plugin-media": "^2.2.5",
     "styled-components": "^6.1.8",
     "three": "^0.161.0",
     "three-spritetext": "^1.8.2"
