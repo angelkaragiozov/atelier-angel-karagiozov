@@ -1,32 +1,39 @@
-import React from 'react'
-import Link from 'next/link';
-import { Logo } from '../../utils/Icons';
+import { Logo } from "../../utils/Icons"
+
+
 
 const LoadingProjectsIndex = () => {
   return (
-    <div className="ml-14 mr-8">
-    <div className=" w-24 h-24 mx-auto mt-8 animate-spin-slow transition-all ease-in-out duration-1000">
-      <Link href="/">
+    <div>
+    <div className="fadein-animation">
+    <div className="w-20 h-20 mx-auto mt-6 mb-4 animate-spin-slow transition-all ease-in-out duration-1000">
         <Logo />
-      </Link>
-    </div>
+      </div>
+      </div>
+      <p className='animate-bounce text-xs text-center mb-4  text-gray dark:text-dark'>Loading...</p>
 
-     <pre className='text-2xs text-gray dark:text-dark mt-0 lg:-mt-20'>{`                                                                         
- _____ _____ _____    __ _____ _____ _____ _____ 
+    <div className="flex flex-row justify-between w-full mt-0 md:-mt-20">
+
+    <pre className='text-2xs  text-gray dark:text-dark'>
+{` _____ _____ _____    __ _____ _____ _____ _____ 
 |  _  | __  |     |__|  |   __|     |_   _|   __|
 |   __|    -|  |  |  |  |   __|   --| | | |__   |
-|__|  |__|__|_____|_____|_____|_____| |_| |_____|                                                 
-    `}
-     </pre>
-    <div className=" top-0 left-0 w-full h-screen border-t-[3px] border-gray dark:border-dark border-double pt-2 ">
+|__|  |__|__|_____|_____|_____|_____| |_| |_____|`}
+    </pre>
+   </div>
+    
+    <div className=" mt-2 flex flex-col lg:flex-col w-full border-t-[3px] border-gray dark:border-dark border-double pt-4 ">
 
-    </div>
+          <div className="mt-4 grid md:grid-cols-2 lg:grid-cols-3 gap-4 items-center">
 
-    <div className="border-b-[3px] border-gray dark:border-dark border-double mb-4">
-    <p className='animate-bounce text-xs text-gray dark:text-dark ml-4 mt-4'> * Loading Projects ...</p>
-    </div>
-  </div>
+             <div className='border border-dotted border-gray dark:border-dark w-full]'></div>
 
+
+
+          </div>
+
+      </div>
+      </div>
   )
 }
 

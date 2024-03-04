@@ -11,7 +11,7 @@ const Footer = () => {
         </Link>
       </div>
       
-        <div className="flex items-center justify-center">
+        <div className="flex items-center justify-center mb-12 md:mb-0">
               <p className="text-center text-3xs text-neutral my-4">
                 &copy; {new Date().getFullYear()} Atelier Angel Karagiozov
               </p>

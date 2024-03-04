@@ -21,7 +21,7 @@ const PaginationControls: FC<PaginationControlsProps> = (
   const searchParams = useSearchParams()
 
   const page = searchParams.get('page') ?? '1'
-  const per_page = searchParams.get('per_page') ?? '9'
+  const per_page = searchParams.get('per_page') ?? '12'
 
   return (
     <div className='flex w-fill items-center justify-between p-4 mb-4 border border-dotted border-gray dark:border-dark'>

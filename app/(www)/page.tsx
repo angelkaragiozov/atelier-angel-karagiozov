@@ -8,6 +8,7 @@ import Link from "next/link";
 import Loader from "./components/Graph/Loader";
 import ThemeSwitch from "./components/UI/ThemeSwitch";
 import PaginationList from "./components/Projects/PaginationList";
+import LoadingProjectList from "./components/Loading/LoadingProjectList";
 
 
 export default async function Home(
@@ -17,7 +18,7 @@ export default async function Home(
   searchParams: { [key: string]: string | string[] | undefined }
 }) {
   const page = searchParams['page'] ?? '1'
-  const per_page = searchParams['per_page'] ?? '9'
+  const per_page = searchParams['per_page'] ?? '12'
 
   const projects = await getProjects();
 
@@ -28,9 +29,11 @@ export default async function Home(
   // slice the projects array to get the entries for the current page
   const entries = projects.slice(start, end)
 
+  await new Promise((resolve) => setTimeout(resolve, 2000));
+
     return (
 
-      <div className="ml-14 mr-8">
+      <div className="mx-8 md:ml-14 md:mr-8">
         <div className="fadein-animation">
         <div className="w-20 h-20 mx-auto mt-6 mb-4 animate-spin-slow transition-all ease-in-out duration-1000">
         <Link href="/">
@@ -49,15 +52,21 @@ export default async function Home(
 |_____|_____|__|__|__|__|`}
         </pre>
  
-        <div className="mt-auto w-5 h-5"><ThemeSwitch /></div>
+        <div className="mt-auto"><ThemeSwitch /></div>
        </div>
         
         <div className=" mt-2 flex flex-col lg:flex-col w-full border-t-[3px] border-gray dark:border-dark border-double pt-4 ">
 
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
-              <Suspense key={`page-${searchParams.page}`} fallback={<div>Loading...</div>}>
+              {/* <Suspense key={`page-${searchParams.page}`} fallback={<LoadingProjectList />}>
                   {entries.map((project) => <ListComponent key={project._id} project={project} />)}
-                </Suspense>
+                </Suspense> */}
+
+              {entries.map((project) => (
+                  <Suspense key={project._id} fallback={<LoadingProjectList />}>
+                    <ListComponent project={project} />
+                  </Suspense>
+                ))}
 
             </div>
         

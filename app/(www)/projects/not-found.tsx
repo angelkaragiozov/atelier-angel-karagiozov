@@ -5,7 +5,7 @@ import { Logo } from "../utils/Icons";
 const NotFound = () => {
   return (
     <div>
-          <div className="fadein-animation w-24 h-24 mx-auto my-8 animate-spin-slow transition-all ease-in-out duration-1000">
+          <div className="fadein-animation w-20 h-20 mx-auto my-8 animate-spin-slow transition-all ease-in-out duration-1000">
             <Link href="/">
               <Logo />
             </Link>

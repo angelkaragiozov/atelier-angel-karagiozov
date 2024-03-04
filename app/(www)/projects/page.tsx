@@ -5,6 +5,7 @@ import Link from "next/link";
 import { Logo } from "../utils/Icons";
 import Tags from "../components/UI/Tags";
 import PaginationCard from "../components/Projects/PaginationCard";
+import ThemeSwitch from "../components/UI/ThemeSwitch";
 
 export default async function Home(
   {
@@ -13,7 +14,7 @@ export default async function Home(
   searchParams: { [key: string]: string | string[] | undefined }
 }) {
   const page = searchParams['page'] ?? '1'
-  const per_page = searchParams['per_page'] ?? '5'
+  const per_page = searchParams['per_page'] ?? '12'
 
   const projects = await getProjects();
 
@@ -24,30 +25,39 @@ export default async function Home(
   // slice the projects array to get the entries for the current page
   const entries = projects.slice(start, end)
 
+  await new Promise((resolve) => setTimeout(resolve, 2000));
+
   return (
-    <div className="ml-14 mr-8">
-    <div className=" w-24 h-24 mx-auto my-8 animate-spin-slow transition-all ease-in-out duration-1000">
-      <Link href="/">
+    <div className="mx-8 md:ml-14 md:mr-8">
+    <div className="fadein-animation">
+    <div className="w-20 h-20 mx-auto mt-6 mb-4 animate-spin-slow transition-all ease-in-out duration-1000">
+    <Link href="/">
         <Logo />
       </Link>
     </div>
-    <div className="flex flex-row w-full justify-center text-xs text-neutral"> 
-        <Link href="/" className="hover:underline underline-offset-2 decoration-dotted">
-            Index
-          </Link>
-            <span className="text-gray dark:text-dark">&nbsp;|&nbsp;Projects</span>
-          </div>
+    </div>
+    <div className="flex flex-row w-full justify-center"><Link href="/" className="hover:underline underline-offset-2 decoration-dotted"><p className="text-xs text-neutral mb-4">Index</p></Link>
+    <span className="text-gray dark:text-dark">&nbsp;|&nbsp;</span>
+         <p className="text-gray dark:text-dark">
+           Projects
+         </p></div>
 
-          <pre className='text-2xs text-gray dark:text-dark mt-0 lg:-mt-20'>{`
- _____ _____ _____    __ _____ _____ _____ _____ 
+    <div className="flex flex-row justify-between w-full mt-0 md:-mt-20">
+
+    <pre className='text-2xs  text-gray dark:text-dark'>
+{` _____ _____ _____    __ _____ _____ _____ _____ 
 |  _  | __  |     |__|  |   __|     |_   _|   __|
 |   __|    -|  |  |  |  |   __|   --| | | |__   |
 |__|  |__|__|_____|_____|_____|_____| |_| |_____|`}
-     </pre>
+    </pre>
 
-          <div className=" top-0 left-0 w-full h-2 border-b-[3px] border-gray dark:border-dark border-double "></div>
+    <div className="mt-auto"><ThemeSwitch /></div>
+   </div>
+    
+
+          <div className="mt-2 flex flex-col lg:flex-col w-full border-t-[3px] border-gray dark:border-dark border-double pt-4"></div>
           
-    <div className='mt-5 grid md:grid-cols-2 lg:grid-cols-3 gap-8 items-center'>
+    <div className='mt-4 grid md:grid-cols-2 lg:grid-cols-3 gap-4 items-center'>
 
              
             <Suspense key={`page-${searchParams.page}`} fallback={<div>Loading...</div>}>
