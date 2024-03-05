@@ -8,26 +8,28 @@ import { Project } from '@/sanity/lib/utils';
 
 
 const CardComponent = async ({ project }: { project: Project }) => {
- // await new Promise((resolve) => setTimeout(resolve, 1000));
+ await new Promise((resolve) => setTimeout(resolve, 1000));
   
   return (
-    <div key={project._id} className='max-w-[520px] mx-auto border border-gray border-dotted hover:border-solid hover:bg-white dark:hover:bg-blacks  dark:border-dark p-4 transition-all ease-in-out duration-1000'>
+    <div key={project._id} className='max-w-[520px] mx-auto border border-gray border-dotted hover:border-solid hover:bg-white dark:hover:bg-blacks  dark:border-dark p-2 transition-all ease-in-out duration-1000'>
       <Link href={`/projects/${project?.slug?.current}`}>
-        <div className="flex justify-between p-2 h-10">
-          <div className="text-xl text-blue dark:text-yellow lowercase w-20">
+        <div className="flex justify-between h-8">
+          <div className="text-xl text-blue dark:text-yellow lowercase w-20 pl-2">
             {project?.title}
           </div>
-          <p className={`my-2 text-xs text-center text-gray dark:text-dark`}>
+          <p className={`text-xs text-center text-gray dark:text-dark`}>
             {new Date(project?.publishedAt).toDateString()}
           </p>
         </div>
+        <div className='fadein-animation'>
         <Image
           src={urlForImage(project.cover).url()}
           width={500}
           height={200}
           alt="projects"
         />
-          <div className='h-20 mt-4'>
+        </div>
+          <div className='h-20 mt-2 truncate'>
         <p className="text-neutral text-sm truncate">{project?.excerpt}</p>
 
 

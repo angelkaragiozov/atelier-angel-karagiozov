@@ -6,6 +6,7 @@ import { Logo } from "../utils/Icons";
 import Tags from "../components/UI/Tags";
 import PaginationCard from "../components/Projects/PaginationCard";
 import ThemeSwitch from "../components/UI/ThemeSwitch";
+import LoadingProjectCard from "../components/Loading/LoadingProjectCard";
 
 export default async function Home(
   {
@@ -42,7 +43,7 @@ export default async function Home(
            Projects
          </p></div>
 
-    <div className="flex flex-row justify-between w-full mt-0 md:-mt-20">
+    <div className="flex flex-row justify-between w-full mt-0 lg:-mt-20">
 
     <pre className='text-2xs  text-gray dark:text-dark'>
 {` _____ _____ _____    __ _____ _____ _____ _____ 
@@ -51,18 +52,24 @@ export default async function Home(
 |__|  |__|__|_____|_____|_____|_____| |_| |_____|`}
     </pre>
 
-    <div className="mt-auto"><ThemeSwitch /></div>
+      <div className=" hidden mt-auto md:block"><ThemeSwitch /></div>
    </div>
     
 
           <div className="mt-2 flex flex-col lg:flex-col w-full border-t-[3px] border-gray dark:border-dark border-double pt-4"></div>
           
-    <div className='mt-4 grid md:grid-cols-2 lg:grid-cols-3 gap-4 items-center'>
+    <div className='grid md:grid-cols-2 lg:grid-cols-3 gap-4 items-center'>
 
-             
+{/*              
             <Suspense key={`page-${searchParams.page}`} fallback={<div>Loading...</div>}>
                {entries.map((project) => <CardComponent key={project._id} project={project} />)}
-            </Suspense>
+            </Suspense> */}
+
+            {entries.map((project) => (
+                  <Suspense key={project._id} fallback={<LoadingProjectCard />}>
+                    <CardComponent project={project} />
+                  </Suspense>
+                ))}
 
      </div>
 

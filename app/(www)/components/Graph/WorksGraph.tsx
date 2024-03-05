@@ -3,7 +3,7 @@
 import React, { useRef, useState, useEffect } from 'react';
 import * as THREE from 'three';
 import ForceGraph3D, {GraphData}from "react-force-graph-3d"
-import d3Data from "../../datasets/miserables.json"
+import d3Data from "../../datasets/data.json"
 import SpriteText from 'three-spritetext';
 
 interface Node {
@@ -52,10 +52,13 @@ function WorksGraph() {
 
       
       <ForceGraph3D 
-        graphData={d3Data as GraphData<Node, Link>}
+        graphData={d3Data as unknown as GraphData<Node, Link>}
         width={dimensions.width}
         height={dimensions.height} 
-        nodeLabel={node => `<span class="graphTooltip text-black">${node.id}</span>`}
+        nodeLabel={node => `  <div>
+        <span class="graphTooltip text-black">${node.id}</span>
+        ${node.cover ? `<img src="${node.cover}" alt="Project Cover" width="150" height="100">` : ''}
+        </div>`}
         backgroundColor="#f2f2f2"
         linkColor={() => "black"}
         onNodeDragEnd={node => {

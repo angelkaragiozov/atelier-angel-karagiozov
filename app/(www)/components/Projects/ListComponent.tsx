@@ -33,14 +33,14 @@ const ListComponent = async ({ project }: { project: Project }) => {
 
    
    <div className="col-span-2 truncate">
-   <p className='text-2xs'>{project?.excerpt}</p>
+   <p className='text-2xs truncate'>{project?.excerpt}</p>
    
-</div>
+   </div>
 
 
  {/* TAGS */}
 
- <div className='row-span-2 col-span-2 '>
+ <div className='row-span-2 col-span-2  '>
    {project?.tags?.map((tag) => (
      <span key={tag?._id} className='mr-2 px-1 border border-gray border-dotted text-2xs text-neutral dark:text-neutral dark:border-dark lowercase'>#{tag?.name}</span>
    ))}

@@ -24,9 +24,84 @@ const LoadingProjectsIndex = () => {
     
     <div className=" mt-2 flex flex-col lg:flex-col w-full border-t-[3px] border-gray dark:border-dark border-double pt-4 ">
 
-          <div className="mt-4 grid md:grid-cols-2 lg:grid-cols-3 gap-4 items-center">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 items-center">
+             <div className='border border-dotted border-gray dark:border-dark w-full p-2'>
+             <div className="text-xl text-gray dark:text-dark lowercase h-8"></div>
+             <div className="w-full aspect-video aspect-ratio-16/9"></div>
+             <div className='h-20 mt-2'></div>
+             </div>
 
-             <div className='border border-dotted border-gray dark:border-dark w-full]'></div>
+             <div className='border border-dotted border-gray dark:border-dark w-full p-2'>
+             <div className="text-xl text-gray dark:text-dark lowercase h-8"></div>
+             <div className="w-full aspect-video aspect-ratio-16/9"></div>
+             <div className='h-20 mt-2'></div>
+             </div>
+
+             <div className='border border-dotted border-gray dark:border-dark w-full p-2'>
+             <div className="text-xl text-gray dark:text-dark lowercase h-8"></div>
+             <div className="w-full aspect-video aspect-ratio-16/9"></div>
+             <div className='h-20 mt-2'></div>
+             </div>
+
+             <div className='border border-dotted border-gray dark:border-dark w-full p-2'>
+             <div className="text-xl text-gray dark:text-dark lowercase h-8"></div>
+             <div className="w-full aspect-video aspect-ratio-16/9"></div>
+             <div className='h-20 mt-2'></div>
+             </div>
+
+             <div className='border border-dotted border-gray dark:border-dark w-full p-2'>
+             <div className="text-xl text-gray dark:text-dark lowercase h-8"></div>
+             <div className="w-full aspect-video aspect-ratio-16/9"></div>
+             <div className='h-20 mt-2'></div>
+             </div>
+
+             <div className='border border-dotted border-gray dark:border-dark w-full p-2'>
+             <div className="text-xl text-gray dark:text-dark lowercase h-8"></div>
+             <div className="w-full aspect-video aspect-ratio-16/9"></div>
+             <div className='h-20 mt-2'></div>
+             </div>
+
+             <div className='border border-dotted border-gray dark:border-dark w-full p-2'>
+             <div className="text-xl text-gray dark:text-dark lowercase h-8"></div>
+             <div className="w-full aspect-video aspect-ratio-16/9"></div>
+             <div className='h-20 mt-2'></div>
+             </div>
+
+             <div className='border border-dotted border-gray dark:border-dark w-full p-2'>
+             <div className="text-xl text-gray dark:text-dark lowercase h-8"></div>
+             <div className="w-full aspect-video aspect-ratio-16/9"></div>
+             <div className='h-20 mt-2'></div>
+             </div>
+
+             <div className='border border-dotted border-gray dark:border-dark w-full p-2'>
+             <div className="text-xl text-gray dark:text-dark lowercase h-8"></div>
+             <div className="w-full aspect-video aspect-ratio-16/9"></div>
+             <div className='h-20 mt-2'></div>
+             </div>
+
+             <div className='border border-dotted border-gray dark:border-dark w-full p-2'>
+             <div className="text-xl text-gray dark:text-dark lowercase h-8"></div>
+             <div className="w-full aspect-video aspect-ratio-16/9"></div>
+             <div className='h-20 mt-2'></div>
+             </div>
+
+             <div className='border border-dotted border-gray dark:border-dark w-full p-2'>
+             <div className="text-xl text-gray dark:text-dark lowercase h-8"></div>
+             <div className="w-full aspect-video aspect-ratio-16/9"></div>
+             <div className='h-20 mt-2'></div>
+             </div>
+
+             <div className='border border-dotted border-gray dark:border-dark w-full p-2'>
+             <div className="text-xl text-gray dark:text-dark lowercase h-8"></div>
+             <div className="w-full aspect-video aspect-ratio-16/9"></div>
+             <div className='h-20 mt-2'></div>
+             </div>
+            
+
+             
+
+             
+             
 
 
 
