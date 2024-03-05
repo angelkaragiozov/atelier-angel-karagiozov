@@ -79,7 +79,7 @@ export default async function Home(
                 <Loader />
               </Suspense> 
 
-              <div className="flex flex-col lg:flex-row w-full mt-4 border mb-2 border-neutral border-dotted  hover:border-solid  dark:border-dark">
+              <div className="flex flex-col lg:flex-row w-full mt-4 border mb-2 border-neutral border-dotted  hover:border-solid">
               <div className="w-44 m-4 align-middle">
           <pre className='text-2xs'>
 {` _____ _____ _____ _____ 

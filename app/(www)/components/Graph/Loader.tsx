@@ -20,7 +20,7 @@ const Loader = () => {
         <>
         <div>
           <div onClick={loadMyComponent} className='cursor-pointer'>
-            <div className='flex flex-col border text-base border-neutral border-dotted hover:border-solid hover:bg-white w-full transition-all ease-in-out duration-1000'>
+            <div className='flex flex-col border text-base border-neutral border-dotted hover:border-solid hover:bg-white dark:hover:bg-blacks w-full transition-all ease-in-out duration-1000'>
             <div className="bg-[url('/visual--graph.svg')] h-52 p-4 bg-no-repeat bg-center flex flex-col lg:flex-row items-center justify-center gap-10 ">
               <div className='leading-tight text-2xs'>
            <pre>{`

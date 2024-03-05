@@ -82,7 +82,7 @@ export default async function Home(
      </div>           
 
 
-     <div className="flex flex-col lg:flex-row w-full mt-4 border mb-2 border-neutral border-dotted  hover:border-solid  dark:border-dark">
+     <div className="flex flex-col lg:flex-row w-full mt-4 mb-2 border border-dotted  hover:border-solid">
               <div className="w-44 m-4 align-middle">
           <pre className='text-2xs text-neutral'>
 {` _____ _____ _____ _____ 

@@ -13,7 +13,7 @@ const Navbar = () => {
     <div
       className={
         nav
-          ? "fixed left-0 bottom-0 backdrop-blur-lg w-full h-screen z-50"
+          ? "fixed left-0 bottom-0 backdrop-blur-lg w-full h-screen"
           : ""
       }
     >
@@ -30,14 +30,8 @@ const Navbar = () => {
 
         <div className="mt-10">
           <Link onClick={handleNav} href="/">
-          <pre className='text-xs text-gray dark:text-dark'>{`                        
-  _ _ _ _____ _____ _____ 
- | | | |     | __  |  |  |
- | | | |  |  |    -|    -|
- |_____|_____|__|__|__|__|
-        `}
-        </pre>
 
+              
           </Link>
         </div>
 
