@@ -33,7 +33,7 @@ export default async function Home(
 
     return (
 
-      <div className="mx-8 md:ml-14 md:mr-8">
+      <div className="mx-4 md:ml-14 md:mr-8">
         <div className="fadein-animation">
         <div className="w-20 h-20 mx-auto mt-6 mb-4 animate-spin-slow transition-all ease-in-out duration-1000">
         <Link href="/">
@@ -41,11 +41,11 @@ export default async function Home(
           </Link>
         </div>
         </div>
-        <div><p className="text-xs text-center text-neutral mb-4">Index</p></div>
+        <div><p className="text-xs text-center mb-4">Index</p></div>
 
         <div className="flex flex-row justify-between w-full mt-0 md:-mt-20">
 
-        <pre className='text-2xs  text-gray dark:text-dark'>
+        <pre className='text-2xs'>
 {` _ _ _ _____ _____ _____ 
 | | | |     | __  |  |  |
 | | | |  |  |    -|    -|
@@ -55,13 +55,9 @@ export default async function Home(
         <div className="mt-auto"><ThemeSwitch /></div>
        </div>
         
-        <div className=" mt-2 flex flex-col lg:flex-col w-full border-t-[3px] border-gray dark:border-dark border-double pt-4 ">
+        <div className=" mt-2 flex flex-col lg:flex-col w-full border-t-[3px] border-neutral border-double pt-4 ">
 
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
-              {/* <Suspense key={`page-${searchParams.page}`} fallback={<LoadingProjectList />}>
-                  {entries.map((project) => <ListComponent key={project._id} project={project} />)}
-                </Suspense> */}
-
               {entries.map((project) => (
                   <Suspense key={project._id} fallback={<LoadingProjectList />}>
                     <ListComponent project={project} />
@@ -78,14 +74,14 @@ export default async function Home(
         />
         </div>
 
-          <div className="w-full mt-4 xl:mt-0">
+          <div className="w-full ">
               <Suspense fallback={<div><Loading/></div>} >
                 <Loader />
               </Suspense> 
 
-              <div className="flex flex-col lg:flex-row w-full mt-4 border mb-2 border-gray border-dotted  hover:border-solid  dark:border-dark">
-              <div className="border border-yellow w-44 pl-1 align-middle">
-          <pre className='text-2xs text-gray dark:text-dark'>
+              <div className="flex flex-col lg:flex-row w-full mt-4 border mb-2 border-neutral border-dotted  hover:border-solid  dark:border-dark">
+              <div className="w-44 m-4 align-middle">
+          <pre className='text-2xs'>
 {` _____ _____ _____ _____ 
 |_   _|  _  |   __|   __|
   | | |     |  |  |__   |
@@ -93,7 +89,7 @@ export default async function Home(
           </pre>
           </div>
 
-          <div className="p-2 pl-4 w-full border-l border-dotted border-gray dark:border-dark hover:dark:bg-blacks  hover:bg-white bg-light dark:bg-black dark:hover:bg-blacks h-30 transition-all ease-in-out duration-1000">
+          <div className="p-2 pl-4 w-full lg:border-l border-dotted border-neutral hover:dark:bg-blacks  hover:bg-white bg-light dark:bg-black dark:hover:bg-blacks h-30 transition-all ease-in-out duration-1000">
             <Tags />
           </div>
           
@@ -102,7 +98,7 @@ export default async function Home(
           </div>    
         </div>
 
-        <div className="border-b-[3px] border-gray dark:border-dark border-double mb-4">
+        <div className="border-b-[3px] border-neutral border-double mt-2 mb-4">
         </div>
       </div>
 

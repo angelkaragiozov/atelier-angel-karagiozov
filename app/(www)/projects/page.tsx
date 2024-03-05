@@ -45,7 +45,7 @@ export default async function Home(
 
     <div className="flex flex-row justify-between w-full mt-0 lg:-mt-20">
 
-    <pre className='text-2xs  text-gray dark:text-dark'>
+    <pre className='text-2xs'>
 {` _____ _____ _____    __ _____ _____ _____ _____ 
 |  _  | __  |     |__|  |   __|     |_   _|   __|
 |   __|    -|  |  |  |  |   __|   --| | | |__   |
@@ -56,7 +56,7 @@ export default async function Home(
    </div>
     
 
-          <div className="mt-2 flex flex-col lg:flex-col w-full border-t-[3px] border-gray dark:border-dark border-double pt-4"></div>
+          <div className="mt-2 flex flex-col lg:flex-col w-full border-t-[3px] border-neutral border-double pt-4"></div>
           
     <div className='grid md:grid-cols-2 lg:grid-cols-3 gap-4 items-center'>
 
@@ -73,7 +73,7 @@ export default async function Home(
 
      </div>
 
-    <div className="mt-8 border border-gray dark:border-dark border-dotted p-4">
+    <div className="mt-8 border border-neutral border-dotted p-4">
             <PaginationCard
                   hasNextPage={end < projects.length}
                   hasPrevPage={start > 0}
@@ -81,21 +81,29 @@ export default async function Home(
                 />
      </div>           
 
-<div className="flex flex-col lg:flex-row w-full mt-4 border mb-2 border-gray border-dotted  hover:border-solid  dark:border-dark">
-         
-        <pre className='text-2xs text-gray dark:text-dark p-4 pt-0 '>{`
- _____ _____ _____ _____ 
+
+     <div className="flex flex-col lg:flex-row w-full mt-4 border mb-2 border-neutral border-dotted  hover:border-solid  dark:border-dark">
+              <div className="w-44 m-4 align-middle">
+          <pre className='text-2xs text-neutral'>
+{` _____ _____ _____ _____ 
 |_   _|  _  |   __|   __|
   | | |     |  |  |__   |
   |_| |__|__|_____|_____|`}
           </pre>
+          </div>
 
-          <div className="p-2 pl-4 w-full border-l border-dotted border-gray dark:border-dark hover:dark:bg-blacks  hover:bg-white bg-light dark:bg-black dark:hover:bg-blacks h-30 transition-all ease-in-out duration-1000">
+          <div className="p-2 pl-4 w-full lg:border-l border-dotted border-neutral hover:dark:bg-blacks  hover:bg-white bg-light dark:bg-black dark:hover:bg-blacks h-30 transition-all ease-in-out duration-1000">
             <Tags />
           </div>
+
+
+
+
+
+          
+          
         </div>
-        <div className="border-b-[3px] border-gray dark:border-dark border-double mb-4">
-        </div>
+        <div className="border-b-[3px] border-neutral border-double  my-4"></div>
 
     </div>
   )

@@ -10,7 +10,7 @@ const ListComponent = async ({ project }: { project: Project }) => {
 
   return (
   
-  <div className='p-2 pt-0.5 border border-dotted border-gray dark:border-dark  hover:text-dark dark:hover:text-gray hover:border-solid hover:bg-white bg-light dark:bg-black dark:hover:bg-blacks h-[88px] transition-all ease-in-out duration-1000'>
+  <div className='p-2 pt-0.5 border border-dotted border-neutral  hover:text-dark dark:hover:text-gray hover:border-solid hover:bg-white bg-light dark:bg-black dark:hover:bg-blacks h-[88px] transition-all ease-in-out duration-1000'>
 
        
 <Link href={`/projects/${project?.slug?.current}`}>
@@ -42,7 +42,7 @@ const ListComponent = async ({ project }: { project: Project }) => {
 
  <div className='row-span-2 col-span-2  '>
    {project?.tags?.map((tag) => (
-     <span key={tag?._id} className='mr-2 px-1 border border-gray border-dotted text-2xs text-neutral dark:text-neutral dark:border-dark lowercase'>#{tag?.name}</span>
+     <span key={tag?._id} className='mr-2 px-1 border border-neutral border-dotted text-2xs text-neutral dark:text-neutral lowercase'>#{tag?.name}</span>
    ))}
  </div>
 

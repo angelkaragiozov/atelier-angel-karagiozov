@@ -11,7 +11,7 @@ const CardComponent = async ({ project }: { project: Project }) => {
  await new Promise((resolve) => setTimeout(resolve, 1000));
   
   return (
-    <div key={project._id} className='max-w-[520px] mx-auto border border-gray border-dotted hover:border-solid hover:bg-white dark:hover:bg-blacks  dark:border-dark p-2 transition-all ease-in-out duration-1000'>
+    <div key={project._id} className='max-w-[520px] mx-auto border border-neutral hover:border-solid hover:bg-white dark:hover:bg-blacks  dark:border-dark p-2 transition-all ease-in-out duration-1000'>
       <Link href={`/projects/${project?.slug?.current}`}>
         <div className="flex justify-between h-8">
           <div className="text-xl text-blue dark:text-yellow lowercase w-20 pl-2">
@@ -36,7 +36,7 @@ const CardComponent = async ({ project }: { project: Project }) => {
           {/* TAGS */}
 
             {project?.tags?.map((tag) => (
-              <span key={tag?._id} className='mr-2 px-1 border text-xs border-gray border-dotted text-2xs text-neutral dark:text-neutral dark:border-dark lowercase'>#{tag?.name}</span>
+              <span key={tag?._id} className='mr-2 px-1 border text-xs border-neutral border-dotted text-2xs text-neutral dark:text-neutral lowercase'>#{tag?.name}</span>
             ))}
           </div>
 

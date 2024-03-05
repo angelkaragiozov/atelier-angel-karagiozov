@@ -3,7 +3,7 @@ import dynamic from 'next/dynamic';
 
 const WorksGraph = dynamic(() => import('./WorksGraph'), { 
   ssr: false,
-  loading: () =><div className='w-full h-screen border border-gray border-dashed dark:border-dark'><p className='animate-bounce text-xs text-gray dark:text-dark ml-4 mt-4'> * Loading Visual Graph ...</p></div> 
+  loading: () =><div className='w-full h-screen border border-neutral border-dashed'><p className='animate-bounce text-xs text-gray dark:text-dark ml-4 mt-4'> * Loading Visual Graph ...</p></div> 
 });
 
 const GraphForce = () => {
