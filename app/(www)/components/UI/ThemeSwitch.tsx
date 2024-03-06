@@ -19,13 +19,20 @@ const ThemeSwitch = () => {
 
   return (
     <div>
- 
-    <button
-      className="w-5 h-5 border border-neutral border-dotted bg-light/50 hover:bg-white dark:bg-black/50 dark:hover:bg-blacks hover:border-solid transition-all ease-in-out duration-1000"
-      onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-    >
-      {theme === "dark" ? <Tooltip text="light"><Theme /></Tooltip>  :<Tooltip text="dark"><Theme /></Tooltip> }
-    </button>
+      <button
+        className="w-5 h-5 border border-neutral border-dotted bg-light/50 hover:bg-white dark:bg-black/50 dark:hover:bg-blacks hover:border-solid transition-all ease-in-out duration-1000"
+        onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
+      >
+        {theme === "dark" ? (
+          <Tooltip text="light">
+            <Theme />
+          </Tooltip>
+        ) : (
+          <Tooltip text="dark">
+            <Theme />
+          </Tooltip>
+        )}
+      </button>
     </div>
   );
 };

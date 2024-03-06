@@ -1,18 +1,47 @@
 {
-    "nodes": [
+  "nodes": [
+    {
+      "id": "Machine Learning",
+      "group": 1,
+      "size": 6,
+      "cover": "",
+      "url": "https://sites.google.com/view/atelierangelkaragiozov"
+    },
+    {
+      "id": "Supervised Learning",
+      "group": 2,
+      "size": 4,
+      "cover": "https://cdn.sanity.io/images/cqs4spoy/production/3889cd075f4bf5d4316d6effd9875ee57b37fe7a-176x108.png",
+      "url": "https://www.google.com"
+    },
+    {
+      "id": "Unsupervised Learning",
+      "group": 2,
+      "size": 4,
+      "cover": "https://cdn.sanity.io/images/cqs4spoy/production/3889cd075f4bf5d4316d6effd9875ee57b37fe7a-176x108.png",
+      "url": "https://www.yahoo.com"
+    },
+    {
+      "id": "Reinforcement Learning",
+      "group": 2,
+      "size": 4,
+      "cover": "https://cdn.sanity.io/images/cqs4spoy/production/3889cd075f4bf5d4316d6effd9875ee57b37fe7a-176x108.png",
+      "url": "https://www.wikipedia.org/wiki/Reinforcement_learning"
+    },
+    {
+      "id": "Dimensionality Reduction",
+      "group": 2,
+      "size": 4,
+      "cover": "https://cdn.sanity.io/images/cqs4spoy/production/3889cd075f4bf5d4316d6effd9875ee57b37fe7a-176x108.png",
+      "url": "https://www.wikipedia.org/wiki/Reinforcement_learning"
+    }
+  ],
 
-    {"id": "Machine Learning", "group": 1, "size": 6, "cover": "", "url": "https://sites.google.com/view/atelierangelkaragiozov" },
-    {"id": "Supervised Learning", "group": 2, "size": 4, "cover": "https://cdn.sanity.io/images/cqs4spoy/production/3889cd075f4bf5d4316d6effd9875ee57b37fe7a-176x108.png", "url": "https://www.google.com"},
-    {"id": "Unsupervised Learning", "group": 2, "size": 4, "cover": "https://cdn.sanity.io/images/cqs4spoy/production/3889cd075f4bf5d4316d6effd9875ee57b37fe7a-176x108.png", "url": "https://www.yahoo.com"},
-    {"id": "Reinforcement Learning", "group": 2, "size": 4, "cover": "https://cdn.sanity.io/images/cqs4spoy/production/3889cd075f4bf5d4316d6effd9875ee57b37fe7a-176x108.png", "url": "https://www.wikipedia.org/wiki/Reinforcement_learning"},
-    {"id": "Dimensionality Reduction", "group": 2, "size": 4, "cover": "https://cdn.sanity.io/images/cqs4spoy/production/3889cd075f4bf5d4316d6effd9875ee57b37fe7a-176x108.png", "url": "https://www.wikipedia.org/wiki/Reinforcement_learning"}
-    ],
-
-    "links": [
-    {"source": "Machine Learning", "target": "Supervised Learning"},
-    {"source": "Machine Learning", "target": "Reinforcement Learning"},
-    {"source": "Machine Learning", "target": "Unsupervised Learning"},
-    {"source": "Machine Learning", "target": "Reinforcement Learning"},
-    {"source": "Machine Learning", "target": "Dimensionality Reduction"}    ]
-  }
-  
+  "links": [
+    { "source": "Machine Learning", "target": "Supervised Learning" },
+    { "source": "Machine Learning", "target": "Reinforcement Learning" },
+    { "source": "Machine Learning", "target": "Unsupervised Learning" },
+    { "source": "Machine Learning", "target": "Reinforcement Learning" },
+    { "source": "Machine Learning", "target": "Dimensionality Reduction" }
+  ]
+}

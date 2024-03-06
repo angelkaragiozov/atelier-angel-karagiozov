@@ -17,8 +17,7 @@ export const project = {
       title: "Subtitle",
       type: "string",
       validation: (Rule: Rule) => Rule.max(40).error("Max 40 characters"),
-    
-    }, 
+    },
 
     {
       name: "slug",
@@ -42,9 +41,9 @@ export const project = {
         {
           name: "alt",
           title: "Alt",
-          type: "string"
-        }
-      ]
+          type: "string",
+        },
+      ],
     },
     {
       name: "excerpt",
@@ -70,8 +69,5 @@ export const project = {
       type: "array",
       of: [{ type: "reference", to: [{ type: "tag" }] }],
     },
-
   ],
-
-  
 };

@@ -1,5 +1,5 @@
 import { groq } from "next-sanity";
-import {client} from "@/sanity/lib/client"
+import { client } from "@/sanity/lib/client";
 import { Image } from "sanity";
 
 export interface Project {
@@ -23,7 +23,7 @@ export interface Tag {
   name: string;
   slug: { current: string };
   _id: string;
-  projectCount?: number
+  projectCount?: number;
 }
 
 export interface Params {
@@ -31,10 +31,8 @@ export interface Params {
     name: string | undefined;
     slug: string;
     title: string;
-
   };
 }
-
 
 export async function getProjects(): Promise<Project[]> {
   return client.fetch(
@@ -54,7 +52,7 @@ export async function getProjects(): Promise<Project[]> {
     }
     
     `
-  )
+  );
 }
 
 export async function getProject(slug: string): Promise<Project> {
@@ -75,10 +73,8 @@ export async function getProject(slug: string): Promise<Project> {
       }
     }`,
     { slug }
-  )
+  );
 }
-
-
 
 export async function getTags(): Promise<Tag[]> {
   return client.fetch(
@@ -93,7 +89,7 @@ export async function getTags(): Promise<Tag[]> {
   );
 }
 
-export async function getProjectsByTag(tag: string): Promise<Project[]>  {
+export async function getProjectsByTag(tag: string): Promise<Project[]> {
   return client.fetch(
     groq`
     *[_type == "project" && references(*[_type == "tag" && slug.current == "${tag}"]._id)]{
@@ -109,9 +105,5 @@ export async function getProjectsByTag(tag: string): Promise<Project[]>  {
       }
     }
     `
-  )
+  );
 }
-
-
-
-

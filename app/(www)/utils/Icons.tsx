@@ -1,6 +1,7 @@
 export const Logo = () => {
   return (
-    <svg className="fill-neutral hover:fill-black  dark:hover:fill-gray  transition-all ease-in-out duration-1000"
+    <svg
+      className="fill-neutral hover:fill-black  dark:hover:fill-gray  transition-all ease-in-out duration-1000"
       width="100%"
       height="100%"
       viewBox="0 0 120 120"
@@ -15,7 +16,8 @@ export const Logo = () => {
       />
 
       <g id="SVGRepo_iconCarrier">
-      <path d="M23.72,30.93l-0.33-0.33l0.33-0.49c0.33-0.49,0.33-0.82,0-1.15c-0.33-0.33-0.98-0.49-2.62-0.98l-2.78,3.44
+        <path
+          d="M23.72,30.93l-0.33-0.33l0.33-0.49c0.33-0.49,0.33-0.82,0-1.15c-0.33-0.33-0.98-0.49-2.62-0.98l-2.78,3.44
 	l0.33,0.66c0.33,0.49,0.66,1.31,1.15,1.64c0.33,0.33,0.82,0.16,1.64-0.66l0.33,0.33l-2.46,2.95L18.97,36
 	c0.49-0.82,0.33-1.31-0.66-2.95l-5.41-9.99l0.33-0.49l10.48,3.11c2.46,0.66,2.95,0.66,3.44,0.16l0.33,0.33L23.72,30.93z
 	 M15.53,26.34l2.46,4.42l2.46-2.95L15.53,26.34z M39.44,4.56c-0.98,0.66-1.15,0.98-0.66,2.13l5.08,10.16L43.38,17l-12.45-5.57
@@ -61,51 +63,45 @@ export const Logo = () => {
 	c-0.33-2.13-2.62-2.95-6.55-2.29C2.92,66.31,0.79,67.94,1.28,70.07 M4.06,39.28c-0.16,0.98,0,1.31,1.15,2.13l9.83,7.04l-0.16,0.49
 	L2.43,50.91c-1.15,0.16-1.31,0.33-1.8,1.31l-0.49-0.16l1.64-6.22l0.49,0.16L2.1,46.65c-0.16,0.66,0,0.98,0.49,1.15
 	c0.33,0,0.49,0,1.47-0.16l6.88-0.98l-5.57-3.93c-0.82-0.49-0.98-0.66-1.31-0.66c-0.66-0.16-0.82,0.16-1.31,1.47l-0.16-0.49
-	l0.98-3.93L4.06,39.28z"/>
-{" "}
+	l0.98-3.93L4.06,39.28z"
+        />{" "}
       </g>
     </svg>
   );
 };
- 
+
 export const Theme = () => {
-	return (
-	  <svg className="p-[3px] fill-neutral hover:fill-dark dark:hover:fill-gray hover:rotate-0 rotate-180 dark:rotate-0 dark:hover:rotate-180 transition-all ease-in-out duration-1000"
-		width="100%"
-		height="100%"
-		viewBox="0 0 36 36"
-		xmlns="http://www.w3.org/2000/svg"
-	  >
-		<g id="SVGRepo_bgCarrier" strokeWidth="0" />
-  
-  
-		<g id="SVGRepo_iconCarrier">
-		<path d="M20.5.4v5h5v-5h5v35.3H5.4V.4h15.1zm-10.1 10h5v-5h-5v5zm0 20.2h15.1V15.5H10.4v15.1z"/>
-  		{" "}
-		</g>
-	  </svg>
-	);
-  };
+  return (
+    <svg
+      className="p-[3px] fill-neutral hover:fill-dark dark:hover:fill-gray hover:rotate-0 rotate-180 dark:rotate-0 dark:hover:rotate-180 transition-all ease-in-out duration-1000"
+      width="100%"
+      height="100%"
+      viewBox="0 0 36 36"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <g id="SVGRepo_bgCarrier" strokeWidth="0" />
 
+      <g id="SVGRepo_iconCarrier">
+        <path d="M20.5.4v5h5v-5h5v35.3H5.4V.4h15.1zm-10.1 10h5v-5h-5v5zm0 20.2h15.1V15.5H10.4v15.1z" />{" "}
+      </g>
+    </svg>
+  );
+};
 
-  export const Nav = () => {
-	return (
-	  <svg className="fill-blue dark:fill-yellow rotate-90 hover:-rotate-90"
-		width="100%"
-		height="100%"
-		viewBox="0 0 30 30"
-		xmlns="http://www.w3.org/2000/svg"
-	  >
-		<g id="SVGRepo_bgCarrier" strokeWidth="0" />
+export const Nav = () => {
+  return (
+    <svg
+      className="fill-blue dark:fill-yellow rotate-90 hover:-rotate-90"
+      width="100%"
+      height="100%"
+      viewBox="0 0 30 30"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <g id="SVGRepo_bgCarrier" strokeWidth="0" />
 
-  
-		<g id="SVGRepo_iconCarrier">
-		<path d="M27.34 3.2v24.6h-4.92v-9.84H17.5v9.84h-4.92v-9.84H7.66v9.84H2.74V3.2h24.6zM7.66 8.12v4.92h14.76V8.12H7.66z"/>
-  		{" "}
-		</g>
-	  </svg>
-	);
-  };
-  
-  
-
+      <g id="SVGRepo_iconCarrier">
+        <path d="M27.34 3.2v24.6h-4.92v-9.84H17.5v9.84h-4.92v-9.84H7.66v9.84H2.74V3.2h24.6zM7.66 8.12v4.92h14.76V8.12H7.66z" />{" "}
+      </g>
+    </svg>
+  );
+};

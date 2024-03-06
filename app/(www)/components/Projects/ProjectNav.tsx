@@ -22,7 +22,7 @@ interface ProjectNavProps {
     const router = useRouter()
   
     return (
-      <div className='flex gap-2 float-end'>
+      <div className='flex flex-row justify-between'>
         <Tooltip text="Previous Project" disabled={!hasPrevProject}>
         <button
            className={`border text-center border-dotted border-gray text-2xl dark:border-dark hover:border-solid bg-light dark:bg-black text-blue dark:text-yellow hover:bg-white dark:hover:bg-blacks py-1.5 px-4 transition-all ease-in-out duration-1000 ${!hasPrevProject ? 'opacity-30 cursor-not-allowed' : ''}`}

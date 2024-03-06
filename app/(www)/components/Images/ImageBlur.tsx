@@ -1,15 +1,13 @@
-import React from'react';
-import { getPlaiceholder } from 'plaiceholder';
-import Image from 'next/image';
-
+import React from "react";
+import { getPlaiceholder } from "plaiceholder";
+import Image from "next/image";
 
 export default async function blur({ src }: { src: string }) {
- 
-    const buffer = await fetch(src).then( async (res) => {
-        return Buffer.from(await res.arrayBuffer())
-    }) 
+  const buffer = await fetch(src).then(async (res) => {
+    return Buffer.from(await res.arrayBuffer());
+  });
 
-    const { base64 } = await getPlaiceholder(buffer);
+  const { base64 } = await getPlaiceholder(buffer);
 
   return (
     <div>
@@ -24,4 +22,3 @@ export default async function blur({ src }: { src: string }) {
     </div>
   );
 }
-

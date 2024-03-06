@@ -1,6 +1,6 @@
-import React from 'react'
-import Link from 'next/link'
-import { Logo } from '../../utils/Icons'
+import React from "react";
+import Link from "next/link";
+import { Logo } from "../../utils/Icons";
 
 const Footer = () => {
   return (
@@ -10,17 +10,14 @@ const Footer = () => {
           <Logo />
         </Link>
       </div>
-      
-        <div className="flex items-center justify-center mb-12 md:mb-0">
-              <p className="text-center text-3xs text-neutral my-4">
-                &copy; {new Date().getFullYear()} Atelier Angel Karagiozov
-              </p>
-            </div>
 
-
-
+      <div className="flex items-center justify-center mb-12 md:mb-0">
+        <p className="text-center text-3xs text-neutral my-4">
+          &copy; {new Date().getFullYear()} Atelier Angel Karagiozov
+        </p>
+      </div>
     </div>
-  )
-}
+  );
+};
 
-export default Footer
+export default Footer;
