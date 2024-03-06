@@ -24,6 +24,7 @@ const Navbar = () => {
             : "fixed left-0 bottom-[-100%] w-[100%] h-dvh bg-light/50 dark:bg-black/50"
         }
       >
+        
         <div onClick={handleNav}>
           <h1 className="text-dark dark:text-gray">CLOSE</h1>
         </div>
