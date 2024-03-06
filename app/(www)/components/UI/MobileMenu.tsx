@@ -21,7 +21,7 @@ const Navbar = () => {
         className={
           nav
             ? "fixed left-0 bottom-0 w-[100%] h-lvh bg-light dark:bg-black p-10 ease-in-out duration-500"
-            : "fixed left-0 bottom-[-100%] w-[100%] h-screen bg-light/50 dark:bg-black/50 ease-out duration-500"
+            : "fixed left-0 bottom-[-100%] w-[100%]  h-lvh bg-light/50 dark:bg-black/50 ease-out duration-500"
         }
       >
         <div onClick={handleNav}>
@@ -37,7 +37,7 @@ const Navbar = () => {
 
         <div
           onClick={handleNav}
-          className="absolute left-0 bottom-full w-full h-14 border-t border-gray border-dashed dark:border-dark bg-light dark:bg-black"
+          className="absolute left-0 bottom-full mt-auto w-full h-14 border-t border-gray border-dashed dark:border-dark bg-light dark:bg-black"
         >
           <div className={nav ? "ease-in duration-500" : ""}>
             <div className="text-base mt-3 text-blue dark:text-yellow">
