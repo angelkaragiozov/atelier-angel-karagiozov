@@ -29,15 +29,14 @@ export default async function Home(
   await new Promise((resolve) => setTimeout(resolve, 2000));
 
   return (
-    <div className="mx-8 md:ml-14 md:mr-8">
-    <div className="fadein-animation">
+    <div className="mx-4 md:ml-14 md:mr-8">
+  
     <div className="w-20 h-20 mx-auto mt-6 mb-4 animate-spin-slow transition-all ease-in-out duration-1000">
     <Link href="/">
         <Logo />
       </Link>
     </div>
-    </div>
-    <div className="flex flex-row w-full justify-center"><Link href="/" className="hover:underline underline-offset-2 decoration-dotted"><p className="text-xs text-neutral mb-4">Index</p></Link>
+    <div className="flex flex-row w-full justify-center"><Link href="/" className="hover:underline underline-offset-2 decoration-dotted"><p className="text-xs text-neutral mb-1 lg:mb-4 ">Index</p></Link>
     <span className="text-gray dark:text-dark">&nbsp;|&nbsp;</span>
          <p className="text-gray dark:text-dark">
            Projects
@@ -59,11 +58,6 @@ export default async function Home(
           <div className="mt-2 flex flex-col lg:flex-col w-full border-t-[3px] border-neutral border-double pt-4"></div>
           
     <div className='grid md:grid-cols-2 lg:grid-cols-3 gap-4 items-center'>
-
-{/*              
-            <Suspense key={`page-${searchParams.page}`} fallback={<div>Loading...</div>}>
-               {entries.map((project) => <CardComponent key={project._id} project={project} />)}
-            </Suspense> */}
 
             {entries.map((project) => (
                   <Suspense key={project._id} fallback={<LoadingProjectCard />}>

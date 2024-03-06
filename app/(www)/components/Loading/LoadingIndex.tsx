@@ -2,13 +2,12 @@ import { Logo } from '../../utils/Icons'
 
 const LoadingIndex = () => {
   return (
-    <div>
     <div className="fadein-animation">
-    <div className="w-20 h-20 mx-auto mt-6 mb-4 animate-spin-slow transition-all ease-in-out duration-1000">
+   
+    <div className="w-20 h-20 mx-auto mt-6 mb-4 opacity-50">
         <Logo />
       </div>
-      </div>
-      <p className='animate-bounce text-xs text-center mb-4  text-gray dark:text-dark'>Loading...</p>
+      <p className='animate-bounce text-xs text-center mb-4'>Loading...</p>
 
     <div className="flex flex-row justify-between w-full mt-0 md:-mt-20">
 

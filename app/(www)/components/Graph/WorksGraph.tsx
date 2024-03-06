@@ -46,9 +46,9 @@ function WorksGraph() {
       return () => window.removeEventListener('resize', updateSize);
     }, []);
   return (
-    <div className="h-screen border border-gray border-dashed hover:border-solid dark:border-dark">
+    <div className="h-screen border border-neutral border-dotted hover:border-solid">
         
-    <div ref={containerRef} className='h-full overflow-hidden hover:brightness-105 dark:invert transition-all ease-in-out duration-1000' >
+    <div ref={containerRef} className='h-full overflow-hidden hover:brightness-110 dark:invert transition ease-in-out duration-1000' >
 
       
       <ForceGraph3D 
@@ -59,8 +59,8 @@ function WorksGraph() {
         <span class="graphTooltip text-black">${node.id}</span>
         ${node.cover ? `<img src="${node.cover}" alt="Project Cover" width="150" height="100">` : ''}
         </div>`}
-        backgroundColor="#f2f2f2"
-        linkColor={() => "black"}
+        backgroundColor="#dddddd"
+        linkColor={() => "#000000"}
         onNodeDragEnd={node => {
           node.fx = node.x;
           node.fy = node.y;
@@ -72,7 +72,7 @@ function WorksGraph() {
         const geometry = new THREE.BoxGeometry(3, 3, 3);
         
         // Create material
-        const material = new THREE.MeshBasicMaterial({ color: '#cccccc', wireframe:true});
+        const material = new THREE.MeshBasicMaterial({ color: '#888888', wireframe:true});
        
         
         // Create mesh

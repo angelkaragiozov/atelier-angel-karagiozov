@@ -34,12 +34,11 @@ export default async function Home(
     return (
 
       <div className="mx-4 md:ml-14 md:mr-8">
-        <div className="fadein-animation">
+
         <div className="w-20 h-20 mx-auto mt-6 mb-4 animate-spin-slow transition-all ease-in-out duration-1000">
         <Link href="/">
             <Logo />
           </Link>
-        </div>
         </div>
         <div><p className="text-xs text-center mb-4">Index</p></div>
 
