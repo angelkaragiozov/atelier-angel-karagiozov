@@ -28,7 +28,7 @@ export interface Tag {
 
 export interface Params {
   params: {
-    name: string | undefined;
+    name: string;
     slug: string;
     title: string;
   };

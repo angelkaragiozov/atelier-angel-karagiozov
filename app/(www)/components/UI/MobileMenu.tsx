@@ -29,7 +29,7 @@ const Navbar = () => {
 
       <div
         onClick={handleNav}
-        className="fixed z-50 left-0 bottom-0 w-full h-14 border-t border-gray border-dashed dark:border-dark bg-light dark:bg-black"
+        className="fixed z-50 left-0 bottom-0 w-full h-14 border-t border-gray border-dashed dark:border-dark bg-light dark:bg-black cursor-pointer"
       >
         <div className={nav ? "ease-in duration-500" : ""}>
           <div className="text-base mt-3 text-blue dark:text-yellow">
