@@ -91,16 +91,16 @@ export const Theme = () => {
 export const Nav = () => {
   return (
     <svg
-      className="fill-blue dark:fill-yellow rotate-90 hover:-rotate-90"
+      className="fill-blue dark:fill-yellow"
       width="100%"
       height="100%"
-      viewBox="0 0 30 30"
+      viewBox="0 0 12 12"
       xmlns="http://www.w3.org/2000/svg"
     >
       <g id="SVGRepo_bgCarrier" strokeWidth="0" />
 
       <g id="SVGRepo_iconCarrier">
-        <path d="M27.34 3.2v24.6h-4.92v-9.84H17.5v9.84h-4.92v-9.84H7.66v9.84H2.74V3.2h24.6zM7.66 8.12v4.92h14.76V8.12H7.66z" />{" "}
+        <path d="M6.1 3.1h-2V1.2H6l.1 1.9H8V5h1.9v2H8V5H6.1V3.1zm-2 5.8H6v1.9H4.1V8.9zm2-1.9H8v1.9H6.1V7z" />{" "}
       </g>
     </svg>
   );

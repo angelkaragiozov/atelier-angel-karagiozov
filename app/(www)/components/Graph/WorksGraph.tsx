@@ -51,8 +51,8 @@ function WorksGraph() {
           width={dimensions.width}
           height={dimensions.height}
           nodeLabel={(node) => `  <div>
-        <span class="graphTooltip text-black">${node.id}</span>
-        ${node.cover ? `<img src="${node.cover}" alt="Project Cover" width="150" height="100">` : ""}
+        <span class="graphTooltip">${node.id}</span>
+        ${node.cover ? `<img src="${node.cover}" alt="Project Cover" width="150" height="100" class="imgTooltip" >` : ""}
         </div>`}
           backgroundColor="#dddddd"
           linkColor={() => "#000000"}

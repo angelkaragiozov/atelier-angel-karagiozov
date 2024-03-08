@@ -54,7 +54,7 @@ const page = async ({ params }: Params) => {
       </div>
       <div className="mt-2 flex flex-col lg:flex-col w-full border-t-[3px] border-neutral border-double pt-4"></div>
 
-      <h2 className="text-center text-xl">
+      <h2 className="text-center text-2xl my-4">
         <div> #{params?.slug}</div>
       </h2>
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 items-center">

@@ -10,7 +10,7 @@ export default async function blur({ src }: { src: string }) {
   const { base64 } = await getPlaiceholder(buffer);
 
   return (
-    <div className="relative w-full h-screen">
+    <div className="relative w-full h-dvh">
       <Image
         src={src}
         alt=""

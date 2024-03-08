@@ -3,6 +3,7 @@
 import { FC } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
 import Tooltip from "../UI/Tooltip";
+import { Nav } from "../../utils/Icons";
 
 interface PaginationControlsProps {
   hasNextPage: boolean;
@@ -25,7 +26,7 @@ const PaginationControls: FC<PaginationControlsProps> = ({
     <div className="flex items-center justify-between">
       <Tooltip text="Previous Page" disabled={!hasPrevPage}>
         <button
-          className={`border text-center border-dotted border-neutral text-2xl hover:border-solid bg-light dark:bg-black text-blue dark:text-yellow hover:bg-white dark:hover:bg-blacks py-1.5 px-5 transition-all ease-in-out duration-1000 ${!hasPrevPage ? "opacity-30 cursor-not-allowed" : ""}`}
+          className={`rotate-180 border text-center border-dotted border-neutral text-2xl hover:border-solid bg-light dark:bg-black text-blue dark:text-yellow hover:bg-white dark:hover:bg-blacks px-4 py-4 transition-all ease-in-out duration-1000 ${!hasPrevPage ? "opacity-30 cursor-not-allowed" : ""}`}
           disabled={!hasPrevPage}
           onClick={() => {
             router.push(
@@ -33,7 +34,9 @@ const PaginationControls: FC<PaginationControlsProps> = ({
             );
           }}
         >
-          &lt;
+          <div className="w-3 h-3">
+            <Nav />
+          </div>
         </button>
       </Tooltip>
 
@@ -43,7 +46,7 @@ const PaginationControls: FC<PaginationControlsProps> = ({
 
       <Tooltip text="Next Page" disabled={!hasNextPage}>
         <button
-          className={`border text-center border-dotted border-neutral text-2xl hover:border-solid bg-light dark:bg-black text-blue dark:text-yellow hover:bg-white dark:hover:bg-blacks py-1.5 px-5 transition-all ease-in-out duration-1000 ${!hasNextPage ? "opacity-30 cursor-not-allowed" : ""}`}
+          className={`border text-center border-dotted border-neutral text-2xl hover:border-solid bg-light dark:bg-black text-blue dark:text-yellow hover:bg-white dark:hover:bg-blacks py-4 px-4 transition-all ease-in-out duration-1000 ${!hasNextPage ? "opacity-30 cursor-not-allowed" : ""}`}
           disabled={!hasNextPage}
           onClick={() => {
             router.push(
@@ -51,7 +54,9 @@ const PaginationControls: FC<PaginationControlsProps> = ({
             );
           }}
         >
-          <p>&gt;</p>
+          <div className="w-3 h-3">
+            <Nav />
+          </div>
         </button>
       </Tooltip>
     </div>

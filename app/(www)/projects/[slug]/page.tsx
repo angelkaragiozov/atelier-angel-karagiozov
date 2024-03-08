@@ -8,7 +8,7 @@ import { PortableText } from "@portabletext/react";
 import Link from "next/link";
 import DynamicPlaiceholderBlur from "../../components/Images/ImageBlur";
 import { Logo } from "../../utils/Icons";
-import LoadingProject from "../../components/Loading/LoadingProjects";
+import LoadingProject from "../../components/Loading/LoadingProject";
 import ThemeSwitch from "../../components/UI/ThemeSwitch";
 
 export const revalidate = 60;
@@ -28,6 +28,8 @@ const page = async ({ params }: Params) => {
   const hasPrevProject = projectIndex > 0;
   const hasNextProject = projectIndex < projects.length - 1;
 
+  await new Promise((resolve) => setTimeout(resolve, 2000));
+
   return (
     <div>
       <Suspense
@@ -38,11 +40,11 @@ const page = async ({ params }: Params) => {
         }
       >
         <Cover project={project} />
-
-        <div className=" hidden md:block float-right mt-10 mr-6">
-          <ThemeSwitch />
-        </div>
       </Suspense>
+
+      <div className="float-right mt-10 mr-6">
+        <ThemeSwitch />
+      </div>
 
       <div className=" w-20 h-20 mx-auto mt-8 mb-4 animate-spin-slow transition-all ease-in-out duration-1000">
         <Link href="/">
@@ -67,13 +69,14 @@ const page = async ({ params }: Params) => {
         <span>&nbsp;|&nbsp;</span>
         <p className="text-gray dark:text-dark">{project?.title}</p>
       </div>
-      <h1 className="text-2xl lg:text-4xl text-neutral text-center">
-        {project?.title}
-      </h1>
 
       <div className="mx-4 md:ml-14 md:mr-8">
         <div className="mx-auto 2xl:max-w-screen-xl">
-          <div className=" border-b-[3px] border-double border-neutral"></div>
+          <div className=" border-b-[3px] border-double border-neutral mt-2"></div>
+
+          <h1 className="text-4xl lg:text-6xl text-neutral text-center mt-4">
+            {project?.title}
+          </h1>
 
           <h1 className="text-base text-center my-8 text-neutral">
             {project?.subtitle}
@@ -88,16 +91,21 @@ const page = async ({ params }: Params) => {
             </div>
           </div>
           <div className="flex flex-col lg:flex-row w-full mt-4 border mb-2 border-neutral border-dotted  hover:border-solid ">
-            <pre className="text-2xs mx-3">
-              {`                                          
+            <div className="px-4 border-b border-dotted border-neutral lg:border-0 hover:bg-white dark:hover:bg-blacks transition-all ease-in-out duration-1000">
+              <Link href="/projects">
+                <pre className="text-2xs mx-3">
+                  {`                                          
  _____ _____ _____    __ _____ _____ _____ 
 |  _  | __  |     |__|  |   __|     |_   _|
 |   __|    -|  |  |  |  |   __|   --| | |  
 |__|  |__|__|_____|_____|_____|_____| |_|  
                    `}
-            </pre>
+                </pre>
+                <p className="text-center">Back to all Projects</p>
+              </Link>
+            </div>
 
-            <div className="p-2 pl-4 w-full border-l border-dotted border-neutral hover:dark:bg-blacks  hover:bg-white bg-light dark:bg-black dark:hover:bg-blacks h-30 transition-all ease-in-out duration-1000">
+            <div className="p-2 pl-4 w-full border-0 lg:border-l border-dotted border-neutral hover:dark:bg-blacks  hover:bg-white bg-light dark:bg-black dark:hover:bg-blacks h-30 transition-all ease-in-out duration-1000">
               <div className="flex flex-row">
                 <div className="w-30 text-2xs text-right leading-7 align-middle">
                   <div>_id:</div>
@@ -112,12 +120,14 @@ const page = async ({ params }: Params) => {
                   <div>{new Date(project?.publishedAt).toDateString()}</div>
                   <div>Right Column 4</div>
                   <div>
-                    <p className="text-neutral text-2xs">{project?.excerpt}</p>{" "}
+                    <p className="text-neutral text-2xs truncate">
+                      {project?.excerpt}
+                    </p>{" "}
                   </div>
                   <div>
                     {project?.tags?.map((tag) => (
                       <Link key={tag?._id} href={`/tag/${tag.slug.current}`}>
-                        <span className=" px-1 text-2xs lowercase border border-dotted dark:border-dark">
+                        <span className=" p-1 text-2xs lowercase border border-dotted dark:border-dark">
                           #{tag.name}
                         </span>
                       </Link>
