@@ -37,18 +37,18 @@ const page = async () => {
 `}
         </pre>
 
-        <div className=" hidden mt-auto md:block">
+        <div className="mt-auto -mb-2 -mr-1">
           <ThemeSwitch />
         </div>
       </div>
 
-      <div className="mt-2 flex flex-col lg:flex-col w-full border-t-[3px] border-neutral border-double pt-4"></div>
+      <div className="mt-2 w-full border-t-[3px] border-neutral border-double pt-4"></div>
 
-      <div className="grid grid-cols-4 gap-4">
+      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
         {tags?.length > 0 &&
           tags?.map((tag) => (
             <Link key={tag?._id} href={`/tags/${tag.slug.current}`}>
-              <div className="h-10 text-dark dark:text-gray text-center text-base p-2 border border-dotted border-neutral hover:dark:bg-blacks  hover:bg-white bg-light dark:bg-black dark:hover:bg-blacks h-30 transition-all ease-in-out duration-1000">
+              <div className="h-10 hover:text-dark dark:text-gray text-center text-base p-2 border border-dotted border-neutral hover:dark:bg-blacks  hover:bg-white bg-light dark:bg-black dark:hover:bg-blacks h-30 transition-all ease-in-out duration-1000">
                 #{tag.name} ({tag?.projectCount})
               </div>
             </Link>

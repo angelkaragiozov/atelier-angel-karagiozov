@@ -53,7 +53,7 @@ export default async function Home({
 |__|  |__|__|_____|_____|_____|_____| |_| |_____|`}
         </pre>
 
-        <div className=" hidden mt-auto md:block">
+        <div className=" hidden mt-auto md:block -mb-2 -mr-1">
           <ThemeSwitch />
         </div>
       </div>

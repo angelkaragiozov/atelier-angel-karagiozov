@@ -38,6 +38,11 @@
     background: #555;
   }
 
+  .localfont {
+    font-family: "Pixel";
+    font-size: 11px;
+  }
+
   .graphTooltip {
     font-family: "Pixel";
     font-size: 11px;

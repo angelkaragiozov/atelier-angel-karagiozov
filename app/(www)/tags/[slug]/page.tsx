@@ -48,7 +48,7 @@ const page = async ({ params }: Params) => {
 `}
         </pre>
 
-        <div className=" hidden mt-auto md:block">
+        <div className="mt-auto -mb-2 -mr-1">
           <ThemeSwitch />
         </div>
       </div>

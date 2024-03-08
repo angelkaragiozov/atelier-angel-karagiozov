@@ -28,32 +28,27 @@ const Loader = () => {
           <div>
             <div onClick={loadMyComponent} className="cursor-pointer">
               <div className="flex flex-col border text-base border-neutral border-dotted hover:border-solid hover:bg-white dark:hover:bg-blacks w-full transition-all ease-in-out duration-1000">
-                <div className="bg-[url('/visual--graph.svg')] h-52 p-4 bg-no-repeat bg-center flex flex-col lg:flex-row items-center justify-center gap-10 ">
-                  <div className="leading-tight text-2xs">
+                <div className="p-4 flex flex-col lg:flex-row items-center justify-center gap-4 ">
+                  <div className="leading-tight text-2xs py-2">
                     <pre>
-                      {`
- _____ _ _____ _____ _____ __    
-|  |  |_|   __|  |  |  _  |  |   
-|  |  | |__   |  |  |     |  |__ 
- \\___/|_|_____|_____|__|__|_____|
-`}
+                      {`_    _ _____ _______ _     _ _______ _     
+ \\  /    |   |______ |     | |_____| |     
+  \\/   __|__ ______| |_____| |     | |_____`}
                     </pre>
                   </div>
 
                   <div className="leading-tight text-2xs">
                     <pre>
-                      {`
- _____ _____ _____ _____ _____ 
-|   __| __  |  _  |  _  |  |  |
-|  |  |    -|     |   __|     |
-|_____|__|__|__|__|__|  |__|__|
-`}
+                      {` ______  ______ _______  _____  _     _
+|  ____ |_____/ |_____| |_____] |_____|
+|_____| |    \\_ |     | |       |     |`}
                     </pre>
                   </div>
                 </div>
-                <p className="text-xs h-10 pt-3 text-center border-t border-dotted border-gray dark:border-dark">
+                <span className="text-xs text-center mb-4 ">
+                  <p className="localfont text-base">*</p>
                   Enter a graph visualization of all projects
-                </p>
+                </span>
               </div>
             </div>
           </div>

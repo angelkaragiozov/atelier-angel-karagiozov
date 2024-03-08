@@ -9,6 +9,7 @@ import Link from "next/link";
 import DynamicPlaiceholderBlur from "../../components/Images/ImageBlur";
 import { Logo } from "../../utils/Icons";
 import LoadingProject from "../../components/Loading/LoadingProjects";
+import ThemeSwitch from "../../components/UI/ThemeSwitch";
 
 export const revalidate = 60;
 
@@ -37,6 +38,10 @@ const page = async ({ params }: Params) => {
         }
       >
         <Cover project={project} />
+
+        <div className=" hidden md:block float-right mt-10 mr-6">
+          <ThemeSwitch />
+        </div>
       </Suspense>
 
       <div className=" w-20 h-20 mx-auto mt-8 mb-4 animate-spin-slow transition-all ease-in-out duration-1000">

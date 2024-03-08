@@ -48,7 +48,7 @@ export default async function Home({
 |_____|_____|__|__|__|__|`}
         </pre>
 
-        <div className="mt-auto">
+        <div className="mt-auto -mb-2 -mr-1">
           <ThemeSwitch />
         </div>
       </div>
@@ -82,14 +82,17 @@ export default async function Home({
           </Suspense>
 
           <div className="flex flex-col lg:flex-row w-full mt-4 border mb-2 border-neutral border-dotted  hover:border-solid">
-            <div className="w-44 m-4 align-middle">
-              <pre className="text-2xs">
-                {` _____ _____ _____ _____ 
+            <Link href="/tags">
+              <div className=" flex flex-col w-full border-b border-neutral border-dotted lg:border-none lg:w-52 p-5 hover:dark:bg-blacks hover:bg-white transition-all ease-in-out duration-1000">
+                <pre className="text-2xs">
+                  {` _____ _____ _____ _____ 
 |_   _|  _  |   __|   __|
   | | |     |  |  |__   |
   |_| |__|__|_____|_____|`}
-              </pre>
-            </div>
+                </pre>
+                <p className="text-center">all tags page</p>
+              </div>
+            </Link>
 
             <div className="p-2 pl-4 w-full lg:border-l border-dotted border-neutral hover:dark:bg-blacks  hover:bg-white bg-light dark:bg-black dark:hover:bg-blacks h-30 transition-all ease-in-out duration-1000">
               <Tags />
