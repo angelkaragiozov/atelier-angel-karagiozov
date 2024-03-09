@@ -62,6 +62,7 @@ export async function getProject(slug: string): Promise<Project> {
       slug,
       publishedAt,
       title,
+      subtitle,
       cover,
       body,
       excerpt,

@@ -40,6 +40,7 @@ function WorksGraph() {
     updateSize();
     return () => window.removeEventListener("resize", updateSize);
   }, []);
+
   return (
     <div className="h-screen border border-neutral border-dotted hover:border-solid">
       <div
@@ -92,15 +93,6 @@ function WorksGraph() {
             window.location.href = node.url;
           }}
         />
-      </div>
-
-      <div className="text-2xs text-center text-neutral -mt-[7px] p-2 border-gray border-dashed dark:text-dark ">
-        <p>
-          {" "}
-          Nodes-&gt; click:visit project, click+hold:positioning |
-          Navigation-&gt; click:rotate, mouse-wheel/middle-click:zoom,
-          right-click:pan
-        </p>
       </div>
     </div>
   );

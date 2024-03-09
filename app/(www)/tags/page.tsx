@@ -9,6 +9,8 @@ export const revalidate = 60;
 const page = async () => {
   const tags: Tag[] = await getTags();
   console.log(tags, "tags");
+
+  await new Promise((resolve) => setTimeout(resolve, 2000));
   return (
     <div className="mx-4 md:ml-14 md:mr-8">
       <div className="w-20 h-20 mx-auto mt-6 mb-4 animate-spin-slow transition-all ease-in-out duration-1000">
@@ -16,7 +18,7 @@ const page = async () => {
           <Logo />
         </Link>
       </div>
-      <div className="flex flex-row w-full justify-center">
+      <div className="flex flex-row w-full justify-center mb-1">
         <Link
           href="/"
           className="hover:underline underline-offset-2 decoration-dotted"
@@ -27,7 +29,7 @@ const page = async () => {
         <p className="text-gray dark:text-dark">Tags</p>
       </div>
 
-      <div className="flex flex-row justify-between w-full mt-0 lg:-mt-20">
+      <div className="flex flex-row justify-between w-full mt-0 lg:-mt-24">
         <pre className="text-2xs">
           {`
  _____ _____ _____ _____ 
@@ -48,7 +50,7 @@ const page = async () => {
         {tags?.length > 0 &&
           tags?.map((tag) => (
             <Link key={tag?._id} href={`/tags/${tag.slug.current}`}>
-              <div className="h-10 hover:text-dark dark:text-gray text-center text-base p-2 border border-dotted border-neutral hover:dark:bg-blacks  hover:bg-white bg-light dark:bg-black dark:hover:bg-blacks h-30 transition-all ease-in-out duration-1000">
+              <div className="h-10 hover:text-dark dark:text-gray text-center text-base p-2 border border-dotted border-neutral hover:dark:bg-blacks  hover:bg-white bg-light dark:bg-black dark:hover:bg-blacks transition-all ease-in-out duration-1000">
                 #{tag.name} ({tag?.projectCount})
               </div>
             </Link>

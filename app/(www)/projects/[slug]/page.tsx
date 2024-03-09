@@ -72,15 +72,14 @@ const page = async ({ params }: Params) => {
 
       <div className="mx-4 md:ml-14 md:mr-8">
         <div className="mx-auto 2xl:max-w-screen-xl">
-          <div className=" border-b-[3px] border-double border-neutral mt-2"></div>
-
-          <h1 className="text-4xl lg:text-6xl text-neutral text-center mt-4">
+          <h1 className="md:-ml-6 text-4xl lg:text-6xl text-neutral text-center">
             {project?.title}
           </h1>
+          <div className=" border-b-[3px] border-double border-neutral mt-1"></div>
 
-          <h1 className="text-base text-center my-8 text-neutral">
+          <h2 className=" md:-ml-6 text-base text-center my-4">
             {project?.subtitle}
-          </h1>
+          </h2>
 
           <div className="border border-dotted border-neutral">
             <div className={richTextStyles}>
@@ -90,8 +89,8 @@ const page = async ({ params }: Params) => {
               />
             </div>
           </div>
-          <div className="flex flex-col lg:flex-row w-full mt-4 border mb-2 border-neutral border-dotted  hover:border-solid ">
-            <div className="px-4 border-b border-dotted border-neutral lg:border-0 hover:bg-white dark:hover:bg-blacks transition-all ease-in-out duration-1000">
+          <div className="flex flex-col lg:flex-row w-full mt-4 border mb-2 border-neutral border-dotted  hover:border-solid">
+            <div className="px-4 pb-4 border-b border-dotted border-neutral lg:border-0 hover:bg-white dark:hover:bg-blacks transition-all ease-in-out duration-1000">
               <Link href="/projects">
                 <pre className="text-2xs mx-3">
                   {`                                          
@@ -101,51 +100,68 @@ const page = async ({ params }: Params) => {
 |__|  |__|__|_____|_____|_____|_____| |_|  
                    `}
                 </pre>
-                <p className="text-center">Back to all Projects</p>
+                <p className="text-center md:text-right md:mr-4 lg:text-center">
+                  Back to all Projects
+                </p>
               </Link>
             </div>
 
-            <div className="p-2 pl-4 w-full border-0 lg:border-l border-dotted border-neutral hover:dark:bg-blacks  hover:bg-white bg-light dark:bg-black dark:hover:bg-blacks h-30 transition-all ease-in-out duration-1000">
-              <div className="flex flex-row">
-                <div className="w-30 text-2xs text-right leading-7 align-middle">
-                  <div>_id:</div>
-                  <div>date:</div>
-                  <div>title:</div>
-                  <div>media:</div>
-                  <div>tags:</div>
+            <div className="p-2 pt-4 w-full border-0 lg:border-l text-sm text-dark dark:text-gray border-dotted border-neutral hover:dark:bg-blacks  hover:bg-white bg-light dark:bg-black dark:hover:bg-blacks h-30 transition-all ease-in-out duration-1000">
+              <div className="flex flex-row w-full">
+                <div className="w-12 mr-4 text-xs text-right text-gray dark:text-dark">
+                  _id:
                 </div>
+                <div>{project?.title}</div>{" "}
+              </div>
 
-                <div className="flex flex-col flex-grow pl-4 leading-7 text-dark  dark:text-gray text-xs">
-                  <div>{project?.title}</div>
-                  <div>{new Date(project?.publishedAt).toDateString()}</div>
-                  <div>Right Column 4</div>
-                  <div>
-                    <p className="text-neutral text-2xs truncate">
-                      {project?.excerpt}
-                    </p>{" "}
-                  </div>
-                  <div>
-                    {project?.tags?.map((tag) => (
-                      <Link key={tag?._id} href={`/tag/${tag.slug.current}`}>
-                        <span className=" p-1 text-2xs lowercase border border-dotted dark:border-dark">
-                          #{tag.name}
-                        </span>
-                      </Link>
-                    ))}
-                  </div>
+              <div className="flex flex-row w-full">
+                <div className="w-12 mr-4 text-xs text-right text-gray dark:text-dark">
+                  date:
+                </div>
+                <div>{new Date(project?.publishedAt).toDateString()}</div>
+              </div>
+
+              <div className="flex flex-row w-full">
+                <div className="w-12 mr-4 text-xs text-right text-gray dark:text-dark">
+                  title:
+                </div>
+                <div>{project?.subtitle}</div>
+              </div>
+
+              <div className="flex flex-row w-full">
+                <div className="w-12 mr-4 text-xs text-right text-gray dark:text-dark">
+                  info:
+                </div>
+                <div>
+                  <p>{project?.excerpt}</p>
+                </div>
+              </div>
+
+              <div className="flex flex-row w-full">
+                <div className="w-12 mr-4 text-xs text-right text-gray dark:text-dark">
+                  tags:
+                </div>
+                <div className="text-dark dark:text-gray">
+                  {project?.tags?.map((tag) => (
+                    <Link key={tag?._id} href={`/tags/${tag.slug.current}`}>
+                      <span className=" p-1 mr-2 text-2xs lowercase border border-dotted dark:border-dark hover:border-solid">
+                        #{tag.name}
+                      </span>
+                    </Link>
+                  ))}
                 </div>
               </div>
             </div>
           </div>
-        </div>
 
-        <div className="mt-4 border border-neutral border-dotted p-4">
-          <ProjectNav
-            hasPrevProject={hasPrevProject}
-            hasNextProject={hasNextProject}
-            nextProjectSlug={projects[projectIndex + 1]?.slug.current}
-            prevProjectSlug={projects[projectIndex - 1]?.slug.current}
-          />
+          <div className="mt-4 border border-neutral border-dotted p-4">
+            <ProjectNav
+              hasPrevProject={hasPrevProject}
+              hasNextProject={hasNextProject}
+              nextProjectSlug={projects[projectIndex + 1]?.slug.current}
+              prevProjectSlug={projects[projectIndex - 1]?.slug.current}
+            />
+          </div>
         </div>
       </div>
     </div>

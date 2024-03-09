@@ -30,14 +30,16 @@ const CardComponent = async ({ project }: { project: Project }) => {
           />
         </div>
         <div className="h-20 mt-2 truncate">
-          <p className="text-neutral text-sm truncate">{project?.excerpt}</p>
+          <p className=" mb-2 text-neutral text-sm truncate">
+            {project?.excerpt}
+          </p>
 
           {/* TAGS */}
 
           {project?.tags?.map((tag) => (
             <span
               key={tag?._id}
-              className="mr-2 px-1 border text-xs border-neutral border-dotted text-2xs text-neutral dark:text-neutral lowercase"
+              className=" mr-2 p-1 border text-xs border-neutral border-dotted text-2xs text-neutral dark:text-neutral lowercase"
             >
               #{tag?.name}
             </span>

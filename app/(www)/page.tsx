@@ -1,6 +1,6 @@
 import React, { Suspense } from "react";
 import { Logo } from "./utils/Icons";
-import Loading from "./components/Loading/Loading";
+import Loading from "./components/Loading/LoadingSimple";
 import Tags from "./components/UI/Tags";
 import { getProjects } from "@/sanity/lib/utils";
 import ListComponent from "./components/Projects/ListComponent";
@@ -90,7 +90,9 @@ export default async function Home({
   | | |     |  |  |__   |
   |_| |__|__|_____|_____|`}
                 </pre>
-                <p className="text-center">all tags page</p>
+                <p className="text-center md:text-right lg:text-center mt-2">
+                  all tags page
+                </p>
               </div>
             </Link>
 

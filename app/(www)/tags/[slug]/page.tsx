@@ -12,6 +12,8 @@ export const revalidate = 60;
 const page = async ({ params }: Params) => {
   const project: Array<Project> = await getProjectsByTag(params.slug);
   console.log(project, "projects by tag");
+
+  await new Promise((resolve) => setTimeout(resolve, 2000));
   return (
     <div className="mx-4 md:ml-14 md:mr-8">
       <div className="w-20 h-20 mx-auto mt-6 mb-4 animate-spin-slow transition-all ease-in-out duration-1000">
@@ -37,7 +39,7 @@ const page = async ({ params }: Params) => {
         <p className="text-gray dark:text-dark"> #{params?.slug}</p>
       </div>
 
-      <div className="flex flex-row justify-between w-full mt-0 lg:-mt-20">
+      <div className="flex flex-row justify-between w-full mt-0 lg:-mt-28">
         <pre className="text-2xs">
           {`
    _ _                        
@@ -53,9 +55,8 @@ const page = async ({ params }: Params) => {
         </div>
       </div>
       <div className="mt-2 flex flex-col lg:flex-col w-full border-t-[3px] border-neutral border-double pt-4"></div>
-
-      <h2 className="text-center text-2xl my-4">
-        <div> #{params?.slug}</div>
+      <h2 className="text-center text-2xl mb-4">
+        <div> # {params?.slug}</div>
       </h2>
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 items-center">
         {project?.length > 0 &&
