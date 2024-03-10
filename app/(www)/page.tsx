@@ -70,7 +70,7 @@ export default async function Home({
           />
         </div>
 
-        <div className="w-full ">
+        <div className="hidden sm:block w-full">
           <Suspense
             fallback={
               <div>

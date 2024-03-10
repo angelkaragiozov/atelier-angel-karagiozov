@@ -25,14 +25,14 @@ const page = async ({ params }: Params) => {
       <div className="flex flex-row w-full justify-center">
         <Link
           href="/"
-          className="hover:underline underline-offset-2 decoration-dotted"
+          className="hover:underline underline-offset-2 decoration-dotted z-10"
         >
           <p className="text-xs text-neutral mb-1 lg:mb-4 ">Index</p>
         </Link>
         <span className="text-gray dark:text-dark">&nbsp;|&nbsp;</span>
         <Link
           href="/tags"
-          className="hover:underline underline-offset-2 decoration-dotted"
+          className="hover:underline underline-offset-2 decoration-dotted z-10"
         >
           <p className="text-xs text-neutral mb-1 lg:mb-4 ">Tags</p>
         </Link>

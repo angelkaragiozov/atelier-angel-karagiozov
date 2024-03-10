@@ -44,6 +44,23 @@ const LoadingTag = () => {
           <div className="w-full aspect-video aspect-ratio-16/9"></div>
           <div className="h-20 mt-2"></div>
         </div>
+        <div className="mx-auto md:mx-0 border border-dotted border-gray dark:border-dark w-full p-2 max-w-[520px]">
+          <div className="text-xl text-gray dark:text-dark lowercase h-8"></div>
+          <div className="w-full aspect-video aspect-ratio-16/9"></div>
+          <div className="h-20 mt-2"></div>
+        </div>
+
+        <div className="mx-auto md:mx-0 border border-dotted border-gray dark:border-dark w-full p-2 max-w-[520px]">
+          <div className="text-xl text-gray dark:text-dark lowercase h-8"></div>
+          <div className="w-full aspect-video aspect-ratio-16/9"></div>
+          <div className="h-20 mt-2"></div>
+        </div>
+
+        <div className="mx-auto md:mx-0 border border-dotted border-gray dark:border-dark w-full p-2 max-w-[520px]">
+          <div className="text-xl text-gray dark:text-dark lowercase h-8"></div>
+          <div className="w-full aspect-video aspect-ratio-16/9"></div>
+          <div className="h-20 mt-2"></div>
+        </div>
       </div>
     </div>
   );
