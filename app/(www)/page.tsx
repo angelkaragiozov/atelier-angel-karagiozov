@@ -30,7 +30,7 @@ export default async function Home({
   await new Promise((resolve) => setTimeout(resolve, 2000));
 
   return (
-    <div className="mx-4 md:ml-14 md:mr-8">
+    <div className="fadein-animation mx-4 md:ml-14 md:mr-8 3xl:mx-auto 3xl:max-w-screen-2xl">
       <div className="w-20 h-20 mx-auto mt-6 mb-4 animate-spin-slow transition-all ease-in-out duration-1000">
         <Link href="/">
           <Logo />

@@ -2,7 +2,7 @@ import { Logo } from "../../utils/Icons";
 
 const LoadingIndex = () => {
   return (
-    <div className="fadein-animation">
+    <div className="fadein-animation mx-4 md:ml-14 md:mr-8 3xl:mx-auto 3xl:max-w-screen-2xl">
       <div className="w-20 h-20 mx-auto mt-6 mb-4 opacity-50">
         <Logo />
       </div>

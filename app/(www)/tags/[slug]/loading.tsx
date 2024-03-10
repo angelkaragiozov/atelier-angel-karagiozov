@@ -1,9 +1,9 @@
-import LoadingSimple from "../../components/Loading/LoadingSimple";
+import LoadingTag from "../../components/Loading/LoadingTag";
 
 export default function Loading() {
   return (
-    <div className="mx-4 md:ml-14 md:mr-8">
-      <LoadingSimple />
+    <div>
+      <LoadingTag />
     </div>
   );
 }

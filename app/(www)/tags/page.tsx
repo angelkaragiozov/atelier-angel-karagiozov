@@ -12,13 +12,13 @@ const page = async () => {
 
   await new Promise((resolve) => setTimeout(resolve, 2000));
   return (
-    <div className="mx-4 md:ml-14 md:mr-8">
+    <div className="fadein-animation mx-4 md:ml-14 md:mr-8 3xl:mx-auto 3xl:max-w-screen-2xl">
       <div className="w-20 h-20 mx-auto mt-6 mb-4 animate-spin-slow transition-all ease-in-out duration-1000">
         <Link href="/">
           <Logo />
         </Link>
       </div>
-      <div className="flex flex-row w-full justify-center mb-1">
+      <div className="flex flex-row w-full justify-center">
         <Link
           href="/"
           className="hover:underline underline-offset-2 decoration-dotted"
@@ -29,7 +29,7 @@ const page = async () => {
         <p className="text-gray dark:text-dark">Tags</p>
       </div>
 
-      <div className="flex flex-row justify-between w-full mt-0 lg:-mt-24">
+      <div className="flex flex-row justify-between w-full -mt-6 lg:-mt-24">
         <pre className="text-2xs">
           {`
  _____ _____ _____ _____ 

@@ -70,7 +70,7 @@ const page = async ({ params }: Params) => {
         <p className="text-gray dark:text-dark">{project?.title}</p>
       </div>
 
-      <div className="mx-4 md:ml-14 md:mr-8">
+      <div className="fadein-animation mx-4 md:ml-14 md:mr-8 3xl:mx-auto 3xl:max-w-screen-2xl">
         <div className="mx-auto 2xl:max-w-screen-xl">
           <h1 className="md:-ml-6 text-4xl lg:text-6xl text-neutral text-center">
             {project?.title}
@@ -106,7 +106,7 @@ const page = async ({ params }: Params) => {
               </Link>
             </div>
 
-            <div className="p-2 pt-4 w-full border-0 lg:border-l text-sm text-dark dark:text-gray border-dotted border-neutral hover:dark:bg-blacks  hover:bg-white bg-light dark:bg-black dark:hover:bg-blacks h-30 transition-all ease-in-out duration-1000">
+            <div className="p-2 pt-4 w-full border-0 lg:border-l text-sm hover:text-dark dark:text-gray border-dotted border-neutral hover:dark:bg-blacks  hover:bg-white bg-light dark:bg-black dark:hover:bg-blacks h-30 transition-all ease-in-out duration-1000">
               <div className="flex flex-row w-full">
                 <div className="w-12 mr-4 text-xs text-right text-gray dark:text-dark">
                   _id:
@@ -162,6 +162,7 @@ const page = async ({ params }: Params) => {
               prevProjectSlug={projects[projectIndex - 1]?.slug.current}
             />
           </div>
+          <div className="mt-4 w-full border-t-[3px] border-neutral border-double pt-4"></div>
         </div>
       </div>
     </div>

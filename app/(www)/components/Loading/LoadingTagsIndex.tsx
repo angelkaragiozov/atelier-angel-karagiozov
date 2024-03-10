@@ -3,15 +3,16 @@ import { Logo } from "../../utils/Icons";
 
 const LoadingTagsIndex = () => {
   return (
-    <div>
-      <div className="w-20 h-20 mx-auto mt-6 mb-4">
+    <div className="fadein-animation mx-4 md:ml-14 md:mr-8 3xl:mx-auto 3xl:max-w-screen-2xl">
+      <div className="w-20 h-20 mx-auto mt-6 mb-4 opacity-50">
         <Logo />
       </div>
-      <div className="animate-bounce text-xs text-gray dark:text-dark ml-4 mt-4 text-center">
+
+      <div className="animate-bounce text-xs text-gray dark:text-dark mt-4 text-center">
         Loading ...
       </div>
 
-      <div className="flex flex-row justify-between w-full mt-0 lg:-mt-20">
+      <div className="flex flex-row justify-between w-full -mt-5 lg:-mt-20">
         <pre className="text-2xs">
           {`
  _____ _____ _____ _____ 

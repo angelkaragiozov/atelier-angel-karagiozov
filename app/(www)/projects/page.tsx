@@ -28,7 +28,7 @@ export default async function Home({
   await new Promise((resolve) => setTimeout(resolve, 2000));
 
   return (
-    <div className="mx-4 md:ml-14 md:mr-8">
+    <div className="fadein-animation mx-4 md:ml-14 md:mr-8 3xl:mx-auto 3xl:max-w-screen-2xl">
       <div className="w-20 h-20 mx-auto mt-6 mb-4 animate-spin-slow transition-all ease-in-out duration-1000">
         <Link href="/">
           <Logo />
@@ -76,15 +76,20 @@ export default async function Home({
         />
       </div>
 
-      <div className="flex flex-col lg:flex-row w-full mt-4 mb-2 border border-dotted  hover:border-solid">
-        <div className="w-44 m-4 align-middle">
-          <pre className="text-2xs text-neutral">
-            {` _____ _____ _____ _____ 
+      <div className="flex flex-col lg:flex-row w-full mt-4 border mb-2 border-neutral border-dotted  hover:border-solid">
+        <Link href="/tags">
+          <div className=" flex flex-col w-full border-b border-neutral border-dotted lg:border-none lg:w-52 p-5 hover:dark:bg-blacks hover:bg-white transition-all ease-in-out duration-1000">
+            <pre className="text-2xs">
+              {` _____ _____ _____ _____ 
 |_   _|  _  |   __|   __|
   | | |     |  |  |__   |
   |_| |__|__|_____|_____|`}
-          </pre>
-        </div>
+            </pre>
+            <p className="text-center md:text-right lg:text-center mt-2">
+              all tags page
+            </p>
+          </div>
+        </Link>
 
         <div className="p-2 pl-4 w-full lg:border-l border-dotted border-neutral hover:dark:bg-blacks  hover:bg-white bg-light dark:bg-black dark:hover:bg-blacks h-30 transition-all ease-in-out duration-1000">
           <Tags />

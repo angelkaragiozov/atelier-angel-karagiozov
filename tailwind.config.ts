@@ -20,6 +20,10 @@ const config: Config = {
       yellow: "#ffff0a",
     },
     extend: {
+      screens: {
+        "3xl": "1650px",
+      },
+
       fontFamily: {
         pixel: "Pixel, sans-serif",
       },

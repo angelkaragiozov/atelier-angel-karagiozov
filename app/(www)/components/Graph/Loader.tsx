@@ -5,8 +5,8 @@ import dynamic from "next/dynamic";
 const WorksGraph = dynamic(() => import("./WorksGraph"), {
   ssr: false,
   loading: () => (
-    <div className="w-full  border border-gray border-dashed dark:border-dark">
-      <p className="animate-bounce text-xs text-neutral ml-4 mt-4">
+    <div className="w-full h-16 border border-gray border-dotted dark:border-dark">
+      <p className="animate-bounce text-xs text-center text-neutral mt-7">
         Loading Visual Graph ...
       </p>
     </div>

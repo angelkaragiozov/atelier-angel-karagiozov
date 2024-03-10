@@ -10,7 +10,7 @@ const CardComponent = async ({ project }: { project: Project }) => {
   return (
     <div
       key={project._id}
-      className="max-w-[520px] mx-auto border border-dotted border-neutral hover:border-solid hover:bg-white dark:hover:bg-blacks p-2 transition-all ease-in-out duration-1000"
+      className="max-w-[520px] mx-auto border border-dotted border-neutral hover:border-solid hover:bg-white dark:hover:bg-blacks hover:text-dark dark:hover:text-gray p-3 transition-all ease-in-out duration-1000"
     >
       <Link href={`/projects/${project?.slug?.current}`}>
         <div className="flex justify-between h-8">
@@ -30,16 +30,14 @@ const CardComponent = async ({ project }: { project: Project }) => {
           />
         </div>
         <div className="h-20 mt-2 truncate">
-          <p className=" mb-2 text-neutral text-sm truncate">
-            {project?.excerpt}
-          </p>
+          <p className=" mb-2 text-sm truncate">{project?.excerpt}</p>
 
           {/* TAGS */}
 
           {project?.tags?.map((tag) => (
             <span
               key={tag?._id}
-              className=" mr-2 p-1 border text-xs border-neutral border-dotted text-2xs text-neutral dark:text-neutral lowercase"
+              className=" mr-2 p-1 border text-xs border-neutral border-dotted text-2xs text-neutral opacity-60 dark:text-neutral lowercase"
             >
               #{tag?.name}
             </span>
