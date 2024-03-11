@@ -1,6 +1,5 @@
 import React, { Suspense } from "react";
 import { Logo } from "./utils/Icons";
-import Loading from "./components/Loading/LoadingSimple";
 import Tags from "./components/UI/Tags";
 import { getProjects } from "@/sanity/lib/utils";
 import ListComponent from "./components/Projects/ListComponent";
@@ -9,6 +8,8 @@ import Loader from "./components/Graph/Loader";
 import ThemeSwitch from "./components/UI/ThemeSwitch";
 import PaginationList from "./components/Projects/PaginationList";
 import LoadingProjectList from "./components/Loading/LoadingProjectList";
+import LoaderWeather from "./components/Weather/LoaderWeather";
+import LoadingSimple from "./components/Loading/LoadingSimple";
 
 export default async function Home({
   searchParams,
@@ -69,36 +70,42 @@ export default async function Home({
             totalProjects={projects.length}
           />
         </div>
-
-        <div className="hidden sm:block w-full">
-          <Suspense
-            fallback={
-              <div>
-                <Loading />
-              </div>
-            }
-          >
-            <Loader />
-          </Suspense>
-
-          <div className="flex flex-col lg:flex-row w-full mt-4 border mb-2 border-neutral border-dotted  hover:border-solid">
-            <Link href="/tags">
-              <div className=" flex flex-col w-full border-b border-neutral border-dotted lg:border-none lg:w-52 p-5 hover:dark:bg-blacks hover:bg-white transition-all ease-in-out duration-1000">
-                <pre className="text-2xs">
-                  {` _____ _____ _____ _____ 
+        <div className="flex flex-col lg:flex-row w-full mb-4 border border-neutral border-dotted  hover:border-solid">
+          <Link href="/tags">
+            <div className=" flex flex-col w-full border-b border-neutral border-dotted lg:border-none lg:w-52 p-5 hover:dark:bg-blacks hover:bg-white transition-all ease-in-out duration-1000">
+              <pre className="text-2xs">
+                {` _____ _____ _____ _____ 
 |_   _|  _  |   __|   __|
   | | |     |  |  |__   |
   |_| |__|__|_____|_____|`}
-                </pre>
-                <p className="text-center md:text-right lg:text-center mt-2">
-                  all tags page
-                </p>
-              </div>
-            </Link>
-
-            <div className="p-2 pl-4 w-full lg:border-l border-dotted border-neutral hover:dark:bg-blacks  hover:bg-white bg-light dark:bg-black dark:hover:bg-blacks h-30 transition-all ease-in-out duration-1000">
-              <Tags />
+              </pre>
+              <p className="text-center md:text-right lg:text-center mt-2">
+                all tags page
+              </p>
             </div>
+          </Link>
+
+          <div className="p-2 pl-4 w-full lg:border-l border-dotted border-neutral hover:dark:bg-blacks  hover:bg-white bg-light dark:bg-black dark:hover:bg-blacks h-30 transition-all ease-in-out duration-1000">
+            <Tags />
+          </div>
+        </div>
+
+        <div>
+          <div className="hidden sm:block w-full">
+            <Suspense
+              fallback={
+                <div>
+                  <LoadingSimple />
+                </div>
+              }
+            >
+              <Loader />
+            </Suspense>
+          </div>
+
+          {/* Weather */}
+          <div className="mt-24">
+            <LoaderWeather />
           </div>
         </div>
       </div>
