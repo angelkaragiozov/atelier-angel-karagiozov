@@ -105,3 +105,21 @@ export const Nav = () => {
     </svg>
   );
 };
+
+export const Find = () => {
+  return (
+    <svg
+      className="fill-neutral hover:fill-dark dark:hover:fill-grey"
+      width="100%"
+      height="100%"
+      viewBox="0 0 20 20"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <g id="SVGRepo_bgCarrier" strokeWidth="0" />
+
+      <g id="SVGRepo_iconCarrier">
+        <path d="M14.872 3.98v4.191h-.844v5.452H6.468V8.394H3.66v1.662h.676v1.08h1.036v2.515H1.031v-2.516h1.025v1.558h2.29v-1.681H2.048v-.957h.679V8.394H1.015v-.94H0V3.941h1.022v3.494h4.377V3.941h1.943V1.22H12.958v2.76h1.914zM2.057 3.915H1.015v-.958h1.042v.958zm2.279-.892H2.048v-.957h2.288v.957zm.011.892v-.958h1.042v.959H4.347zm6.404 8.778h2.252V7.455h.846V4.901h-.891v1.67H7.343v-1.67h-.921v2.535h1.071v5.258h2.355v-2.639h.902v2.638h.001zm1.184-10.515h-3.57v3.437h3.569V2.178h.001z" />{" "}
+      </g>
+    </svg>
+  );
+};
