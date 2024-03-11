@@ -121,3 +121,7 @@
 .myOverlayComponent {
   z-index: 100;
 }
+
+.pixelated {
+  image-rendering: pixelated;
+}
