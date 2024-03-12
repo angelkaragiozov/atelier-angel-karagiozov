@@ -76,14 +76,6 @@ const Weather = () => {
           </div>
         </form>
 
-        {/* <button
-          className="border p-4"
-          onClick={fetchWeather}
-          disabled={isButtonDisabled}
-        >
-          Fetch Data
-        </button> */}
-
         {/* Display error message */}
         {error && <div className="error text-sm text-center">{error}</div>}
 

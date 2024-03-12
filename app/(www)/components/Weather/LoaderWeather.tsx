@@ -6,29 +6,40 @@ const Loader = () => {
   const initialShowComponent = false;
   const [showComponent, setShowComponent] = useState(initialShowComponent);
 
-  const resetState = () => {
-    setShowComponent(initialShowComponent);
-  };
-
-  const loadMyComponent = () => {
-    setShowComponent(true);
+  const toggleState = () => {
+    setShowComponent(!showComponent);
   };
 
   return (
     <div>
-      <div className="flex justify-between items-center">
+      <div
+        className="flex flex-col md:flex-row cursor-pointer gap-4"
+        onClick={toggleState}
+      >
         <div>
-          <button onClick={loadMyComponent}>Load Component</button>
+          <pre>
+            {`| _ _|_' _  _|_ _ ||   
+|(/_ |  _\\   | (_|||<  `}
+          </pre>
         </div>
         <div>
-          <button
-            className="hover:underline underline-offset-2 decoration-dotted decoration-1 hover:text-dark dark:hover:text-grey"
-            onClick={resetState}
-          >
-            Close
-          </button>
+          <pre>
+            {` _ |_  _   _|_  _|_|_  _ 
+(_||_)(_)|_||    | | |(/_`}
+          </pre>
+        </div>
+        <div>
+          <pre>
+            {`\\    / _  _ _|_|_  _  _
+ \\/\\/ (/_(_| | | |(/_|`}
+          </pre>
         </div>
       </div>
+
+      <div className="cursor-pointer float-right" onClick={toggleState}>
+        {showComponent ? "Close" : "check the weather somewhere"}
+      </div>
+
       <div id="dynamic-component-container">{showComponent && <Weather />}</div>
     </div>
   );

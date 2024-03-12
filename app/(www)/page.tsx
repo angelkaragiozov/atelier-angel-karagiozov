@@ -104,7 +104,7 @@ export default async function Home({
           </div>
 
           {/* Weather */}
-          <div className="mt-24">
+          <div className="mt-6">
             <LoaderWeather />
           </div>
         </div>
