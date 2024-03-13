@@ -36,7 +36,7 @@ const Loader = () => {
         </div>
       </div>
 
-      <div className="cursor-pointer float-right" onClick={toggleState}>
+      <div className="cursor-pointer float-right mt-4" onClick={toggleState}>
         {showComponent ? "Close" : "check the weather somewhere"}
       </div>
 
