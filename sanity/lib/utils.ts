@@ -18,6 +18,7 @@ export interface Project {
   source: string;
   target: string;
   value: number;
+  index: number;
 }
 export interface Tag {
   name: string;

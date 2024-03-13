@@ -12,15 +12,15 @@ const ListComponent = async ({ project }: { project: Project }) => {
     <div>
       <MotionDiv
         initial={{
-          opacity: "0.3",
+          rotate: "0deg",
         }}
         animate={{
-          opacity: "1",
+          rotate: "180deg",
         }}
         transition={{
-          delay: project.index * 0.1,
+          delay: project * 1,
           ease: "easeInOut",
-          duration: 0.2,
+          duration: 0.5,
         }}
         viewport={{ amount: 0 }}
       >
@@ -43,6 +43,23 @@ const ListComponent = async ({ project }: { project: Project }) => {
                   height={70}
                   alt="projects"
                 />
+              </div>
+
+              <div className="col-span-2 truncate">
+                <p className="text-2xs truncate">{project?.excerpt}</p>
+              </div>
+
+              {/* TAGS */}
+
+              <div className="row-span-2 col-span-2 opacity-60 ">
+                {project?.tags?.map((tag) => (
+                  <span
+                    key={tag?._id}
+                    className="mr-2 p-1 border border-neutral border-dotted text-2xs text-neutral dark:text-neutral lowercase"
+                  >
+                    #{tag?.name}
+                  </span>
+                ))}
               </div>
             </div>
           </Link>

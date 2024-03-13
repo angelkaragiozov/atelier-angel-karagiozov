@@ -2,7 +2,6 @@ import React, { Suspense } from "react";
 import { Logo } from "./utils/Icons";
 import Tags from "./components/UI/Tags";
 import { getProjects } from "@/sanity/lib/utils";
-import ListComponent from "./components/Projects/ListComponent";
 import Link from "next/link";
 import Loader from "./components/Graph/Loader";
 import ThemeSwitch from "./components/UI/ThemeSwitch";
@@ -10,6 +9,7 @@ import PaginationList from "./components/Projects/PaginationList";
 import LoadingProjectList from "./components/Loading/LoadingProjectList";
 import LoaderWeather from "./components/Weather/LoaderWeather";
 import LoadingSimple from "./components/Loading/LoadingSimple";
+import ListComponent from "./components/Projects/ListComponent";
 
 export default async function Home({
   searchParams,
@@ -28,7 +28,7 @@ export default async function Home({
   // slice the projects array to get the entries for the current page
   const entries = projects.slice(start, end);
 
-  await new Promise((resolve) => setTimeout(resolve, 2000));
+  // await new Promise((resolve) => setTimeout(resolve, 2000));
 
   return (
     <div className="fadein-animation mx-4 md:ml-14 md:mr-8 3xl:mx-auto 3xl:max-w-screen-2xl">
@@ -56,9 +56,9 @@ export default async function Home({
 
       <div className=" mt-2 flex flex-col lg:flex-col w-full border-t-[3px] border-neutral border-double pt-4 ">
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
-          {entries.map((project) => (
+          {entries.map((project, index) => (
             <Suspense key={project._id} fallback={<LoadingProjectList />}>
-              <ListComponent project={project} />
+              <ListComponent project={{ ...project, index }} />
             </Suspense>
           ))}
         </div>
