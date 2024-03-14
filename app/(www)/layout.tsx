@@ -25,7 +25,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body
-        className={`${pixel.className} h-full tracking-wider bg-light dark:bg-black text-neutral text-xs selection:bg-yellow selection:text-dark`}
+        className={`${pixel.className} tracking-wider bg-light dark:bg-black text-neutral text-xs selection:bg-yellow selection:text-dark`}
       >
         <Provider>
           <header>
