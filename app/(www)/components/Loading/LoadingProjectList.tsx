@@ -7,6 +7,7 @@ const LoadingProjectList = () => {
       <MotionDiv
         initial={{
           scale: 0.9,
+          opacity: 0.5,
         }}
       >
         <div className="flex flex-col p-2 pt-0 border border-dotted border-gray dark:border-dark w-full h-[88px]">

@@ -7,7 +7,7 @@ import { MotionDiv } from "../Motion/MotionDiv";
 import PlayInView from "../Motion/PlayInView";
 
 const ListComponent = async ({ project }: { project: Project }) => {
-  await new Promise((resolve) => setTimeout(resolve, 2000));
+  // await new Promise((resolve) => setTimeout(resolve, 2000));
 
   return (
     <div>

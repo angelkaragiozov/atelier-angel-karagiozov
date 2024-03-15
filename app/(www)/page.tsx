@@ -10,6 +10,9 @@ import LoadingProjectList from "./components/Loading/LoadingProjectList";
 import LoaderWeather from "./components/Weather/LoaderWeather";
 import LoadingSimple from "./components/Loading/LoadingSimple";
 import ListComponent from "./components/Projects/ListComponent";
+import PlayInViewSpring from "./components/Motion/PlayInViewSpring";
+import PlayInViewLeft from "./components/Motion/PlayInViewLeft";
+import Line from "./components/Motion/Line";
 
 export default async function Home({
   searchParams,
@@ -31,30 +34,31 @@ export default async function Home({
   // await new Promise((resolve) => setTimeout(resolve, 2000));
 
   return (
-    <div className="fadein-animation mx-4 md:ml-14 md:mr-8 3xl:mx-auto 3xl:max-w-screen-2xl">
-      <div className="w-20 h-20 mx-auto mt-6 mb-4 animate-spin-slow transition-all ease-in-out duration-1000">
-        <Link href="/">
-          <Logo />
-        </Link>
-      </div>
-      <div>
-        <p className="text-xs text-center mb-4">Index</p>
-      </div>
+    <>
+      <div className="fadein-animation mx-4 md:ml-14 md:mr-8 3xl:mx-auto 3xl:max-w-screen-2xl">
+        <div className="w-20 h-20 mx-auto mt-6 mb-4 animate-spin-slow transition-all ease-in-out duration-1000">
+          <Link href="/">
+            <Logo />
+          </Link>
+        </div>
+        <div>
+          <p className="text-xs text-center mb-4">Index</p>
+        </div>
 
-      <div className="flex flex-row justify-between w-full mt-0 md:-mt-20">
-        <pre className="text-2xs">
-          {` _ _ _ _____ _____ _____ 
-| | | |     | __  |  |  |
+        <div className="flex flex-row justify-between w-full mt-0 md:-mt-20">
+          <pre className="text-2xs">
+            {` _ _ _ _____ _____ _____
+| | | |     | __  |  |  |  
 | | | |  |  |    -|    -|
 |_____|_____|__|__|__|__|`}
-        </pre>
+          </pre>
 
-        <div className="mt-auto -mb-2 -mr-1">
-          <ThemeSwitch />
+          <div className="mt-auto -mb-2 -mr-1">
+            <ThemeSwitch />
+          </div>
         </div>
-      </div>
 
-      <div className=" mt-2 flex flex-col lg:flex-col w-full border-t-[3px] border-neutral border-double pt-4 ">
+        <Line />
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
           {entries.map((project, index) => (
             <Suspense key={project._id} fallback={<LoadingProjectList />}>
@@ -70,11 +74,12 @@ export default async function Home({
             totalProjects={projects.length}
           />
         </div>
-        <div className="flex flex-col lg:flex-row w-full mb-4 border border-neutral border-dotted  hover:border-solid">
+
+        <div className="flex flex-col lg:flex-row w-full mb-4 border border-neutral border-dotted hover:border-solid">
           <Link href="/tags">
-            <div className=" flex flex-col w-full border-b border-neutral border-dotted lg:border-none lg:w-52 p-5 hover:dark:bg-blacks hover:bg-white transition-all ease-in-out duration-1000">
+            <div className="flex flex-col w-full border-b border-neutral border-dotted lg:border-none lg:w-52 p-5 hover:dark:bg-blacks hover:bg-white transition-all ease-in-out duration-1000">
               <pre className="text-2xs">
-                {` _____ _____ _____ _____ 
+                {` _____ _____ _____ _____
 |_   _|  _  |   __|   __|
   | | |     |  |  |__   |
   |_| |__|__|_____|_____|`}
@@ -85,7 +90,7 @@ export default async function Home({
             </div>
           </Link>
 
-          <div className="p-2 pl-4 w-full lg:border-l border-dotted border-neutral hover:dark:bg-blacks  hover:bg-white bg-light dark:bg-black dark:hover:bg-blacks h-30 transition-all ease-in-out duration-1000">
+          <div className="p-2 pl-4 w-full lg:border-l border-dotted border-neutral hover:dark:bg-blacks hover:bg-white bg-light dark:bg-black dark:hover:bg-blacks h-30 transition-all ease-in-out duration-1000">
             <Tags />
           </div>
         </div>
@@ -108,9 +113,13 @@ export default async function Home({
             <LoaderWeather />
           </div>
         </div>
-      </div>
 
-      <div className="border-b-[3px] border-neutral border-double mt-2 mb-4"></div>
-    </div>
+        <div className="mt-10">
+          <Line />
+        </div>
+
+        {/* <div className="border-b-[3px] border-neutral border-double mt-2 mb-4"></div> */}
+      </div>
+    </>
   );
 }

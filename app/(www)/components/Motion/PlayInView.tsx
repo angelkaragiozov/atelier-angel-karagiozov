@@ -16,7 +16,7 @@ const PlayInView = ({ children }: PlayInViewProps) => {
     <motion.div
       ref={ref}
       initial={{
-        opacity: 0.7,
+        opacity: 0.5,
         y: 0,
         // scale: 0.9, // Initial scale for elastic effect
       }}
@@ -26,9 +26,9 @@ const PlayInView = ({ children }: PlayInViewProps) => {
         // scale: inView ? 1 : 0.9, // Return to normal scale
       }}
       transition={{
-        delay: 0.5,
+        delay: 0.8,
         duration: 0.5,
-        ease: "linear",
+        ease: "easeInOut",
         // type: "spring", // Apply spring physics
         // stiffness: 300, // Adjust stiffness as needed
       }}
