@@ -41,7 +41,7 @@ const page = async ({ params }: Params) => {
       </div>
 
       <div className="flex flex-row justify-between w-full -mt-9 lg:-mt-28">
-        <pre className="text-2xs">
+        <pre>
           {`
    _ _                        
  _| | |_    _____ _____ _____ 

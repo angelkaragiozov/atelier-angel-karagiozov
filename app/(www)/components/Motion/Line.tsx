@@ -22,7 +22,6 @@ const Line = () => {
           width: inView ? "100%" : "0%",
         }}
         transition={{
-          delay: 0.2,
           duration: 2,
           ease: "easeInOut",
         }}

@@ -7,14 +7,14 @@ import { MotionDiv } from "../Motion/MotionDiv";
 import PlayInView from "../Motion/PlayInView";
 
 const ListComponent = async ({ project }: { project: Project }) => {
-  // await new Promise((resolve) => setTimeout(resolve, 2000));
+  await new Promise((resolve) => setTimeout(resolve, 2000));
 
   return (
     <div>
       <PlayInView>
         <MotionDiv
           initial={{
-            opacity: 0.3,
+            opacity: 0.5,
             scale: 0.9, // Initial scale for elastic effect
           }}
           animate={{

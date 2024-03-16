@@ -5,6 +5,7 @@ import Footer from "./components/UI/Footer";
 import localFont from "next/font/local";
 import Menu from "./components/UI/Menu";
 import MobileMenu from "./components/UI/MobileMenu";
+import Header from "./components/UI/Header";
 
 const pixel = localFont({
   src: "../../public/fonts/Pixel.woff2",
@@ -25,10 +26,11 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body
-        className={`${pixel.className} tracking-wider scroll-smooth overflow-x-hidden bg-light dark:bg-black text-neutral text-xs selection:bg-yellow selection:text-dark`}
+        className={`${pixel.className} tracking-wider scroll-smooth overflow-x-hidden text-sm selection:bg-yellow selection:text-dark`}
       >
         <Provider>
           <header>
+            <Header />
             <div className="hidden md:block">
               <Menu />
             </div>

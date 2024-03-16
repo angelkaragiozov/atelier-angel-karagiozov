@@ -46,7 +46,7 @@ export default async function Home({
       </div>
 
       <div className="flex flex-row justify-between w-full mt-0 lg:-mt-20">
-        <pre className="text-2xs">
+        <pre>
           {` _____ _____ _____    __ _____ _____ _____ _____ 
 |  _  | __  |     |__|  |   __|     |_   _|   __|
 |   __|    -|  |  |  |  |   __|   --| | | |__   |
@@ -79,7 +79,7 @@ export default async function Home({
       <div className="flex flex-col lg:flex-row w-full mt-4 border mb-2 border-neutral border-dotted  hover:border-solid">
         <Link href="/tags">
           <div className=" flex flex-col w-full border-b border-neutral border-dotted lg:border-none lg:w-52 p-5 hover:dark:bg-blacks hover:bg-white transition-all ease-in-out duration-1000">
-            <pre className="text-2xs">
+            <pre>
               {` _____ _____ _____ _____ 
 |_   _|  _  |   __|   __|
   | | |     |  |  |__   |

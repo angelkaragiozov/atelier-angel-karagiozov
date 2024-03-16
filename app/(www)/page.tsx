@@ -1,5 +1,4 @@
 import React, { Suspense } from "react";
-import { Logo } from "./utils/Icons";
 import Tags from "./components/UI/Tags";
 import { getProjects } from "@/sanity/lib/utils";
 import Link from "next/link";
@@ -10,8 +9,6 @@ import LoadingProjectList from "./components/Loading/LoadingProjectList";
 import LoaderWeather from "./components/Weather/LoaderWeather";
 import LoadingSimple from "./components/Loading/LoadingSimple";
 import ListComponent from "./components/Projects/ListComponent";
-import PlayInViewSpring from "./components/Motion/PlayInViewSpring";
-import PlayInViewLeft from "./components/Motion/PlayInViewLeft";
 import Line from "./components/Motion/Line";
 
 export default async function Home({
@@ -36,29 +33,25 @@ export default async function Home({
   return (
     <>
       <div className="fadein-animation mx-4 md:ml-14 md:mr-8 3xl:mx-auto 3xl:max-w-screen-2xl">
-        <div className="w-20 h-20 mx-auto mt-6 mb-4 animate-spin-slow transition-all ease-in-out duration-1000">
-          <Link href="/">
-            <Logo />
-          </Link>
+        <div className="absolute mt-3 top-28 left-1/2 -translate-x-1/2">
+          <p className="text-xs">Index</p>
         </div>
-        <div>
-          <p className="text-xs text-center mb-4">Index</p>
-        </div>
-
-        <div className="flex flex-row justify-between w-full mt-0 md:-mt-20">
-          <pre className="text-2xs">
-            {` _ _ _ _____ _____ _____
+        <div className="relative">
+          <div className="mt-40 md:mt-20">
+            <pre>
+              {` _ _ _ _____ _____ _____
 | | | |     | __  |  |  |  
 | | | |  |  |    -|    -|
 |_____|_____|__|__|__|__|`}
-          </pre>
+            </pre>
+          </div>
 
-          <div className="mt-auto -mb-2 -mr-1">
+          <div className="absolute right-0 bottom-0">
             <ThemeSwitch />
           </div>
+          <Line />
         </div>
 
-        <Line />
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
           {entries.map((project, index) => (
             <Suspense key={project._id} fallback={<LoadingProjectList />}>
@@ -78,7 +71,7 @@ export default async function Home({
         <div className="flex flex-col lg:flex-row w-full mb-4 border border-neutral border-dotted hover:border-solid">
           <Link href="/tags">
             <div className="flex flex-col w-full border-b border-neutral border-dotted lg:border-none lg:w-52 p-5 hover:dark:bg-blacks hover:bg-white transition-all ease-in-out duration-1000">
-              <pre className="text-2xs">
+              <pre>
                 {` _____ _____ _____ _____
 |_   _|  _  |   __|   __|
   | | |     |  |  |__   |

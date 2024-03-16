@@ -30,7 +30,7 @@ const page = async () => {
       </div>
 
       <div className="flex flex-row justify-between w-full -mt-6 lg:-mt-24">
-        <pre className="text-2xs">
+        <pre>
           {`
  _____ _____ _____ _____ 
 |_   _|  _  |   __|   __|

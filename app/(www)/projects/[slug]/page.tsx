@@ -92,7 +92,7 @@ const page = async ({ params }: Params) => {
           <div className="flex flex-col lg:flex-row w-full mt-4 border mb-2 border-neutral border-dotted  hover:border-solid">
             <div className="px-4 pb-4 border-b border-dotted border-neutral lg:border-0 hover:bg-white dark:hover:bg-blacks transition-all ease-in-out duration-1000">
               <Link href="/projects">
-                <pre className="text-2xs mx-3">
+                <pre>
                   {`                                          
  _____ _____ _____    __ _____ _____ _____ 
 |  _  | __  |     |__|  |   __|     |_   _|
