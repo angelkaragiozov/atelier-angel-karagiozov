@@ -2,7 +2,7 @@ import React from "react";
 
 const LoadingSimple = () => {
   return (
-    <div className="animate-bounce text-xs text-center mt-40 text-gray dark:text-dark">
+    <div className="animate-bounce text-xs text-gray dark:text-dark">
       Loading...
     </div>
   );

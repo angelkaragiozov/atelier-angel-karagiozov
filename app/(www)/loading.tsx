@@ -1,9 +1,9 @@
-import LoadingIndex from "./components/Loading/LoadingIndex";
+import LoadingSimple from "./components/Loading/LoadingSimple";
 
 export default function Loading() {
   return (
-    <div>
-      <LoadingIndex />
+    <div className="text-center mt-28">
+      <LoadingSimple />
     </div>
   );
 }

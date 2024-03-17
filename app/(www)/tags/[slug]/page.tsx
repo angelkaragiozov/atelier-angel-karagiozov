@@ -4,9 +4,9 @@ import { getProjectsByTag } from "@/sanity/lib/utils";
 import CardComponent from "../../components/Projects/CardComponent";
 import Link from "next/link";
 import ThemeSwitch from "../../components/UI/ThemeSwitch";
-import { Logo } from "../../utils/Icons";
 import LoadingProjectCard from "../../components/Loading/LoadingProjectCard";
 import Tags from "../../components/UI/Tags";
+import Line from "../../components/Motion/Line";
 
 export const revalidate = 60;
 
@@ -17,48 +17,50 @@ const page = async ({ params }: Params) => {
   await new Promise((resolve) => setTimeout(resolve, 2000));
   return (
     <div className="fadein-animation mx-4 md:ml-14 md:mr-8 3xl:mx-auto 3xl:max-w-screen-2xl">
-      <div className="w-20 h-20 mx-auto mt-6 mb-4 animate-spin-slow transition-all ease-in-out duration-1000">
-        <Link href="/">
-          <Logo />
-        </Link>
+      <div className="absolute top-28 left-1/2 -translate-x-1/2 z-20">
+        <div className="flex">
+          <Link
+            href="/"
+            className="hover:underline underline-offset-2 decoration-dotted"
+          >
+            <p className="text-xs">Index</p>
+          </Link>
+          <span className="text-gray dark:text-dark text-xs">
+            &nbsp;|&nbsp;
+          </span>
+          <Link
+            href="/tags"
+            className="hover:underline underline-offset-2 decoration-dotted"
+          >
+            <p className="text-xs">Tags</p>
+          </Link>
+          <span className="text-gray dark:text-dark text-xs">
+            &nbsp;|&nbsp;
+          </span>
+          <p className="text-gray dark:text-dark text-xs">{params?.slug}</p>
+        </div>
       </div>
-      <div className="flex flex-row w-full justify-center">
-        <Link
-          href="/"
-          className="hover:underline underline-offset-2 decoration-dotted z-10"
-        >
-          <p className="text-xs text-neutral mb-1 lg:mb-4 ">Index</p>
-        </Link>
-        <span className="text-gray dark:text-dark">&nbsp;|&nbsp;</span>
-        <Link
-          href="/tags"
-          className="hover:underline underline-offset-2 decoration-dotted z-10"
-        >
-          <p className="text-xs text-neutral mb-1 lg:mb-4 ">Tags</p>
-        </Link>
-        <span className="text-gray dark:text-dark">&nbsp;|&nbsp;</span>
-        <p className="text-gray dark:text-dark"> #{params?.slug}</p>
-      </div>
-
-      <div className="flex flex-row justify-between w-full -mt-9 lg:-mt-28">
-        <pre>
-          {`
-   _ _                        
+      <div className="relative">
+        <div className="mt-[116px] md:mt-[68px]">
+          <pre>
+            {`   _ _                        
  _| | |_    _____ _____ _____ 
 |_     _|  |_   _|  _  |   __|
 |_     _|    | | |     |  |  |
   |_|_|      |_| |__|__|_____|
 `}
-        </pre>
+          </pre>
+        </div>
 
-        <div className="mt-auto -mb-2 -mr-1">
+        <div className="absolute right-0 bottom-0">
           <ThemeSwitch />
         </div>
+        <Line />
       </div>
-      <div className="mt-2 flex flex-col lg:flex-col w-full border-t-[3px] border-neutral border-double pt-4"></div>
-      <h2 className="text-center text-2xl mb-4">
-        <div> # {params?.slug}</div>
-      </h2>
+
+      <div className=" text-center text-4xl border border-neutral border-dotted py-2 mb-4">
+        <span className="md:-ml-8 3xl:ml-0 align-middle"># {params?.slug}</span>
+      </div>
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 items-center">
         {project?.length > 0 &&
           project?.map((project) => (

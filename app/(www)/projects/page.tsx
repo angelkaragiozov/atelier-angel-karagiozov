@@ -2,11 +2,11 @@ import { getProjects } from "@/sanity/lib/utils";
 import CardComponent from "../components/Projects/CardComponent";
 import { Suspense } from "react";
 import Link from "next/link";
-import { Logo } from "../utils/Icons";
 import Tags from "../components/UI/Tags";
 import PaginationCard from "../components/Projects/PaginationCard";
 import ThemeSwitch from "../components/UI/ThemeSwitch";
 import LoadingProjectCard from "../components/Loading/LoadingProjectCard";
+import Line from "../components/Motion/Line";
 
 export default async function Home({
   searchParams,
@@ -29,36 +29,35 @@ export default async function Home({
 
   return (
     <div className="fadein-animation mx-4 md:ml-14 md:mr-8 3xl:mx-auto 3xl:max-w-screen-2xl">
-      <div className="w-20 h-20 mx-auto mt-6 mb-4 animate-spin-slow transition-all ease-in-out duration-1000">
-        <Link href="/">
-          <Logo />
-        </Link>
+      <div className="absolute top-28 left-1/2 -translate-x-1/2 z-20">
+        <div className="flex">
+          <Link
+            href="/"
+            className="hover:underline underline-offset-2 decoration-dotted"
+          >
+            <p className="text-xs">Index</p>
+          </Link>
+          <span className="text-gray dark:text-dark text-xs">
+            &nbsp;|&nbsp;
+          </span>
+          <p className="text-gray dark:text-dark text-xs">Projects</p>
+        </div>
       </div>
-      <div className="flex flex-row w-full justify-center">
-        <Link
-          href="/"
-          className="hover:underline underline-offset-2 decoration-dotted"
-        >
-          <p className="text-xs text-neutral mb-1 lg:mb-4 ">Index</p>
-        </Link>
-        <span className="text-gray dark:text-dark">&nbsp;|&nbsp;</span>
-        <p className="text-gray dark:text-dark">Projects</p>
-      </div>
-
-      <div className="flex flex-row justify-between w-full mt-0 lg:-mt-20">
-        <pre>
-          {` _____ _____ _____    __ _____ _____ _____ _____ 
+      <div className="relative">
+        <div className="mt-32 md:mt-20">
+          <pre>
+            {` _____ _____ _____    __ _____ _____ _____ _____ 
 |  _  | __  |     |__|  |   __|     |_   _|   __|
 |   __|    -|  |  |  |  |   __|   --| | | |__   |
 |__|  |__|__|_____|_____|_____|_____| |_| |_____|`}
-        </pre>
+          </pre>
+        </div>
 
-        <div className=" hidden mt-auto md:block -mb-2 -mr-1">
+        <div className="absolute right-0 bottom-0">
           <ThemeSwitch />
         </div>
+        <Line />
       </div>
-
-      <div className="mt-2 flex flex-col lg:flex-col w-full border-t-[3px] border-neutral border-double pt-4"></div>
 
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 items-center">
         {entries.map((project) => (
