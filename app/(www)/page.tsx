@@ -28,7 +28,7 @@ export default async function Home({
   // slice the projects array to get the entries for the current page
   const entries = projects.slice(start, end);
 
-  await new Promise((resolve) => setTimeout(resolve, 500));
+  // await new Promise((resolve) => setTimeout(resolve, 500));
 
   return (
     <>
@@ -110,8 +110,6 @@ export default async function Home({
         <div className="mt-10">
           <Line />
         </div>
-
-        {/* <div className="border-b-[3px] border-neutral border-double mt-2 mb-4"></div> */}
       </div>
     </>
   );

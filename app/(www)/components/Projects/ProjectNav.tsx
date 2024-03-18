@@ -1,7 +1,7 @@
 "use client";
 
 import { FC } from "react";
-import { useRouter } from "next/navigation";
+
 import Tooltip from "../UI/Tooltip";
 import { Nav } from "../../utils/Icons";
 import Link from "next/link";
@@ -19,27 +19,31 @@ const ProjectNav: FC<ProjectNavProps> = ({
   prevProjectSlug,
   nextProjectSlug,
 }) => {
-  const router = useRouter();
+  // const router = useRouter();
 
   return (
     <div className="flex flex-row justify-between">
       <Tooltip text="Previous_Project" disabled={!hasPrevProject}>
-        <button
-          className={`rotate-180 border text-center border-dotted border-neutral text-2xl hover:border-solid bg-light dark:bg-black text-blue dark:text-yellow hover:bg-white dark:hover:bg-blacks py-4 px-4 transition-all ease-in-out duration-1000 ${!hasPrevProject ? "opacity-30 cursor-not-allowed" : ""}`}
-          disabled={!hasPrevProject}
-          onClick={() => {
-            router.push(`/projects/${prevProjectSlug}`);
-          }}
-        >
-          <div className="w-3 h-3">
-            <Nav />
+        <Link href={hasPrevProject ? `/projects/${prevProjectSlug}` : ""}>
+          <div
+            className={`rotate-180 border text-center border-dotted border-neutral text-2xl hover:border-solid bg-light dark:bg-black hover:bg-white dark:hover:bg-blacks py-4 px-4 transition-all ease-in-out duration-1000 ${!hasPrevProject ? "opacity-30 cursor-not-allowed" : ""}`}
+            aria-disabled={!prevProjectSlug}
+            aria-label="Previous Project"
+            aria-hidden="true"
+          >
+            <div className="w-3 h-3">
+              <Nav />
+            </div>
           </div>
-        </button>{" "}
+        </Link>
       </Tooltip>
       <Tooltip text="Next_Project" disabled={!hasNextProject}>
-        <Link href={`/projects/${nextProjectSlug}`}>
+        <Link href={hasNextProject ? `/projects/${nextProjectSlug}` : ""}>
           <div
-            className={`border text-center border-dotted border-neutral text-2xl hover:border-solid bg-light dark:bg-black text-blue dark:text-yellow hover:bg-white dark:hover:bg-blacks py-4 px-4 transition-all ease-in-out duration-1000 ${!hasNextProject ? "opacity-30 cursor-not-allowed" : ""}`}
+            className={`border text-center border-dotted border-neutral text-2xl hover:border-solid bg-light dark:bg-black hover:bg-white dark:hover:bg-blacks py-4 px-4 transition-all ease-in-out duration-1000 ${!hasNextProject ? "opacity-30 cursor-not-allowed" : ""}`}
+            aria-disabled={!nextProjectSlug}
+            aria-label="Next Project"
+            aria-hidden="true"
           >
             <div className="w-3 h-3">
               <Nav />

@@ -1,7 +1,7 @@
 "use client";
 
 import { FC } from "react";
-import { useRouter, useSearchParams } from "next/navigation";
+import { useSearchParams } from "next/navigation";
 import Tooltip from "../UI/Tooltip";
 import { Nav } from "../../utils/Icons";
 import Link from "next/link";
@@ -17,7 +17,6 @@ const PaginationControls: FC<PaginationControlsProps> = ({
   hasPrevPage,
   totalProjects,
 }) => {
-  const router = useRouter();
   const searchParams = useSearchParams();
 
   const page = searchParams.get("page") ?? "1";
@@ -26,9 +25,18 @@ const PaginationControls: FC<PaginationControlsProps> = ({
   return (
     <div className="flex items-center justify-between">
       <Tooltip text="Previous_Page" disabled={!hasPrevPage}>
-        <Link href={`projects/?page=${Number(page) - 1}&per_page=${per_page}`}>
+        <Link
+          href={
+            hasPrevPage
+              ? `projects/?page=${Number(page) - 1}&per_page=${per_page}`
+              : ""
+          }
+        >
           <div
             className={`rotate-180 border text-center border-dotted border-neutral text-2xl hover:border-solid bg-light dark:bg-black hover:bg-white dark:hover:bg-blacks px-4 py-4 transition-all ease-in-out duration-1000 ${!hasPrevPage ? "opacity-30 cursor-not-allowed" : ""}`}
+            aria-disabled={!hasPrevPage}
+            aria-label="Previous Page"
+            aria-hidden="true"
           >
             <div className="w-3 h-3">
               <Nav />
@@ -42,19 +50,24 @@ const PaginationControls: FC<PaginationControlsProps> = ({
       </div>
 
       <Tooltip text="Next_Page" disabled={!hasNextPage}>
-        <button
-          className={`border text-center border-dotted border-neutral text-2xl hover:border-solid bg-light dark:bg-black hover:bg-white dark:hover:bg-blacks py-4 px-4 transition-all ease-in-out duration-1000 ${!hasNextPage ? "opacity-30 cursor-not-allowed" : ""}`}
-          disabled={!hasNextPage}
-          onClick={() => {
-            router.push(
-              `projects/?page=${Number(page) + 1}&per_page=${per_page}`
-            );
-          }}
+        <Link
+          href={
+            hasNextPage
+              ? `projects/?page=${Number(page) + 1}&per_page=${per_page}`
+              : ""
+          }
         >
-          <div className="w-3 h-3">
-            <Nav />
+          <div
+            className={`border text-center border-dotted border-neutral text-2xl hover:border-solid bg-light dark:bg-black hover:bg-white dark:hover:bg-blacks px-4 py-4 transition-all ease-in-out duration-1000 ${!hasNextPage ? "opacity-30 cursor-not-allowed" : ""}`}
+            aria-disabled={!hasNextPage}
+            aria-label="Next Page"
+            aria-hidden="true"
+          >
+            <div className="w-3 h-3">
+              <Nav />
+            </div>
           </div>
-        </button>
+        </Link>
       </Tooltip>
     </div>
   );
