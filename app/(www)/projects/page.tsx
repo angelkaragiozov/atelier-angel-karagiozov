@@ -44,7 +44,7 @@ export default async function Home({
         </div>
       </div>
       <div className="relative">
-        <div className="mt-32 md:mt-20">
+        <div className="mt-32 lg:mt-20">
           <pre>
             {` _____ _____ _____    __ _____ _____ _____ _____ 
 |  _  | __  |     |__|  |   __|     |_   _|   __|
@@ -53,7 +53,7 @@ export default async function Home({
           </pre>
         </div>
 
-        <div className="absolute right-0 bottom-0">
+        <div className="hidden sm:block absolute right-0 bottom-0">
           <ThemeSwitch />
         </div>
         <Line />
@@ -94,7 +94,9 @@ export default async function Home({
           <Tags />
         </div>
       </div>
-      <div className="border-b-[3px] border-neutral border-double  my-4"></div>
+      <div className="mt-4">
+        <Line />
+      </div>
     </div>
   );
 }

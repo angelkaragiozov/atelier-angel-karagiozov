@@ -10,6 +10,7 @@ import DynamicPlaiceholderBlur from "../../components/Images/ImageBlur";
 import { Logo } from "../../utils/Icons";
 import LoadingProject from "../../components/Loading/LoadingProject";
 import ThemeSwitch from "../../components/UI/ThemeSwitch";
+import Line from "../../components/Motion/Line";
 
 export const revalidate = 60;
 
@@ -75,7 +76,7 @@ const page = async ({ params }: Params) => {
           <h1 className="md:-ml-6 text-4xl lg:text-6xl text-neutral text-center">
             {project?.title}
           </h1>
-          <div className=" border-b-[3px] border-double border-neutral mt-1"></div>
+          <Line />
 
           <h2 className=" md:-ml-6 text-base text-center my-4">
             {project?.subtitle}
@@ -108,37 +109,37 @@ const page = async ({ params }: Params) => {
 
             <div className="p-2 pt-4 w-full border-0 lg:border-l text-sm hover:text-dark dark:text-gray border-dotted border-neutral hover:dark:bg-blacks  hover:bg-white bg-light dark:bg-black dark:hover:bg-blacks h-30 transition-all ease-in-out duration-1000">
               <div className="flex flex-row w-full">
-                <div className="w-12 mr-4 text-xs text-right text-gray dark:text-dark">
+                <div className="min-w-10 mr-4 text-xs text-right text-gray dark:text-dark">
                   _id:
                 </div>
                 <div>{project?.title}</div>{" "}
               </div>
 
               <div className="flex flex-row w-full">
-                <div className="w-12 mr-4 text-xs text-right text-gray dark:text-dark">
+                <div className="min-w-10 mr-4 text-xs text-right text-gray dark:text-dark">
                   date:
                 </div>
                 <div>{new Date(project?.publishedAt).toDateString()}</div>
               </div>
 
               <div className="flex flex-row w-full">
-                <div className="w-12 mr-4 text-xs text-right text-gray dark:text-dark">
+                <div className="min-w-10 mr-4 text-xs text-right text-gray dark:text-dark">
                   title:
                 </div>
                 <div>{project?.subtitle}</div>
               </div>
 
               <div className="flex flex-row w-full">
-                <div className="w-12 mr-4 text-xs text-right text-gray dark:text-dark">
+                <div className="min-w-10 mr-4 text-xs text-right text-gray dark:text-dark">
                   info:
                 </div>
-                <div>
-                  <p>{project?.excerpt}</p>
+                <div className="truncate w-full">
+                  <p className="truncate">{project?.excerpt}</p>
                 </div>
               </div>
 
               <div className="flex flex-row w-full">
-                <div className="w-12 mr-4 text-xs text-right text-gray dark:text-dark">
+                <div className="min-w-10 mr-4 text-xs text-right text-gray dark:text-dark">
                   tags:
                 </div>
                 <div className="text-dark dark:text-gray">
@@ -154,7 +155,7 @@ const page = async ({ params }: Params) => {
             </div>
           </div>
 
-          <div className="mt-4 border border-neutral border-dotted p-4">
+          <div className="my-4 border border-neutral border-dotted p-4">
             <ProjectNav
               hasPrevProject={hasPrevProject}
               hasNextProject={hasNextProject}
@@ -162,7 +163,7 @@ const page = async ({ params }: Params) => {
               prevProjectSlug={projects[projectIndex - 1]?.slug.current}
             />
           </div>
-          <div className="mt-4 w-full border-t-[3px] border-neutral border-double pt-4"></div>
+          <Line />
         </div>
       </div>
     </div>

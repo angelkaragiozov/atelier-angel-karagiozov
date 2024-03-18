@@ -56,10 +56,11 @@ const Loader = () => {
                     </pre>
                   </div>
                 </div>
-                <span className="text-xs text-center mb-4 ">
-                  <p className="localfont text-base">*</p>
+
+                <p className="text-center localfont text-base">*</p>
+                <p className="text-center text-sm mb-4">
                   Enter a graph visualization of all projects
-                </span>
+                </p>
               </div>
             </div>
           </div>
@@ -89,12 +90,13 @@ const Loader = () => {
                 Mouse
               </h3>
               <p>
-                Nodes: click to visit project, click+hold+drag is for
-                positioning Navigation: click+drag to rotate, mouse-wheel /
-                middle-click to zoom in or out, right-click: pan Nodes: click to
-                visit project, click+hold+drag is for positioning Navigation:
-                click+drag to rotate, mouse-wheel / middle-click to zoom in or
-                out, right-click: pan
+                Nodes Interaction -- Click: Visit the project associated with
+                the node. Click + Hold + Drag: Adjust the position of the node.
+              </p>
+              <p>
+                Navigation Controls -- Click the background + Drag: Rotate the
+                view. Mouse-Wheel / Middle-Click: Zoom in or out. Right-Click:
+                Pan the graph.
               </p>
             </div>
             <div className="border border-neutral border-dotted hover:border-solid hover:text-dark dark:hover:text-gray hover:bg-white dark:hover:bg-blacks p-2 my-4 transition-all ease-in-out duration-1000">
@@ -102,12 +104,12 @@ const Loader = () => {
                 Touch
               </h3>
               <p>
-                Nodes: click to visit project, click+hold+drag is for
-                positioning Navigation: click+drag to rotate, mouse-wheel /
-                middle-click to zoom in or out, right-click: pan Nodes: click to
-                visit project, click+hold+drag is for positioning Navigation:
-                click+drag to rotate, mouse-wheel / middle-click to zoom in or
-                out, right-click: pan
+                Node Interaction -- Tap: Visit the project associated with the
+                node. Tap + Hold + Drag: Adjust the position of the node.
+              </p>
+              <p>
+                Navigation Controls -- Swipe: Rotate the view. Pinch Gesture:
+                Zoom in or out.
               </p>
             </div>
           </div>

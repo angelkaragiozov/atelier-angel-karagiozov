@@ -41,7 +41,7 @@ const page = async ({ params }: Params) => {
         </div>
       </div>
       <div className="relative">
-        <div className="mt-[116px] md:mt-[68px]">
+        <div className="mt-[130px] md:mt-[68px]">
           <pre>
             {`   _ _                        
  _| | |_    _____ _____ _____ 
@@ -88,7 +88,9 @@ const page = async ({ params }: Params) => {
           <Tags />
         </div>
       </div>
-      <div className="my-4 w-full border-t-[3px] border-neutral border-double"></div>
+      <div className="mt-4">
+        <Line />
+      </div>
     </div>
   );
 };
