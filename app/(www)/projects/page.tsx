@@ -7,6 +7,8 @@ import PaginationCard from "../components/Projects/PaginationCard";
 import ThemeSwitch from "../components/UI/ThemeSwitch";
 import LoadingProjectCard from "../components/Loading/LoadingProjectCard";
 import Line from "../components/Motion/Line";
+import CardComponentMobile from "../components/Projects/CardComponentMobile";
+import LoadingCardMobile from "../components/Loading/LoadingCardMobile";
 
 export default async function Home({
   searchParams,
@@ -58,13 +60,24 @@ export default async function Home({
         </div>
         <Line />
       </div>
+      <div className="block md:hidden">
+        <div className="grid gap-4 ">
+          {entries.map((project, index) => (
+            <Suspense key={project._id} fallback={<LoadingCardMobile />}>
+              <CardComponentMobile project={{ ...project, index }} />
+            </Suspense>
+          ))}
+        </div>
+      </div>
 
-      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 items-center">
-        {entries.map((project) => (
-          <Suspense key={project._id} fallback={<LoadingProjectCard />}>
-            <CardComponent project={project} />
-          </Suspense>
-        ))}
+      <div className="hidden md:block">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+          {entries.map((project, index) => (
+            <Suspense key={project._id} fallback={<LoadingProjectCard />}>
+              <CardComponent project={{ ...project, index }} />
+            </Suspense>
+          ))}
+        </div>
       </div>
 
       <div className="mt-4 border border-neutral border-dotted p-4">

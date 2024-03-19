@@ -7,7 +7,7 @@ interface PlayInViewProps {
   children: ReactNode;
 }
 
-const PlayInView = ({ children }: PlayInViewProps) => {
+const PlayInViewMobile = ({ children }: PlayInViewProps) => {
   const { ref, inView } = useInView({
     triggerOnce: true, // Change this to false if you want the animation to trigger again when it comes back in view
   });
@@ -16,20 +16,20 @@ const PlayInView = ({ children }: PlayInViewProps) => {
     <motion.div
       ref={ref}
       initial={{
-        opacity: 0.7,
-        y: 0,
-        scale: 0.9, // Initial scale for elastic effect
+        opacity: 0.2,
+        // y: 0,
+        // scale: 0.9, // Initial scale for elastic effect
       }}
       animate={{
-        opacity: inView ? 1 : 0.7,
-        y: inView ? 0 : 10,
-        scale: inView ? 1 : 0.9, // Return to normal scale
+        opacity: inView ? 1 : 0.2,
+        // y: inView ? 0 : 10,
+        // scale: inView ? 1 : 0.9, // Return to normal scale
       }}
       transition={{
-        duration: 0.2,
+        duration: 1,
         ease: "linear",
-        type: "spring", // Apply spring physics
-        stiffness: 200, // Adjust stiffness as needed
+        // type: "spring", // Apply spring physics
+        // stiffness: 200, // Adjust stiffness as needed
       }}
     >
       {children}
@@ -37,4 +37,4 @@ const PlayInView = ({ children }: PlayInViewProps) => {
   );
 };
 
-export default PlayInView;
+export default PlayInViewMobile;

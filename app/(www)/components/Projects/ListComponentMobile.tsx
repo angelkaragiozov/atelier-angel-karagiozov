@@ -4,29 +4,29 @@ import { urlForImage } from "@/sanity/lib/image";
 import Link from "next/link";
 import { Project } from "@/sanity/lib/utils";
 import { MotionDiv } from "../Motion/MotionDiv";
-import PlayInView from "../Motion/PlayInView";
+import PlayInViewMobile from "../Motion/PlayInViewMobile";
 
-const ListComponent = async ({ project }: { project: Project }) => {
+const ListComponentMobile = async ({ project }: { project: Project }) => {
   // await new Promise((resolve) => setTimeout(resolve, 2000));
 
   return (
     <div>
-      <PlayInView>
+      <PlayInViewMobile>
         <MotionDiv
           initial={{
-            opacity: 0.5,
-            scale: 0.9, // Initial scale for elastic effect
+            opacity: 0.2,
+            // scale: 0.9, // Initial scale for elastic effect
           }}
           animate={{
             opacity: 1,
-            scale: 1, // Return to normal scale
+            // scale: 1, // Return to normal scale
           }}
           transition={{
             delay: project.index * 0.2,
             duration: 0.5,
             ease: "linear",
-            type: "spring", // Apply spring physics
-            stiffness: 300, // Adjust stiffness as needed
+            // type: "spring", // Apply spring physics
+            // stiffness: 300, // Adjust stiffness as needed
           }}
         >
           <div className="p-2 pt-0.5 border border-dotted border-neutral  hover:text-dark dark:hover:text-gray hover:border-solid hover:bg-white bg-light dark:bg-black dark:hover:bg-blacks h-[88px] transition-all ease-in-out duration-1000">
@@ -45,7 +45,7 @@ const ListComponent = async ({ project }: { project: Project }) => {
                   <Image
                     src={urlForImage(project.cover).url()}
                     width={100}
-                    height={56}
+                    height={70}
                     alt="projects"
                   />
                 </div>
@@ -69,9 +69,9 @@ const ListComponent = async ({ project }: { project: Project }) => {
             </Link>
           </div>
         </MotionDiv>
-      </PlayInView>
+      </PlayInViewMobile>
     </div>
   );
 };
 
-export default ListComponent;
+export default ListComponentMobile;

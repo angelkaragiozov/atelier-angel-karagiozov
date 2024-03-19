@@ -101,7 +101,7 @@ const page = async ({ params }: Params) => {
 |__|  |__|__|_____|_____|_____|_____| |_|  
                    `}
                 </pre>
-                <p className="text-center md:text-right md:mr-4 lg:text-center">
+                <p className="text-center md:text-right md:mr-4 lg:text-center text-xs text-gray dark:text-dark">
                   Back to all Projects
                 </p>
               </Link>

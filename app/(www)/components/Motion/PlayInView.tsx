@@ -16,21 +16,17 @@ const PlayInView = ({ children }: PlayInViewProps) => {
     <motion.div
       ref={ref}
       initial={{
-        // opacity: 0.5,
         y: 0,
-        // scale: 0.9, // Initial scale for elastic effect
       }}
       animate={{
-        // opacity: inView ? 1 : 0.7,
-        y: inView ? 0 : 10,
-        // scale: inView ? 1 : 0.9, // Return to normal scale
+        y: inView ? 0 : 20,
       }}
       transition={{
-        delay: 0.8,
-        duration: 0.5,
+        delay: 0.5,
+        duration: 1,
         ease: "easeInOut",
-        // type: "spring", // Apply spring physics
-        // stiffness: 300, // Adjust stiffness as needed
+        type: "spring", // Apply spring physics
+        stiffness: 300, // Adjust stiffness as needed
       }}
     >
       {children}

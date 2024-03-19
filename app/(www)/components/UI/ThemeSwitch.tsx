@@ -22,6 +22,8 @@ const ThemeSwitch = () => {
       <button
         className="w-5 h-5"
         onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
+        aria-label="Toggle Theme"
+        aria-hidden="true"
       >
         {theme === "dark" ? (
           <Tooltip text="light">

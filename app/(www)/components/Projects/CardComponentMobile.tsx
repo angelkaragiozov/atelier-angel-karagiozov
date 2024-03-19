@@ -3,30 +3,30 @@ import Image from "next/image";
 import { urlForImage } from "@/sanity/lib/image";
 import Link from "next/link";
 import { Project } from "@/sanity/lib/utils";
-import PlayInView from "../Motion/PlayInView";
 import { MotionDiv } from "../Motion/MotionDiv";
+import PlayInViewMobile from "../Motion/PlayInViewMobile";
 
 const CardComponent = async ({ project }: { project: Project }) => {
   // await new Promise((resolve) => setTimeout(resolve, 1000));
 
   return (
     <div>
-      <PlayInView>
+      <PlayInViewMobile>
         <MotionDiv
           initial={{
-            opacity: 0.5,
-            scale: 0.9, // Initial scale for elastic effect
+            opacity: 0.2,
+            // scale: 0.9, // Initial scale for elastic effect
           }}
           animate={{
             opacity: 1,
-            scale: 1, // Return to normal scale
+            // scale: 1, // Return to normal scale
           }}
           transition={{
             delay: project.index * 0.2,
             duration: 0.5,
             ease: "linear",
-            type: "spring", // Apply spring physics
-            stiffness: 250, // Adjust stiffness as needed
+            // type: "spring", // Apply spring physics
+            // stiffness: 300, // Adjust stiffness as needed
           }}
         >
           <div
@@ -68,7 +68,7 @@ const CardComponent = async ({ project }: { project: Project }) => {
             </Link>
           </div>
         </MotionDiv>
-      </PlayInView>
+      </PlayInViewMobile>
     </div>
   );
 };
