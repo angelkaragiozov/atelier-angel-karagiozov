@@ -1,4 +1,5 @@
 /** @type {import('next').NextConfig} */
+
 const nextConfig = {
   reactStrictMode: true,
   images: {
@@ -12,14 +13,6 @@ const nextConfig = {
         hostname: "openweathermap.org",
       },
     ],
-  },
-  async rewrites() {
-    return [
-      {
-        source: "/:path*",
-        destination: "/device",
-      },
-    ];
   },
 };
 

@@ -17,12 +17,12 @@ const PlayInViewMobile = ({ children }: PlayInViewProps) => {
       ref={ref}
       initial={{
         opacity: 0.2,
-        // y: 0,
+        y: 0,
         // scale: 0.9, // Initial scale for elastic effect
       }}
       animate={{
         opacity: inView ? 1 : 0.2,
-        // y: inView ? 0 : 10,
+        y: inView ? 0 : 10,
         // scale: inView ? 1 : 0.9, // Return to normal scale
       }}
       transition={{
