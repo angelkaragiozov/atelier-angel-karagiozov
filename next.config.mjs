@@ -13,14 +13,6 @@ const nextConfig = {
       },
     ],
   },
-  async rewrites() {
-    return [
-      {
-        source: "/:path*",
-        destination: "/device",
-      },
-    ];
-  },
 };
 
 export default nextConfig;

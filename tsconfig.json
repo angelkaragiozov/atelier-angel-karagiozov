@@ -1,5 +1,4 @@
 {
-
   "compilerOptions": {
     "lib": ["dom", "dom.iterable", "esnext"],
     "target": "ES2017",
@@ -21,8 +20,7 @@
     ],
     "paths": {
       "@/*": ["./*"]
-    },
-   
+    }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
   "exclude": ["node_modules"]
