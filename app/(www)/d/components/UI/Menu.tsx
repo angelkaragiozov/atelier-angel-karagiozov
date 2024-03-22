@@ -42,7 +42,7 @@ const Navbar = () => {
 
         <div
           onClick={handleNav}
-          className="absolute top-0 left-full w-12 -translate-x-2 h-full border-r border-neutral border-dashed cursor-pointer transition hover:bg-white dark:hover:bg-blacks hover:border-solid hover:-translate-x-0.5 ease-out duration-500"
+          className="absolute top-0 left-full w-12 -translate-x-2 h-full border-r border-dark dark:border-gray border-dashed cursor-pointer transition hover:bg-white dark:hover:bg-blacks hover:border-solid hover:-translate-x-0.5 ease-out duration-500"
         >
           <div className={nav ? "ease-in duration-500" : ""}>
             <div className=" h-screen text-base text-blue dark:text-yellow">

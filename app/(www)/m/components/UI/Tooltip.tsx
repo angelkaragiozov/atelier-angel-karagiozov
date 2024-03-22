@@ -14,7 +14,7 @@ const Tooltip: React.FC<TooltipProps> = ({ text, children, disabled }) => {
     >
       {children}
       <span
-        className={`invisible absolute bg-white dark:bg-blacks text-xs text-neutral text-2xs  inline-block text-nowrap border border-dotted border-neutral py-1 px-2 mb-2 bottom-full left-1/2 transform -translate-x-1/2 transition-opacity opacity-0 ${
+        className={`invisible absolute bg-white dark:bg-blacks text-xs text-neutral text-2xs  inline-block text-nowrap border border-dotted border-dark dark:border-gray py-1 px-2 mb-2 bottom-full left-1/2 transform -translate-x-1/2 transition-opacity opacity-0 ${
           disabled ? "" : "group-hover:opacity-100 group-hover:visible"
         }`}
       >

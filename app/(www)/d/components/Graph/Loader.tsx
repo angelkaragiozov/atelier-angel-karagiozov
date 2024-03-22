@@ -38,7 +38,7 @@ const Loader = () => {
         <>
           <div>
             <div onClick={loadMyComponent} className="cursor-pointer">
-              <div className="flex flex-col border text-base border-neutral border-dotted hover:border-solid hover:bg-white dark:hover:bg-blacks w-full transition-all ease-in-out duration-1000">
+              <div className="flex flex-col border text-base  border-dark dark:border-gray border-dotted hover:border-solid hover:bg-white dark:hover:bg-blacks w-full transition-all ease-in-out duration-1000">
                 <div className="p-4 flex flex-col lg:flex-row items-center justify-center gap-4 ">
                   <div className="leading-tight text-2xs py-2">
                     <pre>
@@ -84,9 +84,9 @@ const Loader = () => {
           <div className="cursor-move">
             <WorksGraph />
           </div>
-          <div className="text-xs text-justify text-neutral border-neutral border-dotted dark:text-dark ">
-            <div className="border border-neutral border-dotted hover:border-solid hover:text-dark dark:hover:text-gray hover:bg-white dark:hover:bg-blacks p-2 my-4 transition-all ease-in-out duration-1000">
-              <h3 className="text-sm mb-2  border-b border-neutral border-dotted">
+          <div className="text-xs text-justify text-neutral  border-dark dark:border-gray border-dotted dark:text-dark ">
+            <div className="border  border-dark dark:border-gray border-dotted hover:border-solid hover:text-dark dark:hover:text-gray hover:bg-white dark:hover:bg-blacks p-2 my-4 transition-all ease-in-out duration-1000">
+              <h3 className="text-sm mb-2  border-b  border-dark dark:border-gray border-dotted">
                 Mouse
               </h3>
               <p>
@@ -99,8 +99,8 @@ const Loader = () => {
                 Pan the graph.
               </p>
             </div>
-            <div className="border border-neutral border-dotted hover:border-solid hover:text-dark dark:hover:text-gray hover:bg-white dark:hover:bg-blacks p-2 my-4 transition-all ease-in-out duration-1000">
-              <h3 className="text-sm mb-2 border-b border-neutral border-dotted">
+            <div className="border  border-dark dark:border-gray border-dotted hover:border-solid hover:text-dark dark:hover:text-gray hover:bg-white dark:hover:bg-blacks p-2 my-4 transition-all ease-in-out duration-1000">
+              <h3 className="text-sm mb-2 border-b  border-dark dark:border-gray border-dotted">
                 Touch
               </h3>
               <p>
@@ -109,7 +109,7 @@ const Loader = () => {
               </p>
               <p>
                 Navigation Controls -- Swipe: Rotate the view. Pinch Gesture:
-                Zoom in or out.
+                Zoom in or out. Two Fingers: Pan the graph.
               </p>
             </div>
           </div>

@@ -10,6 +10,7 @@ import Line from "./components/Motion/Line";
 import PlayInView from "./components/Motion/PlayInView";
 import ThemeSwitch from "./components/UI/ThemeSwitch";
 import TagsAll from "./components/UI/TagsAll";
+import ShowMotion from "./components/Motion/ShowMotion";
 
 export default async function Home({
   searchParams,
@@ -59,41 +60,49 @@ export default async function Home({
             </Suspense>
           ))}
         </div>
+        <ShowMotion delay={1.5}>
+          <PlayInView>
+            <PaginationList
+              hasNextPage={end < projects.length}
+              hasPrevPage={start > 0}
+              totalProjects={projects.length}
+            />
+          </PlayInView>
+        </ShowMotion>
 
-        <PlayInView>
-          <PaginationList
-            hasNextPage={end < projects.length}
-            hasPrevPage={start > 0}
-            totalProjects={projects.length}
-          />
-        </PlayInView>
+        <ShowMotion delay={2}>
+          <PlayInView>
+            <TagsAll />
+          </PlayInView>
+        </ShowMotion>
 
-        <PlayInView>
-          <TagsAll />
-        </PlayInView>
-
-        <PlayInView>
-          <div>
-            <div className="hidden sm:block w-full">
-              <Suspense
-                fallback={
-                  <div>
-                    <LoadingSimple />
-                  </div>
-                }
-              >
-                <Loader />
-              </Suspense>
+        <ShowMotion delay={2.5}>
+          <PlayInView>
+            <div>
+              <div className="hidden sm:block w-full">
+                <Suspense
+                  fallback={
+                    <div>
+                      <LoadingSimple />
+                    </div>
+                  }
+                >
+                  <Loader />
+                </Suspense>
+              </div>
             </div>
-          </div>
-        </PlayInView>
+          </PlayInView>
+        </ShowMotion>
 
         {/* Weather */}
-        <PlayInView>
-          <div className="mt-6">
-            <LoaderWeather />
-          </div>
-        </PlayInView>
+
+        <ShowMotion delay={3}>
+          <PlayInView>
+            <div className="mt-6">
+              <LoaderWeather />
+            </div>
+          </PlayInView>
+        </ShowMotion>
 
         <div className="mt-10">
           <Line />

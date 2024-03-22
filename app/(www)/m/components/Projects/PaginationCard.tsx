@@ -33,7 +33,7 @@ const PaginationControls: FC<PaginationControlsProps> = ({
           }
         >
           <div
-            className={`rotate-180 border text-center border-dotted border-neutral text-2xl hover:border-solid bg-light dark:bg-black hover:bg-white dark:hover:bg-blacks px-4 py-4 transition-all ease-in-out duration-1000 ${!hasPrevPage ? "opacity-30 cursor-not-allowed" : ""}`}
+            className={`rotate-180 border text-center border-dotted border-dark dark:border-gray text-2xl hover:border-solid bg-light dark:bg-black hover:bg-white dark:hover:bg-blacks px-4 py-4 transition-all ease-in-out duration-1000 ${!hasPrevPage ? "opacity-30 cursor-not-allowed" : ""}`}
             aria-disabled={!hasPrevPage}
             aria-label="Previous Page"
           >
@@ -57,7 +57,7 @@ const PaginationControls: FC<PaginationControlsProps> = ({
           }
         >
           <div
-            className={`border text-center border-dotted border-neutral text-2xl hover:border-solid bg-light dark:bg-black hover:bg-white dark:hover:bg-blacks px-4 py-4 transition-all ease-in-out duration-1000 ${!hasNextPage ? "opacity-30 cursor-not-allowed" : ""}`}
+            className={`border text-center border-dotted border-dark dark:border-gray text-2xl hover:border-solid bg-light dark:bg-black hover:bg-white dark:hover:bg-blacks px-4 py-4 transition-all ease-in-out duration-1000 ${!hasNextPage ? "opacity-30 cursor-not-allowed" : ""}`}
             aria-disabled={!hasNextPage}
             aria-label="Next Page"
           >

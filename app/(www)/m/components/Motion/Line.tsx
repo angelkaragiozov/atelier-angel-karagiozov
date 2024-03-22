@@ -23,7 +23,7 @@ const Line = () => {
                 ease: "easeInOut",
               }}
             >
-              <div className="border-b-[3px] border-neutral border-double mt-2 mb-4"></div>
+              <div className="border-b-[3px] border-dark dark:border-gray border-double mt-2 mb-4"></div>
             </MotionDiv>
           </Lazy>
         )}

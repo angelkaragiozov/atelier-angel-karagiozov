@@ -7,7 +7,7 @@ const WeatherDetails = ({ data }: { data: any }) => {
     <div className="mb-4">
       <h2 className="text-2xl text-center mb-3">Weather in {data.name}</h2>
 
-      <div className="flex flex-col md:flex-row justify-between gap-4 max-w-2xl mx-auto p-4 border border-dotted items-center border-neutral">
+      <div className="flex flex-col md:flex-row justify-between gap-4 max-w-2xl mx-auto p-4 border border-dotted items-center  border-dark dark:border-gray">
         <div className="md:w-1/2 max-w-[350px] pixelated border aspect-square bg-[url('https://cdn.sanity.io/images/cqs4spoy/production/fd9739d5720244c5feb4b45bba0ff8fed18b71ba-400x400.gif')]">
           <Image
             className="grayscale mix-blend-difference mx-auto mt-auto pixelated "
@@ -29,7 +29,7 @@ const WeatherDetails = ({ data }: { data: any }) => {
           </span>
 
           <div className="flex w-full border-t border-dotted pt-8 md:pt-5">
-            <div className="flex w-1/2 items-center justify-center gap-2 border-r border-neutral/60">
+            <div className="flex w-1/2 items-center justify-center gap-2 border-r border-dark/60 dark:border-gray/60">
               Humidity: <p className="text-2xl">{data.main.humidity}% </p>
             </div>
             <div className="flex w-1/2 items-center justify-center gap-2">

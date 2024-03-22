@@ -1,7 +1,7 @@
 export const Logo = () => {
   return (
     <svg
-      className="fill-neutral hover:fill-black  dark:hover:fill-gray  transition-all ease-in-out duration-1000"
+      className="fill-dark dark:fill-gray hover:fill-black  dark:hover:fill-light  transition-all ease-in-out duration-1000"
       width="100%"
       height="100%"
       viewBox="0 0 120 120"
@@ -73,7 +73,7 @@ export const Logo = () => {
 export const Theme = () => {
   return (
     <svg
-      className="p-[3px] fill-neutral hover:fill-dark dark:hover:fill-gray hover:rotate-0 rotate-180 dark:rotate-0 dark:hover:rotate-180 transition-all ease-in-out duration-1000"
+      className="p-[3px] fill-dark dark:fill-gray hover:fill-black dark:hover:fill-light hover:rotate-0 rotate-180 dark:rotate-0 dark:hover:rotate-180 transition-all ease-in-out duration-1000"
       width="100%"
       height="100%"
       viewBox="0 0 36 36"
@@ -109,7 +109,7 @@ export const Nav = () => {
 export const Find = () => {
   return (
     <svg
-      className="fill-neutral hover:fill-dark dark:hover:fill-grey"
+      className="fill-dark dark:fill-gray hover:fill-black dark:hover:fill-light"
       width="100%"
       height="100%"
       viewBox="0 0 20 20"

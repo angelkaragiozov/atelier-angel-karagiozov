@@ -83,7 +83,7 @@ const page = async ({ params }: Params) => {
             {project?.subtitle}
           </h2>
 
-          <div className="border border-dotted border-neutral">
+          <div className="border border-dotted border-dark dark:border-gray">
             <div className={richTextStyles}>
               <PortableText
                 value={project?.body}
@@ -92,8 +92,8 @@ const page = async ({ params }: Params) => {
             </div>
           </div>
           <PlayInView>
-            <div className="flex flex-col lg:flex-row w-full mt-4 border mb-2 border-neutral border-dotted  hover:border-solid">
-              <div className="px-4 pb-4 border-b border-dotted border-neutral lg:border-0 hover:bg-white dark:hover:bg-blacks transition-all ease-in-out duration-1000">
+            <div className="flex flex-col lg:flex-row w-full mt-4 border mb-2 border-dark dark:border-gray border-dotted  hover:border-solid">
+              <div className="px-4 pb-4 border-b border-dotted border-dark dark:border-gray lg:border-0 hover:bg-white dark:hover:bg-blacks transition-all ease-in-out duration-1000">
                 <Link href="/d/projects">
                   <pre>
                     {`                                          
@@ -109,7 +109,7 @@ const page = async ({ params }: Params) => {
                 </Link>
               </div>
 
-              <div className="p-2 pt-4 w-full border-0 lg:border-l text-sm hover:text-dark dark:text-gray border-dotted border-neutral hover:dark:bg-blacks  hover:bg-white bg-light dark:bg-black dark:hover:bg-blacks h-30 transition-all ease-in-out duration-1000">
+              <div className="p-2 pt-4 w-full border-0 lg:border-l text-sm hover:text-dark dark:text-gray border-dotted border-dark dark:border-gray hover:dark:bg-blacks  hover:bg-white bg-light dark:bg-black dark:hover:bg-blacks h-30 transition-all ease-in-out duration-1000">
                 <div className="flex flex-row w-full">
                   <div className="min-w-10 mr-4 text-xs text-right text-gray dark:text-dark">
                     _id:
@@ -158,7 +158,7 @@ const page = async ({ params }: Params) => {
             </div>
           </PlayInView>
           <PlayInView>
-            <div className="my-4 border border-neutral border-dotted p-4">
+            <div className="my-4 border border-dark dark:border-gray border-dotted p-4">
               <ProjectNav
                 hasPrevProject={hasPrevProject}
                 hasNextProject={hasNextProject}

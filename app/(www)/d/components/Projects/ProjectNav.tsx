@@ -25,7 +25,7 @@ const ProjectNav: FC<ProjectNavProps> = ({
       <Tooltip text="Previous_Project" disabled={!hasPrevProject}>
         <Link href={hasPrevProject ? `/d/projects/${prevProjectSlug}` : ""}>
           <div
-            className={`rotate-180 border text-center border-dotted border-neutral text-2xl hover:border-solid bg-light dark:bg-black hover:bg-white dark:hover:bg-blacks py-4 px-4 transition-all ease-in-out duration-1000 ${!hasPrevProject ? "opacity-30 cursor-not-allowed" : ""}`}
+            className={`rotate-180 border text-center border-dotted  border-dark dark:border-gray text-2xl hover:border-solid bg-light dark:bg-black hover:bg-white dark:hover:bg-blacks py-4 px-4 transition-all ease-in-out duration-1000 ${!hasPrevProject ? "opacity-30 cursor-not-allowed" : ""}`}
             aria-disabled={!prevProjectSlug}
             aria-label="Previous Project"
           >
@@ -38,7 +38,7 @@ const ProjectNav: FC<ProjectNavProps> = ({
       <Tooltip text="Next_Project" disabled={!hasNextProject}>
         <Link href={hasNextProject ? `/d/projects/${nextProjectSlug}` : ""}>
           <div
-            className={`border text-center border-dotted border-neutral text-2xl hover:border-solid bg-light dark:bg-black hover:bg-white dark:hover:bg-blacks py-4 px-4 transition-all ease-in-out duration-1000 ${!hasNextProject ? "opacity-30 cursor-not-allowed" : ""}`}
+            className={`border text-center border-dotted border-dark dark:border-gray text-2xl hover:border-solid bg-light dark:bg-black hover:bg-white dark:hover:bg-blacks py-4 px-4 transition-all ease-in-out duration-1000 ${!hasNextProject ? "opacity-30 cursor-not-allowed" : ""}`}
             aria-disabled={!nextProjectSlug}
             aria-label="Next Project"
           >

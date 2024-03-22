@@ -43,7 +43,7 @@ function WorksGraph() {
   }, []);
 
   return (
-    <div className="h-screen border border-neutral border-dotted hover:border-solid">
+    <div className="h-screen border bborder-dark dark:border-gray border-dotted hover:border-solid">
       <div
         ref={containerRef}
         className="h-full overflow-hidden hover:brightness-110 dark:invert transition ease-in-out duration-1000"

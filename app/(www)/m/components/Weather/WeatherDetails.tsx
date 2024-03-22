@@ -29,7 +29,7 @@ const WeatherDetails = ({ data }: { data: any }) => {
           </span>
 
           <div className="flex w-full border-t border-dotted pt-8 md:pt-5">
-            <div className="flex w-1/2 items-center justify-center gap-2 border-r border-neutral/60">
+            <div className="flex w-1/2 items-center justify-center gap-2 border-r border-dark/60 dark:border-gray/60">
               Humidity: <p className="text-2xl">{data.main.humidity}% </p>
             </div>
             <div className="flex w-1/2 items-center justify-center gap-2">

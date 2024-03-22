@@ -67,7 +67,7 @@ export default async function Home({
         ))}
       </div>
 
-      <div className="mt-4 border border-neutral border-dotted p-4">
+      <div className="mt-4 border border-dark dark:border-gray border-dotted p-4">
         <PaginationCard
           hasNextPage={end < projects.length}
           hasPrevPage={start > 0}
@@ -75,9 +75,9 @@ export default async function Home({
         />
       </div>
 
-      <div className="flex flex-col lg:flex-row w-full mt-4 border mb-2 border-neutral border-dotted  hover:border-solid">
+      <div className="flex flex-col lg:flex-row w-full mt-4 border mb-2 border-dark dark:border-gray border-dotted  hover:border-solid">
         <Link href="/tags">
-          <div className=" flex flex-col w-full border-b border-neutral border-dotted lg:border-none lg:w-52 p-5 hover:dark:bg-blacks hover:bg-white transition-all ease-in-out duration-1000">
+          <div className=" flex flex-col w-full border-b border-dark dark:border-gray border-dotted lg:border-none lg:w-52 p-5 hover:dark:bg-blacks hover:bg-white transition-all ease-in-out duration-1000">
             <pre>
               {` _____ _____ _____ _____ 
 |_   _|  _  |   __|   __|
@@ -90,7 +90,7 @@ export default async function Home({
           </div>
         </Link>
 
-        <div className="p-2 pl-4 w-full lg:border-l border-dotted border-neutral hover:dark:bg-blacks  hover:bg-white bg-light dark:bg-black dark:hover:bg-blacks h-30 transition-all ease-in-out duration-1000">
+        <div className="p-2 pl-4 w-full lg:border-l border-dotted border-dark dark:border-gray hover:dark:bg-blacks  hover:bg-white bg-light dark:bg-black dark:hover:bg-blacks h-30 transition-all ease-in-out duration-1000">
           <Tags />
         </div>
       </div>
