@@ -5,12 +5,13 @@
 @layer base {
   html,
   body {
-    @apply top-0 left-0 bg-light dark:bg-black text-neutral;
+    @apply top-0 left-0 bg-light dark:bg-black;
   }
   pre {
     font-family: monospace;
     font-size: 10px;
     line-height: 12px;
+    color: #888888;
   }
 }
 

@@ -146,7 +146,7 @@ const page = async ({ params }: Params) => {
                   </div>
                   <div className="text-dark dark:text-gray">
                     {project?.tags?.map((tag) => (
-                      <Link key={tag?._id} href={`/tags/${tag.slug.current}`}>
+                      <Link key={tag?._id} href={`/d/tags/${tag.slug.current}`}>
                         <span className=" p-1 mr-2 text-2xs lowercase border border-dotted dark:border-dark hover:border-solid">
                           #{tag.name}
                         </span>

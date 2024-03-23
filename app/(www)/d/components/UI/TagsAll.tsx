@@ -4,7 +4,7 @@ import Tags from "./Tags";
 
 const TagsAll = () => {
   return (
-    <div className="flex flex-col lg:flex-row w-full mb-4 border border-dark dark:border-gray border-dotted hover:border-solid">
+    <div className="flex flex-col lg:flex-row w-full my-4 border border-dark dark:border-gray border-dotted hover:border-solid">
       <Link href="/d/tags">
         <div className="flex flex-col w-full border-b  border-dark dark:border-gray border-dotted lg:border-none lg:w-52 p-5 hover:dark:bg-blacks hover:bg-white transition-all ease-in-out duration-1000">
           <pre>
