@@ -17,8 +17,8 @@ const page = async ({ params }: Params) => {
 
   await new Promise((resolve) => setTimeout(resolve, 2000));
   return (
-    <div className="fadein-animation mx-4 md:ml-14 md:mr-8 3xl:mx-auto 3xl:max-w-screen-2xl">
-      <div className="absolute top-28 left-1/2 -translate-x-1/2 z-20">
+    <div className="mx-4 md:ml-14 md:mr-8 3xl:mx-auto 3xl:max-w-screen-2xl">
+      <div className="absolute top-28 left-1/2 -translate-x-1/2">
         <div className="flex">
           <Link
             href="/"

@@ -8,10 +8,9 @@ import { PortableText } from "@portabletext/react";
 import Link from "next/link";
 import DynamicPlaiceholderBlur from "../../components/Images/ImageBlur";
 import LoadingProject from "../../components/Loading/LoadingProject";
+import ThemeSwitch from "../../components/UI/ThemeSwitch";
 import Line from "../../components/Motion/Line";
 import { Logo } from "@/app/(www)/utils/Icons";
-import PlayInView from "../../components/Motion/PlayInView";
-import ThemeSwitch from "../../components/UI/ThemeSwitch";
 
 export const revalidate = 60;
 
@@ -30,7 +29,7 @@ const page = async ({ params }: Params) => {
   const hasPrevProject = projectIndex > 0;
   const hasNextProject = projectIndex < projects.length - 1;
 
-  await new Promise((resolve) => setTimeout(resolve, 2000));
+  // await new Promise((resolve) => setTimeout(resolve, 2000));
 
   return (
     <div>
@@ -72,7 +71,7 @@ const page = async ({ params }: Params) => {
         <p className="text-gray dark:text-dark">{project?.title}</p>
       </div>
 
-      <div className="fadein-animation mx-4 md:ml-14 md:mr-8 3xl:mx-auto 3xl:max-w-screen-2xl">
+      <div className="mx-4 md:ml-14 md:mr-8 3xl:mx-auto 3xl:max-w-screen-2xl">
         <div className="mx-auto 2xl:max-w-screen-xl">
           <h1 className="md:-ml-6 text-4xl lg:text-6xl text-neutral text-center">
             {project?.title}
@@ -91,82 +90,79 @@ const page = async ({ params }: Params) => {
               />
             </div>
           </div>
-          <PlayInView>
-            <div className="flex flex-col lg:flex-row w-full mt-4 border mb-2 border-dark dark:border-gray border-dotted  hover:border-solid">
-              <div className="px-4 pb-4 border-b border-dotted border-dark dark:border-gray lg:border-0 hover:bg-white dark:hover:bg-blacks transition-all ease-in-out duration-1000">
-                <Link href="/d/projects">
-                  <pre>
-                    {`                                          
+          <div className="flex flex-col lg:flex-row w-full mt-4 border mb-2 border-dark dark:border-gray border-dotted  hover:border-solid">
+            <div className="px-4 pb-4 border-b border-dotted border-dark dark:border-gray lg:border-0 hover:bg-white dark:hover:bg-blacks transition-all ease-in-out duration-1000">
+              <Link href="/d/projects">
+                <pre>
+                  {`                                          
  _____ _____ _____    __ _____ _____ _____ 
 |  _  | __  |     |__|  |   __|     |_   _|
 |   __|    -|  |  |  |  |   __|   --| | |  
 |__|  |__|__|_____|_____|_____|_____| |_|  
                    `}
-                  </pre>
-                  <p className="text-center md:text-right md:mr-4 lg:text-center text-xs text-gray dark:text-dark">
-                    Back to all Projects
-                  </p>
-                </Link>
+                </pre>
+                <p className="text-center md:text-right md:mr-4 lg:text-center text-xs  text-neutral">
+                  Back to all Projects
+                </p>
+              </Link>
+            </div>
+
+            <div className="p-2 pt-4 w-full border-0 lg:border-l text-sm hover:text-black dark:text-light border-dotted border-dark dark:border-gray hover:dark:bg-blacks  hover:bg-white bg-light dark:bg-black dark:hover:bg-blacks h-30 transition-all ease-in-out duration-1000">
+              <div className="flex flex-row w-full">
+                <div className="min-w-10 mr-4 text-xs text-right  text-neutral">
+                  _id:
+                </div>
+                <div>{project?.title}</div>
               </div>
 
-              <div className="p-2 pt-4 w-full border-0 lg:border-l text-sm hover:text-dark dark:text-gray border-dotted border-dark dark:border-gray hover:dark:bg-blacks  hover:bg-white bg-light dark:bg-black dark:hover:bg-blacks h-30 transition-all ease-in-out duration-1000">
-                <div className="flex flex-row w-full">
-                  <div className="min-w-10 mr-4 text-xs text-right text-gray dark:text-dark">
-                    _id:
-                  </div>
-                  <div>{project?.title}</div>{" "}
+              <div className="flex flex-row w-full">
+                <div className="min-w-10 mr-4 text-xs text-right  text-neutral">
+                  date:
                 </div>
+                <div>{new Date(project?.publishedAt).toDateString()}</div>
+              </div>
 
-                <div className="flex flex-row w-full">
-                  <div className="min-w-10 mr-4 text-xs text-right text-gray dark:text-dark">
-                    date:
-                  </div>
-                  <div>{new Date(project?.publishedAt).toDateString()}</div>
+              <div className="flex flex-row w-full">
+                <div className="min-w-10 mr-4 text-xs text-right  text-neutral">
+                  title:
                 </div>
+                <div>{project?.subtitle}</div>
+              </div>
 
-                <div className="flex flex-row w-full">
-                  <div className="min-w-10 mr-4 text-xs text-right text-gray dark:text-dark">
-                    title:
-                  </div>
-                  <div>{project?.subtitle}</div>
+              <div className="flex flex-row w-full">
+                <div className="min-w-10 mr-4 text-xs text-right  text-neutral">
+                  info:
                 </div>
-
-                <div className="flex flex-row w-full">
-                  <div className="min-w-10 mr-4 text-xs text-right text-gray dark:text-dark">
-                    info:
-                  </div>
-                  <div className="truncate w-full">
-                    <p className="truncate">{project?.excerpt}</p>
-                  </div>
+                <div className="truncate w-full">
+                  <p className="truncate">{project?.excerpt}</p>
                 </div>
+              </div>
 
-                <div className="flex flex-row w-full">
-                  <div className="min-w-10 mr-4 text-xs text-right text-gray dark:text-dark">
-                    tags:
-                  </div>
-                  <div className="text-dark dark:text-gray">
-                    {project?.tags?.map((tag) => (
-                      <Link key={tag?._id} href={`/d/tags/${tag.slug.current}`}>
-                        <span className=" p-1 mr-2 text-2xs lowercase border border-dotted dark:border-dark hover:border-solid">
-                          #{tag.name}
-                        </span>
-                      </Link>
-                    ))}
-                  </div>
+              <div className="flex flex-row w-full">
+                <div className="min-w-10 mr-4 text-xs text-right  text-neutral">
+                  tags:
+                </div>
+                <div className="text-dark dark:text-gray">
+                  {project?.tags?.map((tag) => (
+                    <Link key={tag?._id} href={`/d/tags/${tag.slug.current}`}>
+                      <span className=" p-1 mr-2 text-2xs lowercase border border-dotted dark:border-dark hover:border-solid">
+                        #{tag.name}
+                      </span>
+                    </Link>
+                  ))}
                 </div>
               </div>
             </div>
-          </PlayInView>
-          <PlayInView>
-            <div className="my-4 border border-dark dark:border-gray border-dotted p-4">
-              <ProjectNav
-                hasPrevProject={hasPrevProject}
-                hasNextProject={hasNextProject}
-                nextProjectSlug={projects[projectIndex + 1]?.slug.current}
-                prevProjectSlug={projects[projectIndex - 1]?.slug.current}
-              />
-            </div>
-          </PlayInView>
+          </div>
+
+          <div className="my-4 border border-dark dark:border-gray border-dotted p-4">
+            <ProjectNav
+              hasPrevProject={hasPrevProject}
+              hasNextProject={hasNextProject}
+              nextProjectSlug={projects[projectIndex + 1]?.slug.current}
+              prevProjectSlug={projects[projectIndex - 1]?.slug.current}
+            />
+          </div>
           <Line />
         </div>
       </div>

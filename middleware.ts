@@ -6,7 +6,7 @@ export function middleware(request: NextRequest, _event: undefined) {
 
   // Extract device information using a reliable library
   const { isBot, device } = userAgent(request);
-  console.log(isBot);
+  // console.log(isBot);
   const isMobile = device.type === "mobile";
 
   // Determine the appropriate pathname based on device type

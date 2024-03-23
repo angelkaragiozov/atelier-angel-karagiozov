@@ -24,7 +24,7 @@ const PaginationControls: FC<PaginationControlsProps> = ({
   const per_page = searchParams.get("per_page") ?? "12";
 
   return (
-    <div className="flex w-fill items-center justify-between p-4 mb-4 border border-dotted border-dark dark:border-gray">
+    <div className="flex w-fill items-center justify-between p-4 my-4 border border-dotted border-dark dark:border-gray">
       <Tooltip text="Previous_Page" disabled={!hasPrevPage}>
         <Link
           href={

@@ -28,14 +28,15 @@ export default async function Home({
 
   // slice the projects array to get the entries for the current page
   const entries = projects.slice(start, end);
-
-  // await new Promise((resolve) => setTimeout(resolve, 500));
+  // await new Promise((resolve) => setTimeout(resolve, 2000));
 
   return (
     <>
-      <div className="fadein-animation mx-4 md:ml-14 md:mr-8 3xl:mx-auto 3xl:max-w-screen-2xl">
+      <div className="mx-4 md:ml-14 md:mr-8 3xl:mx-auto 3xl:max-w-screen-2xl">
         <div className="absolute top-28 left-1/2 -translate-x-1/2">
-          <p className="text-xs">Desktop</p>
+          <div className="flex">
+            <p className="text-xs">Desktop</p>
+          </div>
         </div>
         <div className="relative">
           <div className="mt-32 md:mt-20">

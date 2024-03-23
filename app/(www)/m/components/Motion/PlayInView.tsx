@@ -24,11 +24,9 @@ const PlayInView = ({ children }: PlayInViewProps) => {
           y: inView ? 0 : 20,
         }}
         transition={{
-          delay: 0.5,
-          duration: 1,
+          delay: 0.2,
+          duration: 0.5,
           ease: "easeInOut",
-          type: "spring", // Apply spring physics
-          stiffness: 200, // Adjust stiffness as needed
         }}
       >
         {children}

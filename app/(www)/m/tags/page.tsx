@@ -47,7 +47,7 @@ const page = async () => {
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
         {tags?.length > 0 &&
           tags?.map((tag) => (
-            <Link key={tag?._id} href={`/tags/${tag.slug.current}`}>
+            <Link key={tag?._id} href={`/m/tags/${tag.slug.current}`}>
               <div className="h-10 hover:text-dark dark:text-gray text-center text-base p-2 border border-dotted border-dark dark:border-gray hover:dark:bg-blacks  hover:bg-white bg-light dark:bg-black dark:hover:bg-blacks transition-all ease-in-out duration-1000">
                 #{tag.name} ({tag?.projectCount})
               </div>

@@ -101,36 +101,36 @@ const page = async ({ params }: Params) => {
 |__|  |__|__|_____|_____|_____|_____| |_|  
                    `}
                 </pre>
-                <p className="text-center md:text-right md:mr-4 lg:text-center text-xs text-gray dark:text-dark">
+                <p className="text-center md:text-right md:mr-4 lg:text-center text-xs  text-neutral">
                   Back to all Projects
                 </p>
               </Link>
             </div>
 
-            <div className="p-2 pt-4 w-full border-0 lg:border-l text-sm hover:text-dark dark:text-gray border-dotted border-dark dark:border-gray hover:dark:bg-blacks  hover:bg-white bg-light dark:bg-black dark:hover:bg-blacks h-30 transition-all ease-in-out duration-1000">
+            <div className="p-2 pt-4 w-full border-0 lg:border-l text-sm hover:text-black dark:text-light border-dotted border-dark dark:border-gray hover:dark:bg-blacks  hover:bg-white bg-light dark:bg-black dark:hover:bg-blacks h-30 transition-all ease-in-out duration-1000">
               <div className="flex flex-row w-full">
-                <div className="min-w-10 mr-4 text-xs text-right text-gray dark:text-dark">
+                <div className="min-w-10 mr-4 text-xs text-right  text-neutral">
                   _id:
                 </div>
-                <div>{project?.title}</div>{" "}
+                <div>{project?.title}</div>
               </div>
 
               <div className="flex flex-row w-full">
-                <div className="min-w-10 mr-4 text-xs text-right text-gray dark:text-dark">
+                <div className="min-w-10 mr-4 text-xs text-right  text-neutral">
                   date:
                 </div>
                 <div>{new Date(project?.publishedAt).toDateString()}</div>
               </div>
 
               <div className="flex flex-row w-full">
-                <div className="min-w-10 mr-4 text-xs text-right text-gray dark:text-dark">
+                <div className="min-w-10 mr-4 text-xs text-right  text-neutral">
                   title:
                 </div>
                 <div>{project?.subtitle}</div>
               </div>
 
               <div className="flex flex-row w-full">
-                <div className="min-w-10 mr-4 text-xs text-right text-gray dark:text-dark">
+                <div className="min-w-10 mr-4 text-xs text-right  text-neutral">
                   info:
                 </div>
                 <div className="truncate w-full">
@@ -139,7 +139,7 @@ const page = async ({ params }: Params) => {
               </div>
 
               <div className="flex flex-row w-full">
-                <div className="min-w-10 mr-4 text-xs text-right text-gray dark:text-dark">
+                <div className="min-w-10 mr-4 text-xs text-right  text-neutral">
                   tags:
                 </div>
                 <div className="text-dark dark:text-gray">
