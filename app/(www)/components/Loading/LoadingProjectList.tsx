@@ -1,5 +1,4 @@
 import React from "react";
-import { MotionDiv } from "../Motion/MotionDiv";
 
 const LoadingProjectList = () => {
   return (
