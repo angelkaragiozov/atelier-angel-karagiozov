@@ -2,10 +2,10 @@ import type { Metadata } from "next";
 import "./globals.css";
 import { Provider } from "./utils/Provider";
 import localFont from "next/font/local";
-import Header from "./d/components/UI/Header";
-import Menu from "./d/components/UI/Menu";
-import Footer from "./d/components/UI/Footer";
-import MobileMenu from "./m/components/UI/Menu";
+import Header from "./components/UI/Header";
+import Menu from "./components/UI/Menu";
+import Footer from "./components/UI/Footer";
+import MobileMenu from "./components/UI/Menu";
 
 const pixel = localFont({
   src: "../../public/fonts/Pixel.woff2",

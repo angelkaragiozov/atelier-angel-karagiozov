@@ -1,4 +1,4 @@
-import LoadingSimple from "./d/components/Loading/LoadingSimple";
+import LoadingSimple from "./components/Loading/LoadingSimple";
 
 export default function Loading() {
   return (
