@@ -28,7 +28,7 @@ const page = async ({ params }: Params) => {
             &nbsp;|&nbsp;
           </span>
           <Link
-            href="/d/tags"
+            href="/tags"
             className="hover:underline underline-offset-2 decoration-dotted"
           >
             <p className="text-xs">Tags</p>

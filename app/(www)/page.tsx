@@ -8,6 +8,7 @@ import LoadingSimple from "./components/Loading/LoadingSimple";
 import ListComponent from "./components/Projects/ListComponent";
 import ThemeSwitch from "./components/UI/ThemeSwitch";
 import TagsAll from "./components/UI/TagsAll";
+import Line from "./components/Motion/Line";
 
 export default async function Home({
   searchParams,
@@ -48,6 +49,7 @@ export default async function Home({
           <div className="absolute right-0 bottom-0">
             <ThemeSwitch />
           </div>
+          <Line />
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
@@ -87,6 +89,8 @@ export default async function Home({
         </div>
 
         <div className="mt-10"></div>
+
+        <Line />
       </div>
     </>
   );

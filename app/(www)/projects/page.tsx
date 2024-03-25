@@ -29,7 +29,7 @@ export default async function Home({
 
   return (
     <div className="mx-4 md:ml-14 md:mr-8 3xl:mx-auto 3xl:max-w-screen-2xl">
-      <div className="absolute top-28 left-1/2 -translate-x-1/2">
+      <div className="absolute top-28 left-1/2 -translate-x-1/2 z-10">
         <div className="flex">
           <Link
             href="/"
@@ -44,7 +44,7 @@ export default async function Home({
         </div>
       </div>
       <div className="relative">
-        <div className="mt-32 lg:mt-20">
+        <div className="mt-32 lg:mt-20 z-0 border w-[350px] border-blue">
           <pre>
             {` _____ _____ _____    __ _____ _____ _____ _____ 
 |  _  | __  |     |__|  |   __|     |_   _|   __|

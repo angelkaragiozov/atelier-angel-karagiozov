@@ -131,3 +131,15 @@
 .pixelated {
   image-rendering: pixelated;
 }
+
+#banner-1 {
+  display: none;
+}
+
+#banner-2 {
+  display: none;
+}
+
+#banner-3 {
+  display: none;
+}

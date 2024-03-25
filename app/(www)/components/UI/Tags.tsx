@@ -15,7 +15,7 @@ export default async function Tags() {
     <div className="text-xs  text-blue dark:text-yellow">
       {tags?.length > 0 &&
         tags?.map((tag) => (
-          <Link key={tag?._id} href={`/d/tags/${tag.slug.current}`}>
+          <Link key={tag?._id} href={`/tags/${tag.slug.current}`}>
             <span className=" flex lowercase">
               #
               <p className="hover:underline underline-offset-2 decoration-dotted">

@@ -5,7 +5,7 @@ import localFont from "next/font/local";
 import Header from "./components/UI/Header";
 import Menu from "./components/UI/Menu";
 import Footer from "./components/UI/Footer";
-import MobileMenu from "./components/UI/Menu";
+import MobileMenu from "./components/UI/MobileMenu";
 
 const pixel = localFont({
   src: "../../public/fonts/Pixel.woff2",
@@ -31,12 +31,14 @@ export default function RootLayout({
         <Provider>
           <header>
             <Header />
-            <div className="hidden md:block">
-              <Menu />
-            </div>
-            <div className="md:hidden">
-              <MobileMenu />
-            </div>
+            <nav>
+              <div className="hidden md:block">
+                <Menu />
+              </div>
+              <div className="block md:hidden">
+                <MobileMenu />
+              </div>
+            </nav>
           </header>
           <main className="min-h-screen flex flex-col">
             <div className="flex-grow">{children}</div>

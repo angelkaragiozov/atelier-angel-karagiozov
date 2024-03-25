@@ -1,6 +1,7 @@
 import React from "react";
 import Link from "next/link";
 import Tags from "./Tags";
+import TransitionLink from "./TransitionLink";
 
 const TagsAll = () => {
   return (
@@ -21,6 +22,8 @@ const TagsAll = () => {
 
       <div className="p-2 pl-4 w-full lg:border-l border-dotted  border-dark dark:border-gray hover:dark:bg-blacks hover:bg-white bg-light dark:bg-black dark:hover:bg-blacks h-30 transition-all ease-in-out duration-1000">
         <Tags />
+
+        <TransitionLink href="/tags" label="Work" />
       </div>
     </div>
   );

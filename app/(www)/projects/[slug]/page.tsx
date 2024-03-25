@@ -61,7 +61,7 @@ const page = async ({ params }: Params) => {
         </Link>
         <span>&nbsp;|&nbsp;</span>
         <Link
-          href="/d/projects"
+          href="/projects"
           className="hover:underline underline-offset-2 decoration-dotted"
         >
           Projects
@@ -91,7 +91,7 @@ const page = async ({ params }: Params) => {
           </div>
           <div className="flex flex-col lg:flex-row w-full mt-4 border mb-2 border-dark dark:border-gray border-dotted  hover:border-solid">
             <div className="px-4 pb-4 border-b border-dotted border-dark dark:border-gray lg:border-0 hover:bg-white dark:hover:bg-blacks transition-all ease-in-out duration-1000">
-              <Link href="/d/projects">
+              <Link href="/projects">
                 <pre>
                   {`                                          
  _____ _____ _____    __ _____ _____ _____ 
@@ -143,7 +143,7 @@ const page = async ({ params }: Params) => {
                 </div>
                 <div className="text-dark dark:text-gray">
                   {project?.tags?.map((tag) => (
-                    <Link key={tag?._id} href={`/d/tags/${tag.slug.current}`}>
+                    <Link key={tag?._id} href={`/tags/${tag.slug.current}`}>
                       <span className=" p-1 mr-2 text-2xs lowercase border border-dotted dark:border-dark hover:border-solid">
                         #{tag.name}
                       </span>

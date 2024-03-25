@@ -13,7 +13,7 @@ const CardComponent = async ({ project }: { project: Project }) => {
         key={project._id}
         className="max-w-[520px] mx-auto border border-dotted border-dark dark:border-gray hover:border-solid hover:bg-white dark:hover:bg-blacks hover:text-dark dark:hover:text-gray p-3 transition-all ease-in-out duration-1000"
       >
-        <Link href={`/d/projects/${project?.slug?.current}`}>
+        <Link href={`/projects/${project?.slug?.current}`}>
           <div className="flex justify-between h-8">
             <div className="text-xl text-blue dark:text-yellow lowercase w-20 pl-2">
               {project?.title}
