@@ -8,6 +8,10 @@ const nextConfig = {
         hostname: "cdn.sanity.io",
       },
       {
+        protocol: "https",
+        hostname: "picsum.photos",
+      },
+      {
         protocol: "http",
         hostname: "openweathermap.org",
       },

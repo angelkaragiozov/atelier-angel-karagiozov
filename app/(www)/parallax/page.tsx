@@ -1,8 +1,12 @@
 import { getProjects } from "@/sanity/lib/utils";
-
+import CardComponent from "../components/Projects/CardComponent";
 import { Suspense } from "react";
+import Link from "next/link";
+import PaginationCard from "../components/Projects/PaginationCard";
 import LoadingProjectCard from "../components/Loading/LoadingProjectCard";
-import ParalaxImages from "../components/Projects/ParalaxImages";
+import Line from "../components/Motion/Line";
+import TagsAll from "../components/UI/TagsAll";
+import ThemeSwitch from "../components/UI/ThemeSwitch";
 
 export default async function Home({
   searchParams,
@@ -25,12 +29,54 @@ export default async function Home({
 
   return (
     <div className="mx-4 md:ml-14 md:mr-8 3xl:mx-auto 3xl:max-w-screen-2xl">
+      <div className="absolute top-28 left-1/2 -translate-x-1/2 z-10">
+        <div className="flex">
+          <Link
+            href="/"
+            className="hover:underline underline-offset-2 decoration-dotted"
+          >
+            <p className="text-xs">Index</p>
+          </Link>
+          <span className="text-gray dark:text-dark text-xs">
+            &nbsp;|&nbsp;
+          </span>
+          <p className="text-gray dark:text-dark text-xs">Projects</p>
+        </div>
+      </div>
+      <div className="relative">
+        <div className="mt-32 lg:mt-20 z-0 border w-[350px] border-blue">
+          <pre>
+            {` _____ _____ _____    __ _____ _____ _____ _____ 
+|  _  | __  |     |__|  |   __|     |_   _|   __|
+|   __|    -|  |  |  |  |   __|   --| | | |__   |
+|__|  |__|__|_____|_____|_____|_____| |_| |_____|`}
+          </pre>
+        </div>
+
+        <div className="hidden sm:block absolute right-0 bottom-0">
+          <ThemeSwitch />
+        </div>
+        <Line />
+      </div>
+
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
         {entries.map((project, index) => (
           <Suspense key={project._id} fallback={<LoadingProjectCard />}>
-            <ParalaxImages project={project} index={index} />
+            <CardComponent project={{ ...project, index }} />
           </Suspense>
         ))}
+      </div>
+
+      <PaginationCard
+        hasNextPage={end < projects.length}
+        hasPrevPage={start > 0}
+        totalProjects={projects.length}
+      />
+
+      <TagsAll />
+
+      <div className="mt-4">
+        <Line />
       </div>
     </div>
   );

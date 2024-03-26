@@ -6,6 +6,7 @@ import Header from "./components/UI/Header";
 import Menu from "./components/UI/Menu";
 import Footer from "./components/UI/Footer";
 import MobileMenu from "./components/UI/MobileMenu";
+import SmoothScrolling from "./components/Projects/SmoothScrolling";
 
 const pixel = localFont({
   src: "../../public/fonts/Pixel.woff2",
@@ -41,7 +42,9 @@ export default function RootLayout({
             </nav>
           </header>
           <main className="min-h-screen flex flex-col">
-            <div className="flex-grow">{children}</div>
+            <SmoothScrolling>
+              <div className="flex-grow">{children}</div>
+            </SmoothScrolling>
           </main>
           <footer className="justify-center ">
             <Footer />

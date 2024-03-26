@@ -28,7 +28,7 @@ export function Parallax({
 
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
-    const y = (windowWidth || 0) * speed * 0.1; // Use 0 if windowWidth is undefined
+    const y = (windowWidth || 0) * speed * 1; // Use 0 if windowWidth is undefined
 
     const setY = gsap.quickSetter(target.current, "y", "px");
 

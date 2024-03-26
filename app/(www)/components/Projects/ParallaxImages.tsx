@@ -17,22 +17,21 @@ const CardComponent = async ({
   return (
     <div>
       <Parallax
-        speed={Math.random() * 4 - 1}
+        speed={Math.random() * 4 - 2}
         className={`${index % 2 === 0 ? "self-start" : "self-end"} z-${index}`}
       >
         <div
           key={project._id}
-          className="m-20 border-dark dark:border-gray hover:border-solid hover:bg-white dark:hover:bg-blacks hover:text-dark dark:hover:text-gray p-3 transition-all ease-in-out duration-1000"
+          // className=" border w-80 border-blue hover:translate-x-11 hover:text-dark dark:hover:text-gray p-3 transition-all ease-in-out duration-1000"
+          // className={`${index % 2 === 0 ? "self-start" : "self-end"} z-${index}`}
         >
           <Link href={`/projects/${project?.slug?.current}`}>
-            <div className="fadein-animation">
-              <Image
-                src={urlForImage(project.cover).url()}
-                width={300}
-                height={150}
-                alt="projects"
-              />
-            </div>
+            <Image
+              src={urlForImage(project.cover).url()}
+              width={300}
+              height={150}
+              alt="projects"
+            />
           </Link>
         </div>
       </Parallax>
