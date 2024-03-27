@@ -9,12 +9,12 @@ const config: Config = {
   darkMode: "class",
   theme: {
     colors: {
-      white: "#f3f3f3",
+      white: "#ffffff",
       light: "#dddddd",
       gray: "#b3b3b3",
       neutral: "#888888",
       dark: "#666666",
-      black: "#222222",
+      black: "#000000",
       blacks: "#0c0c0c",
       blue: "#0000f5",
       yellow: "#ffff0a",

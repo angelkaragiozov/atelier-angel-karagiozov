@@ -10,7 +10,7 @@ export function middleware(request: NextRequest, _event: undefined) {
   const isMobile = device.type === "mobile";
 
   // Determine the appropriate pathname based on device type
-  const pathname = isMobile ? "/m" : "/d";
+  const pathname = isMobile ? "/mobile" : "/desktop";
 
   // Construct the full path without using the path module:
   const fullPath = new URL(pathname, request.url).toString();

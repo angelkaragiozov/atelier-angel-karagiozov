@@ -8,9 +8,9 @@ import Footer from "./components/UI/Footer";
 import MobileMenu from "./components/UI/MobileMenu";
 import SmoothScrolling from "./components/Projects/SmoothScrolling";
 
-const pixel = localFont({
-  src: "../../public/fonts/Pixel.woff2",
-  weight: "400",
+const helvetica = localFont({
+  src: "../../public/fonts/Helvetica.woff2",
+  weight: "600",
   display: "block",
 });
 
@@ -27,7 +27,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body
-        className={`${pixel.className} tracking-wider scroll-smooth overflow-x-hidden text-sm text-dark dark:text-gray selection:bg-yellow selection:text-dark`}
+        className={`${helvetica.className} tracking-wider scroll-smooth overflow-x-hidden text-sm text-dark dark:text-gray selection:bg-yellow selection:text-dark`}
       >
         <Provider>
           <header>

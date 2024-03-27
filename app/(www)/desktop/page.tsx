@@ -4,8 +4,6 @@ import { Suspense } from "react";
 import Link from "next/link";
 import PaginationCard from "../components/Projects/PaginationCard";
 import LoadingProjectCard from "../components/Loading/LoadingProjectCard";
-import Line from "../components/Motion/Line";
-import TagsAll from "../components/UI/TagsAll";
 import ThemeSwitch from "../components/UI/ThemeSwitch";
 
 export default async function Home({
@@ -35,31 +33,16 @@ export default async function Home({
             href="/"
             className="hover:underline underline-offset-2 decoration-dotted"
           >
-            <p className="text-xs">Index</p>
+            <p className="text-xs">Desktop</p>
           </Link>
-          <span className="text-gray dark:text-dark text-xs">
-            &nbsp;|&nbsp;
-          </span>
-          <p className="text-gray dark:text-dark text-xs">Projects</p>
         </div>
       </div>
-      <div className="relative">
-        <div className="mt-32 lg:mt-20 z-0 border w-[350px] border-blue">
-          <pre>
-            {` _____ _____ _____    __ _____ _____ _____ _____ 
-|  _  | __  |     |__|  |   __|     |_   _|   __|
-|   __|    -|  |  |  |  |   __|   --| | | |__   |
-|__|  |__|__|_____|_____|_____|_____| |_| |_____|`}
-          </pre>
-        </div>
-
-        <div className="hidden sm:block absolute right-0 bottom-0">
-          <ThemeSwitch />
-        </div>
-        <Line />
+      <div className=" absolute right-4 top-4">
+        <ThemeSwitch />
       </div>
 
-      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+      <div className="mt-40 grid md:grid-cols-2 lg:grid-cols-3 gap-10">
+        {/* <div> */}
         {entries.map((project, index) => (
           <Suspense key={project._id} fallback={<LoadingProjectCard />}>
             <CardComponent project={{ ...project, index }} />
@@ -72,12 +55,6 @@ export default async function Home({
         hasPrevPage={start > 0}
         totalProjects={projects.length}
       />
-
-      <TagsAll />
-
-      <div className="mt-4">
-        <Line />
-      </div>
     </div>
   );
 }

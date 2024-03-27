@@ -8,10 +8,12 @@ import { Parallax } from "./Parallax";
 const CardComponent = ({ project }: { project: Project }) => {
   return (
     <div>
-      <Parallax speed={Math.random() * 4 - 2} className={`self-start z-1`}>
+      {/* <Parallax speed={Math.random() * 2 - 1} className={`self-end z-1`}> */}
+
+      <Parallax speed={Math.random() * 3 - 1} className={`self-end`}>
         <div
           key={project._id}
-          className="max-w-[520px] mx-auto border border-dotted border-dark dark:border-gray hover:border-solid hover:bg-white dark:hover:bg-blacks hover:text-dark dark:hover:text-gray p-3 transition-all ease-in-out duration-1000"
+          className="max-w-[520px] mx-auto mb-40 border border-dotted border-dark dark:border-gray hover:border-solid hover:bg-white dark:hover:bg-blacks hover:text-dark dark:hover:text-gray p-3 transition-all ease-in-out duration-1000"
         >
           <Link href={`/projects/${project?.slug?.current}`}>
             <div className="flex justify-between h-8">

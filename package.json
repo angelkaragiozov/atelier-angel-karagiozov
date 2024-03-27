@@ -14,7 +14,7 @@
     "@sanity/vision": "^3.28.0",
     "@studio-freight/hamo": "^0.6.28",
     "@studio-freight/lenis": "^1.0.42",
-    "@studio-freight/react-lenis": "^0.0.38",
+    "@studio-freight/react-lenis": "^0.0.46",
     "@vercel/speed-insights": "^1.0.10",
     "autoprefixer": "^10.4.17",
     "axios": "^1.6.7",

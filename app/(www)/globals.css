@@ -5,8 +5,31 @@
 @layer base {
   html,
   body {
-    @apply top-0 left-0 bg-light dark:bg-black;
+    @apply top-0 left-0 bg-white dark:bg-black;
   }
+  /* 
+  html.lenis,
+  html.lenis body {
+    height: auto;
+  } */
+
+  /* .lenis.lenis-smooth {
+    scroll-behavior: auto !important;
+  }
+
+
+  .lenis.lenis-smooth [data-lenis-prevent] {
+    overscroll-behavior: contain;
+  }
+
+  .lenis.lenis-stopped {
+    overflow: hidden;
+  }
+
+  .lenis.lenis-scrolling iframe {
+    pointer-events: none;
+  } */
+
   pre {
     font-family: monospace;
     font-size: 10px;
@@ -16,8 +39,8 @@
 }
 
 @font-face {
-  font-family: "Pixel";
-  src: url("../../public/fonts/Pixel.woff2") format("woff2");
+  font-family: "Helvetica";
+  src: url("../../public/fonts/Helvetica.woff2") format("woff2");
   font-weight: 400;
   font-display: block;
   font-style: normal;
